@@ -61,6 +61,7 @@ Tomada del documento de mapeo:
 
 - **Finanzas** es crítica para todos: debe construirse primero y bien.
 - **Agenda, Tareas e Inventario** tienen demanda muy dispareja: por eso son motores activables y no parte del núcleo.
+- La **tarea simple** entre colaboradores (asignar, vencer, aprobar el cierre) es parte del **núcleo**. El motor de **Tareas e Hitos** agrega hitos, dependencias y cobro por avance, y sigue siendo propio del Clúster 3.
 - El **Clúster 6** depende de un motor (Inventario) que el piloto no usa: "Nulo" en C1.
 - El orden de construcción de motores debería seguir a los clientes reales, no a esta tabla.
 

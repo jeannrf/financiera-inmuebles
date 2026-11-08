@@ -22,7 +22,7 @@
 |----|----------|
 | C1-Q-19 ⭐ | Para el prorrateo, ¿se usa el **porcentaje del consumo** sobre el total del recibo, o un **factor (S/ por unidad)** como el 0.87? Si la suma de los submedidores no coincide con el medidor general, ¿cómo se reparte la diferencia? |
 | C1-Q-33 | ¿Qué conceptos se cobran como mantenimiento (vigilancia, ascensor, luz común, limpieza)? ¿Es un monto fijo o se reparte según los gastos del mes? |
-| C1-Q-34 | ¿El gas también se prorratea? |
+| C1-Q-34 | ¿El gas también se prorratea? **Respondida: sí, según la PPT del cliente** ([C1-RF-58](06-requerimientos-preliminares.md)). Falta confirmar en qué inmuebles hay gas. |
 | C1-Q-35 | ¿El rol de limpieza es semanal? ¿Cuánto se cobra por reemplazo y quién fija ese monto? |
 | C1-Q-36 | ¿Qué gastos necesitan su aprobación? ¿Hay un monto mínimo? |
 
@@ -64,3 +64,10 @@
 | C1-Q-55 | 1.4 | ¿Los créditos no usados se acumulan? ¿Se controla el acceso físico? |
 
 > La definición del "monto" del tablero pasó a [NUC-Q-26](../../../general/01-analisis-negocio/08-preguntas-abiertas.md), porque afecta a todos los negocios.
+
+## Tras la PPT del cliente
+
+| ID | Pregunta |
+|----|----------|
+| C1-Q-56 ⭐ | En la reunión la alerta de atraso iba **directa al dueño**; en la PPT va "al analista y luego al gerente". ¿Confirmamos el escalamiento? ¿Con cuántos días cada nivel? |
+| C1-Q-57 | ¿El autovalúo solo se archiva o también se registra su monto como gasto del inmueble? |

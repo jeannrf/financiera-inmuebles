@@ -48,14 +48,14 @@ docs/
 
 | Parte | Análisis de negocio | Validación | SRS, modelado, arquitectura, UX |
 |-------|---------------------|------------|----------------|
-| [General](general/01-analisis-negocio/00-README.md) | ✅ Borrador v0.2 | Modelo SaaS sin validar con el cliente | ⏳ Pendiente |
-| [Clúster 1: Activos y Alquileres](clusters/cluster-1-activos-alquileres-espacios/README.md) | ✅ Borrador v0.2 | 🟢 Cliente real (1.1 y 1.2) | ⏳ Pendiente |
+| [General](general/01-analisis-negocio/00-README.md) | ✅ Borrador v0.3 | Modelo SaaS sin validar con el cliente | ⏳ Pendiente |
+| [Clúster 1: Activos y Alquileres](clusters/cluster-1-activos-alquileres-espacios/README.md) | ✅ Borrador v0.3 | 🟢 Cliente real (1.1 y 1.2) | ⏳ Pendiente |
 | [Clúster 2: Comercial de Alto Valor](clusters/cluster-2-comercial-alto-valor/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
 | [Clúster 3: Servicios Profesionales](clusters/cluster-3-servicios-profesionales-proyectos/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
 | [Clúster 4: Citas y Suscripciones](clusters/cluster-4-citas-agendas-suscripciones/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
 | [Clúster 5: Servicio Técnico](clusters/cluster-5-servicio-tecnico-campo/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
 | [Clúster 6: Comercio y Distribución](clusters/cluster-6-comercio-distribucion-produccion/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
-| [Módulo: Inversiones y Liquidez](modulos/inversiones-y-liquidez/README.md) | ✅ Borrador v0.2 | 🟢 Cliente real | ⏳ Pendiente |
+| [Módulo: Inversiones y Liquidez](modulos/inversiones-y-liquidez/README.md) | ✅ Borrador v0.3 | 🟢 Cliente real | ⏳ Pendiente |
 | [Cliente piloto](clientes/cliente-piloto/README.md) | ✅ Primera reunión | 🟡 Por confirmar con el cliente | No aplica |
 
 ## Convenciones
@@ -65,6 +65,7 @@ docs/
 | Marca | Significado |
 |-------|-------------|
 | `[CONFIRMADO]` | El cliente piloto lo dijo claramente |
+| `[CONFIRMADO — PPT cliente]` | Viene de la presentación (PPT) que compartió el cliente piloto |
 | `[EQUIPO]` | Decisión del equipo, aún sin validar con un cliente |
 | `[MAPEO]` | Viene del documento de mapeo de verticales |
 | `[INFERIDO]` | Lo deducimos del contexto; hay que validarlo |

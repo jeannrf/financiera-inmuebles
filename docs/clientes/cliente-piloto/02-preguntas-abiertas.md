@@ -15,9 +15,18 @@
 | CLI-Q-07 | ¿Cuántos analistas trabajarían al inicio? ¿Ya hay alguno? |
 | CLI-Q-08 ⭐ | ¿Cuál será su **tercer negocio**? Mencionó presupuestos de construcción. ¿Sigue siendo la idea? |
 | CLI-Q-09 ⭐ | Si la plataforma se ofrece también a otras empresas, ¿cómo le gustaría participar: primer cliente con condiciones especiales, socio, otra fórmula? |
+| CLI-Q-10 ⭐ | Su PPT pone **WhatsApp y video** en la portada. Por costo (API oficial de WhatsApp Business), proponemos dejarlo para la etapa 3 y usar mientras tanto la mensajería interna y las tareas del sistema. ¿Está de acuerdo? |
 
 ## Actualización de estas preguntas tras el giro a SaaS
 
 - **CLI-Q-03 ya tiene decisión interna:** una empresa propia del equipo ([NUC-Q-09](../../general/01-analisis-negocio/08-preguntas-abiertas.md#decisiones-tomadas)). El cliente dijo
   que "igual van a ganar" con cualquiera de las dos opciones, pero aún no conoce el modelo SaaS. Hay que **explicárselo en la reunión, antes de hablar de precio**.
 - **CLI-Q-04 deja de ser una pregunta:** un SaaS es una aplicación web. Hay que informárselo con la ventaja que le da: acceso desde cualquier laptop o celular.
+
+## Preguntas de la PPT que también hay que enviarle por escrito
+
+[C1-Q-56](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) (escalamiento de alertas),
+[NUC-Q-27](../../general/01-analisis-negocio/08-preguntas-abiertas.md) (alertas por teléfono),
+[NUC-Q-28](../../general/01-analisis-negocio/08-preguntas-abiertas.md) (plazo de 10 años),
+[INV-Q-39](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md) (EBITDA) e
+[INV-Q-40](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md) (alerta de ±5 %).

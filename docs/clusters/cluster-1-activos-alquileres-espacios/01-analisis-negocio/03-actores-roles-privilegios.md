@@ -64,11 +64,15 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 |--------|--------------|-------|
 | Lista de pagos que vencen **esta semana** | Analista | Sistema + correo |
 | Hoy le toca pagar a X | Analista | Sistema |
-| Pago con **atraso ≥ N días** (el cliente dijo 5 y también 7) [PREGUNTA C1-Q-13] | **Dueño** | Correo y/o **SMS** |
+| Pago con atraso ≥ N₁ días (nivel 1) [PREGUNTA C1-Q-13] | **Analista** | Sistema + correo |
+| Pago aún sin regularizar ≥ N₂ días (nivel 2) [PREGUNTA C1-Q-56] | **Dueño / Gerente** | Correo y/o SMS |
 | Renovación de contrato próxima | Dueño (y analista [INFERIDO]) | Sistema + correo |
 | Gasto pendiente de aprobación | Dueño | Mensaje interno |
 | Negocio por debajo del objetivo (en rojo) | Dueño | Tablero |
 | Cumpleaños del inquilino | Inquilino (saludo automático) | Correo [PREGUNTA C1-Q-14] |
 
-> **Por qué la alerta va directa al dueño:** "Mata dos pájaros de un tiro". El dueño se entera de
-> la deuda y además **controla al analista** (si el analista no le avisó, no está haciendo su trabajo).
+> **Por qué la alerta escala:** en la reunión el cliente dijo que la alerta iba directa al dueño, para enterarse de la
+> deuda y a la vez **controlar al analista** ("mata dos pájaros de un tiro"). En la PPT pide "al analista y luego al
+> gerente". Se adopta el escalamiento ([C1-RN-38](05-reglas-de-negocio-y-calculos.md), pendiente de confirmar en
+> [C1-Q-56](08-preguntas-abiertas.md)), y el nivel 2 llega al dueño **aunque el analista no haga nada**, con lo que se
+> conserva el control sobre el analista.

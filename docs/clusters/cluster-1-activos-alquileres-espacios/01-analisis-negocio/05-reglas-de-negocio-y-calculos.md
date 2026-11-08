@@ -33,6 +33,7 @@
 | C1-RN-35 | Toda entrega y devolución requiere un acta con evidencia. | 1.3 |
 | C1-RN-36 | Los créditos no usados se pierden o se acumulan según el plan. | 1.4 |
 | C1-RN-37 | Una penalidad por mora o el ajuste por IPC son **parámetros por vertical**: el mapeo los incluye en 1.1, mientras que el piloto aún no define si cobra mora ([C1-Q-24](08-preguntas-abiertas.md)) y usa incrementos manuales. | 1.1 |
+| C1-RN-38 | La alerta de morosidad escala: analista (N₁ días) → dueño (N₂ días). N₁ y N₂ son parámetros. El dueño recibe el nivel 2 aunque el analista no haya hecho nada. | [CONFIRMADO — PPT cliente] + [PREGUNTA C1-Q-56] |
 
 ---
 

@@ -20,13 +20,13 @@
 | C1-RF-30 | Advertir si se sube un **archivo idéntico** a uno ya existente (comparando hash) | S | 1 |
 | C1-RF-31 | Consultar los vouchers por inquilino y período ("muéstrame todos los vouchers de 2026") | M | 1 |
 | C1-RF-32 | Lista **semanal** de cobros y lista de "hoy vence" para el analista | M | 1 |
-| C1-RF-33 | Alerta al dueño por atraso ≥ N días (configurable, 7 por defecto) | M | 1 |
+| C1-RF-33 | Alerta al dueño por atraso ≥ N días (configurable, 7 por defecto) *(ahora es el segundo nivel del escalamiento de C1-RF-57)* | M | 1 |
 | C1-RF-34 | Alerta de **renovación de contrato** X días antes de su vencimiento | M | 1 |
 | C1-RF-35 | Historial del inquilino: estadías, atrasos y deudas (incluye inquilinos que regresan) | M | 1 |
 | C1-RF-36 | **Calificación** del inquilino (verde, amarillo o rojo) con criterios ponderados configurables | S | 2 |
-| C1-RF-37 | Registrar recibos de agua y luz del proveedor (uno o más suministros) con su archivo | M | 2 |
+| C1-RF-37 | Registrar recibos de agua, luz y gas del proveedor (uno o más suministros) con su archivo | M | 2 |
 | C1-RF-38 | Registrar lecturas de submedidores con foto; la lectura anterior se toma del mes previo | M | 2 |
-| C1-RF-39 | **Calcular el prorrateo** por departamento con cuadre exacto al total del recibo | M | 2 |
+| C1-RF-39 | **Calcular el prorrateo** por departamento con cuadre exacto al total del recibo (agua, luz y gas) | M | 2 |
 | C1-RF-40 | Generar el **resumen de servicios** por inquilino y enviarlo por correo con los adjuntos | S | 2 |
 | C1-RF-41 | Registrar si el dueño ya pagó el recibo al proveedor | S | 2 |
 | C1-RF-42 | Registrar gastos de mantenimiento con el flujo **solicitud → aprobación del dueño** | S | 2 |
@@ -36,12 +36,16 @@
 | C1-RF-46 | Calcular el **rendimiento** mensual y anual, los años de recuperación y la comparación con un plazo fijo, por inmueble y total | M | 2 |
 | C1-RF-47 | **Cierre de mes** con validaciones (sin deudas, vouchers completos, servicios pagados) y bloqueo de cambios | S | 2 |
 | C1-RF-48 | Saludo automático de **cumpleaños** por correo | C | 2 |
-| C1-RF-49 | Exportar reportes (cobranza, morosidad, rendimiento) a Excel o PDF | S | 2 |
+| C1-RF-49 | Exportar reportes (cobranza, morosidad, rendimiento) a Excel o PDF (ver C1-RF-56) | S | 2 |
 | C1-RF-50 | Importar los datos iniciales desde los Excel actuales del cliente | S | 1 |
 | C1-RF-51 | Armar el **dossier de desalojo** con contrato, datos laborales, deuda y comprobantes | S | 2 |
 | C1-RF-52 | Emitir el **desglose en PDF** del estado de cuenta por correo | S | 2 |
 | C1-RF-53 | Declarar una cuota como **incobrable**, con autorización y motivo | S | 2 |
 | C1-RF-54 | Comparar el Cap Rate con la tasa del módulo de inversiones, o con una tasa manual si no está activo | S | 2 |
+| C1-RF-55 | Guardar el **autovalúo** (impuesto predial) de cada inmueble por año, con su archivo y fecha de pago [CONFIRMADO — PPT cliente] | M | 1 |
+| C1-RF-56 | **Vista tipo tabla (estilo Excel)** de cuotas por contrato: período, monto, fecha de vencimiento, fecha de pago, estado, y una **columna de incremento programado** visible; filtrable, ordenable y exportable [CONFIRMADO — PPT cliente] | M | 1 |
+| C1-RF-57 | **Escalamiento de alerta por falta de pago:** primero al **analista**; si no se regulariza en N días (configurable), al **dueño/gerente** [CONFIRMADO — PPT cliente] | M | 1 |
+| C1-RF-58 | Prorratear y cobrar el **gas** igual que agua y luz, cuando el inmueble lo tenga [CONFIRMADO — PPT cliente] | S | 2 |
 | C1-RF-83 | **Portal o app para el inquilino**: ver su deuda, subir comprobantes y reportar limpieza | C | 3 |
 
 ## 6.2 Demás verticales [INFERIDO a partir del mapeo]
