@@ -14,9 +14,10 @@ de terceros con costo o incertidumbre (WhatsApp, OCR, SMS masivo) va al final.
 - Inmuebles, departamentos, inquilinos (con DNI y datos laborales) y contratos.
 - Cuotas mensuales automáticas, **historial de montos** e **incrementos programados**.
 - Registro de pagos + **repositorio de vouchers** por período + verificación humana + aviso de archivo duplicado.
-- **Alertas**: lista semanal y diaria para el analista, atraso ≥ 7 días para el dueño (**correo**), renovación de contrato.
+- **Alertas**: lista semanal y diaria para el analista, escalamiento por atraso (analista y luego dueño, por **correo**, [C1-RF-57](06-requerimientos-preliminares.md)), renovación de contrato.
 - Historial del inquilino (estadías y atrasos).
 - Importación inicial desde Excel y reportes básicos de cobranza.
+- Guardar el **autovalúo** por año (C1-RF-55) y la **vista tipo tabla** de cuotas con columna de incremento (C1-RF-56).
 
 **Entregable funcional:** el analista registra cobros y vouchers; el dueño recibe correos por morosidad y renovación.
 
@@ -24,7 +25,7 @@ de terceros con costo o incertidumbre (WhatsApp, OCR, SMS masivo) va al final.
 
 **Objetivo:** que el dueño vea **cuánto gana y cuánto vale** cada inmueble.
 
-- **Servicios**: recibos, lecturas con foto, **prorrateo** exacto y envío del resumen por correo.
+- **Servicios**: recibos, lecturas con foto, **prorrateo** exacto (agua, luz y **gas**, C1-RF-58) y envío del resumen por correo.
 - Mantenimiento con **aprobación de gastos** y **rol de limpieza**.
 - **Mejoras**, **valorización por UIT** y **rendimiento** mensual y anual.
 - **Calificación** de inquilinos (semáforo).

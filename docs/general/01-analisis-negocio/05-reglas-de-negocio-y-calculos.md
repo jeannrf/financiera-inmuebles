@@ -21,6 +21,8 @@ Los números de las reglas originales se conservan para mantener la trazabilidad
 | NUC-RN-24 | Las reglas de un rubro van en su paquete o plantilla, **nunca** en el núcleo. | [EQUIPO] |
 | NUC-RN-25 | Los importes, impuestos, umbrales y pesos son **parámetros**, no valores fijos en el código. | [CONFIRMADO, ver NUC-RNF-12] |
 | NUC-RN-27 | El dinero de terceros (garantías, primas, gastos suplidos, pauta) **no es ingreso** y no entra al P&L. | [INFERIDO de C1, C2 y C3] |
+| NUC-RN-28 | Una tarea solo pasa a **Cerrada** cuando la aprueba quien la asignó o el dueño. El responsable no puede cerrarla solo. | [CONFIRMADO — PPT cliente] |
+| NUC-RN-29 | Los datos con valor tributario se conservan **10 años** desde el cierre del ejercicio; antes de ese plazo solo se pueden archivar, no borrar. | [CONFIRMADO — PPT cliente] |
 | NUC-RN-26 | Los cálculos tributarios **calculan y reportan**; no presentan declaraciones ante SUNAT. | [CONFIRMADO en fases] |
 
 ## 5.2 Cómo cambia cada regla según el clúster

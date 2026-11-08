@@ -51,7 +51,16 @@ Procesos particulares: [C1-P-01 a C1-P-11](../../clusters/cluster-1-activos-alqu
 ### NUC-P-18. Salida de un cliente y exportación de datos [INFERIDO]
 1. El **Dueño** solicita la baja de un negocio o de toda su organización.
 2. El sistema genera una exportación completa de datos y documentos.
-3. Tras el plazo acordado, se conserva lo que obliga la ley y se elimina el resto, dejando constancia.
+3. Se conserva **10 años** la información con valor tributario ([NUC-RN-29](05-reglas-de-negocio-y-calculos.md), [NUC-RNF-22](06-requerimientos-preliminares.md)), solo archivada y sin posibilidad de borrarla; el resto se elimina tras el plazo acordado, dejando constancia.
+
+### NUC-P-19. Asignación y cierre de tareas [CONFIRMADO — PPT cliente]
+**AS-IS:** las tareas se piden por WhatsApp y nadie confirma que se hicieron.
+**TO-BE:**
+1. Un usuario crea la tarea y la asigna.
+2. El sistema notifica al responsable.
+3. El responsable la ejecuta y la marca "por aprobar", con evidencia opcional.
+4. Quien asignó la aprueba (cerrada) o la devuelve (en curso) con comentario ([NUC-RN-28](05-reglas-de-negocio-y-calculos.md)).
+5. Si vence sin cerrarse, se alerta al responsable y luego a quien asignó.
 
 ---
 

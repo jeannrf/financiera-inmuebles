@@ -45,3 +45,7 @@
 | NUC-Q-15 | ¿Se necesita contabilidad formal o basta con un P&L de gestión? | P&L de gestión; no reemplaza al sistema contable. |
 | NUC-Q-16 | ¿Multimoneda en el núcleo? C2 (viajes) e Inversiones la necesitan. | Sí, por negocio y con tipo de cambio registrado en cada operación. |
 | NUC-Q-26 | En el tablero, ¿qué representa el "monto" de cada negocio: ingresos del mes, acumulado anual o patrimonio? ¿Cómo se define el objetivo? | Que lo defina cada paquete; validar con el cliente piloto para C1 e Inversiones. |
+| NUC-Q-27 | "Alertas por teléfono": ¿SMS, llamada automática o WhatsApp? | SMS en la etapa 2 (barato); WhatsApp en la etapa 3 |
+| NUC-Q-28 | ¿El plazo de 10 años aplica a todo o solo a lo tributario? ¿Desde qué fecha se cuenta? Validar con un contador (el Código Tributario fija plazos de conservación y prescripción). | Conservar 10 años todo lo que tenga monto o comprobante |
+| NUC-Q-29 | ¿Un analista puede asignar tareas a otro analista o solo el dueño asigna? | Ambos pueden; el cierre lo aprueba quien asignó |
+| NUC-Q-30 | ¿La calculadora es una calculadora simple o calculadoras de negocio (rendimiento, interés de plazo fijo, incremento de alquiler)? | Empezar con una simple + las de negocio que ya existen como fórmulas |

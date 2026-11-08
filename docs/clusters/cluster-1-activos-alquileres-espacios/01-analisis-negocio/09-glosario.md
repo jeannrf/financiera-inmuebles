@@ -8,6 +8,7 @@ Términos del rubro. Los de la plataforma están en el [glosario general](../../
 | **Alícuota** | Porcentaje de participación de una unidad en los gastos comunes. |
 | **Analista** | Empleado que realiza la operación diaria (cobros, vouchers, lecturas) con acceso restringido. |
 | **Arbitrios** | Tributo municipal por limpieza pública, parques y serenazgo, que paga el propietario. |
+| **Autovalúo** | Valor del predio declarado cada año, sobre el que se calcula el impuesto predial. |
 | **Cap Rate** | Ingreso neto anual dividido entre el valor del activo. |
 | **Check-in / Check-out** | Devolución y entrega de un bien alquilado, con acta. |
 | **Cierre de mes (candado)** | Bloqueo de un período cuando todo está cobrado, verificado y pagado; después ya no se modifica. |

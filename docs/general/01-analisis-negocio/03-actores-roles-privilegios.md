@@ -45,6 +45,8 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial o configurabl
 | Ver totales, utilidades, saldos y valorizaciones | ❌ | ❌ | ✅ | ❌ |
 | Trabajar la operación diaria | ❌ | ❌ | ✅ | ✅ |
 | Aprobar gastos y excepciones | ❌ | ❌ | ✅ | ❌ |
+| Asignar tareas a otros colaboradores | ❌ | ❌ | ✅ | ✅ [PREGUNTA [NUC-Q-29](08-preguntas-abiertas.md)] |
+| Aprobar el cierre de una tarea | ❌ | ❌ | ✅ | ⚠ solo las que él asignó |
 | Cerrar un período | ❌ | ❌ | ✅ | ❌ |
 | Ver datos del cliente | ⚠ solo con permiso | ⚠ acceso temporal y auditado | ✅ | ⚠ según rol |
 | Consultar la auditoría | ⚠ de plataforma | ❌ | ✅ | ❌ |

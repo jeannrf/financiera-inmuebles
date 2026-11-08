@@ -89,6 +89,10 @@ nuevos negocios, y el sistema puede **crecer a N negocios** y **adaptarse a otro
 | Propuesta de las 3 etapas | Igual |
 | Cronograma (MS Project o Gantt) y precio | Después de validar el alcance |
 
+## 1.9 Material recibido del cliente
+
+2026-11-06 — PPT *SOFTWARE DE GESTIÓN* (4 diapositivas) con las características macro de los software general, inmobiliario y de finanzas. Sus puntos se incorporaron con la marca `[CONFIRMADO — PPT cliente]`.
+
 ## Entregables que pidió el cliente para la próxima reunión (~1 mes, en un coworking)
 
 1. Un **borrador o boceto en PowerPoint** con lo que entendimos: la estructura, la información

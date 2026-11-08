@@ -80,6 +80,7 @@ trabajo, no para todo. El límite real es este:
 | **Flujo / Estado** | Máquina de estados configurable | Pipeline, Kanban |
 | **Alerta / Notificación** | Avisos internos y externos programados | Vencimiento, cumpleaños |
 | **Solicitud de aprobación** | Acción que requiere autorización | Gasto de mantenimiento, descuento |
+| **Tarea** | Trabajo asignado a un colaborador, con responsable, fecha límite y aprobación de cierre | "Subir el voucher del Depto 401", "Revisar el recibo de luz" |
 | **Período** | Mes contable con candado | Octubre 2026 cerrado |
 | **Mensaje** | Mensajería interna anclada a una entidad | Observación sobre la cuota del Depto 401 |
 | **Registro de auditoría** | Quién hizo qué y cuándo | |

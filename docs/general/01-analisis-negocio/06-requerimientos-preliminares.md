@@ -18,7 +18,7 @@
 | NUC-RF-06 | **Mensajería interna** analista → dueño (por ejemplo, gasto pendiente de aprobación), marcable como leída | S | 2 |
 | NUC-RF-07 | Bandeja de **alertas** dentro del sistema | M | 1 |
 | NUC-RF-08 | Enviar alertas por **correo electrónico** | M | 1 |
-| NUC-RF-09 | Enviar alertas por **SMS** | C | 2–3 |
+| NUC-RF-09 | Enviar alertas por **SMS** *(sube de C a S: la PPT pide alertas por teléfono como característica macro. Ver [NUC-Q-27](08-preguntas-abiertas.md))* | S | 2–3 |
 | NUC-RF-10 | Repositorio de **documentos** (imágenes o PDF) asociados a entidades, consultables por período | M | 1 |
 | NUC-RF-11 | Configurar parámetros: días de umbral de alerta, tasas de impuestos, tabla de UIT, tasa de referencia | M | 1–2 |
 | NUC-RF-12 | Bitácora de auditoría (quién registró o cambió qué y cuándo) | S | 1 |
@@ -47,7 +47,7 @@
 | NUC-RF-30 | Registrar ingresos y egresos con centro de costo | M | 1 |
 | NUC-RF-31 | Cuentas por cobrar y cuentas por pagar | M | 1–2 |
 | NUC-RF-32 | Cajas y bancos con conciliación de saldos | S | 2 |
-| NUC-RF-33 | Estado de Resultados (P&L) mensual y anual por negocio y centro de costo | S | 2 |
+| NUC-RF-33 | Estado de Resultados (P&L) mensual y anual por negocio y centro de costo, y **total consolidado** de todos los negocios | S | 2 |
 | NUC-RF-34 | Directorio unificado de contactos con uno o más papeles | M | 1 |
 | NUC-RF-35 | Plantillas de PDF para contratos, recibos y presupuestos | S | 2 |
 | NUC-RF-36 | Motor de estados y tableros Kanban configurables | S | 2 |
@@ -55,12 +55,25 @@
 | NUC-RF-38 | **Comprobantes electrónicos** (boleta y factura) mediante un proveedor autorizado | S | Por definir ([NUC-Q-07](08-preguntas-abiertas.md)) |
 | NUC-RF-39 | **Fondos de terceros:** registrar dinero ajeno fuera del P&L hasta aplicarlo o devolverlo | S | 2 |
 
+### Colaboración y tareas [CONFIRMADO — PPT cliente]
+
+| ID | Requerimiento | Prioridad | Etapa |
+|----|---------------|:---------:|:-----:|
+| NUC-RF-40 | **Asignar tareas** a otros colaboradores (título, descripción, responsable, fecha límite, negocio y entidad relacionada) | M | 1–2 |
+| NUC-RF-41 | Estados de la tarea (pendiente, en curso, por aprobar, cerrada, rechazada) y notificación al responsable | M | 1–2 |
+| NUC-RF-42 | **Aprobación para cerrar una tarea:** el responsable la marca como terminada y quien la asignó (o el dueño) la aprueba o la devuelve, con comentario y evidencia | M | 1–2 |
+| NUC-RF-43 | Bandeja "mis tareas" y "tareas que asigné", con alerta de tareas vencidas | S | 2 |
+| NUC-RF-44 | **Calculadora** integrada, accesible desde cualquier pantalla ([NUC-Q-30](08-preguntas-abiertas.md)) | C | 2 |
+| NUC-RF-45 | **Gráfico de barras de evolución** (ingresos, egresos y resultado por período) por negocio y consolidado | S | 2 |
+
+> **Cambio de alcance:** el motor de tareas e hitos estaba previsto solo como motor activable para el Clúster 3. Con la PPT, la **tarea básica entre colaboradores pasa al núcleo**. Los hitos y dependencias de proyecto siguen en C3.
+
 ### Integraciones y futuro (original etapa 3)
 
 | ID | Requerimiento | Prioridad | Etapa |
 |----|---------------|:---------:|:-----:|
-| NUC-RF-80 | Integración con **WhatsApp** (recibir mensajes y comprobantes, enviar recordatorios) | C | 3 |
-| NUC-RF-81 | Chat o **videollamada** interna | C | 3 |
+| NUC-RF-80 | Integración con **WhatsApp** (recibir mensajes y comprobantes, enviar recordatorios) *(sube de C a S: la PPT lo pone en la portada; explicar al cliente por qué va en la etapa 3, [CLI-Q-10](../../clientes/cliente-piloto/02-preguntas-abiertas.md))* | S | 3 |
+| NUC-RF-81 | Chat o **videollamada** interna *(sube de C a S: la PPT lo pone en la portada; mismo motivo que NUC-RF-80)* | S | 3 |
 | NUC-RF-82 | Lectura automática de comprobantes (OCR) que solo **sugiere** monto y fecha | C | 3 |
 | NUC-RF-85 | ~~Plantillas para otros rubros~~ → ahora es el centro del producto; ver NUC-RF-14 y NUC-RF-15, y los [clústeres](../../clusters/README.md) | — | — |
 
@@ -89,6 +102,7 @@
 | NUC-RNF-19 | **Uso de IA** | El uso de datos de clientes en modelos de IA requiere consentimiento y se minimiza; toda propuesta queda registrada junto con quién la aprobó |
 | NUC-RNF-20 | **Portabilidad de datos** | El cliente puede obtener sus datos en formato abierto |
 | NUC-RNF-21 | **Sensibilidad por paquete** | Un paquete puede declarar datos sensibles (salud, contraseñas de equipos) con cifrado y acceso más estrictos |
+| NUC-RNF-22 | **Retención** | La información contable y tributaria (ingresos, egresos, comprobantes, vouchers, reportes) se conserva al menos **10 años** y no se puede eliminar antes de ese plazo, ni siquiera al dar de baja un negocio ([NUC-RN-29](05-reglas-de-negocio-y-calculos.md), [NUC-Q-28](08-preguntas-abiertas.md)) [CONFIRMADO — PPT cliente] |
 
 ## 6.3 Restricciones conocidas
 
