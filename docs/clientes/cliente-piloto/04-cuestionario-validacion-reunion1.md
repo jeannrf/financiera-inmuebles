@@ -5,6 +5,10 @@
 **Elaborado por:** Equipo de Ingeniería del Proyecto (John, Jeanpier, Ilia)  
 **Objetivo:** Consolidar definiciones operativas y recopilar datos reales para la presentación formal de la Fase 0 (~28 de noviembre de 2026 en Coworking).
 
+> **Estado de respuestas (10/Nov/2026):** el cliente respondió las preguntas **3 a 10**. Las respuestas y los
+> archivos actualizados están en la [Sección 3](#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026).
+> Siguen pendientes la **1, 2, 11, 12, 13 y 14** y los 3 insumos prácticos.
+
 ---
 
 ## Sección 1: Mensaje Ejecutivo para Envío Directo (WhatsApp / Correo)
@@ -179,3 +183,34 @@ Quedamos a su disposición para coordinar la recepción de los archivos. ¡Mucha
   1. El módulo admitirá operaciones tanto en **Soles (S/)** como en **Dólares (US$)**, mostrando los saldos en su moneda de origen y ofreciendo un totalizador consolidado al tipo de cambio del día ingresado por el usuario.  
   2. Para las acciones vigentes en portafolio, el sistema mostrará el costo promedio de compra y permitirá ingresar el precio actual de bolsa para proyectar la ganancia o pérdida no realizada, ayudándole a decidir cuándo liquidar una posición para transferir los fondos a instrumentos más rentables.
 
+
+---
+
+## Sección 3: Respuestas del cliente (10 de noviembre de 2026)
+
+> Respuestas registradas por el equipo. Cada fila indica qué cambió y dónde. Lo que quedó sin responder dentro de
+> una pregunta se convirtió en una pregunta nueva.
+
+| # | Pregunta | Respuesta del cliente | ¿Aceptó la propuesta? | Dónde se aplicó |
+|---|----------|-----------------------|:---------------------:|-----------------|
+| 3 | Plataforma web (`CLI-Q-04`) | Está de acuerdo con la web, pero pide **dos formas de entrega**: **versión web para empresas pequeñas** y **aplicación de escritorio para medianas y grandes**. Además, que se usen **servidores** en lugar de la nube. | ⚠ Con cambios | Núcleo: [arquitectura](../../general/04-arquitectura/README.md), [NUC-RNF-07 y NUC-RNF-23](../../general/01-analisis-negocio/06-requerimientos-preliminares.md), [NUC-Q-31 a NUC-Q-33](../../general/01-analisis-negocio/08-preguntas-abiertas.md), [riesgos](../../general/01-analisis-negocio/01-vision-y-modelo-de-negocio.md#16-riesgos-que-introduce-este-cambio) |
+| 4 | Tercer negocio (`CLI-Q-08`) | **Por ahora solo** inmobiliario e inversiones financieras. No habrá tercer negocio a mediano plazo. | ❌ No (se descarta el espacio de Proyectos / Construcción) | [README del cliente](README.md), [fases generales](../../general/01-analisis-negocio/07-fases-y-alcance.md#73-qué-clúster-va-después-del-piloto), [C3 fases](../../clusters/cluster-3-servicios-profesionales-proyectos/01-analisis-negocio/07-fases-y-alcance.md) |
+| 5 | Dimensionamiento (`CLI-Q-06`, `CLI-Q-07`) | **1 analista** y **11 unidades en alquiler** de tres tipos: **departamentos**, **alquiler en mercado** y **cocheras**. No indicó la proyección a 2–3 años. | ✅ Sí | [Configuración del cliente](03-configuracion-y-datos.md#34-dimensionamiento-actual), [C1 dominio: tipos de unidad](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/02-dominio.md#unidad-alquilable-departamento-puesto-de-mercado-o-cochera) |
+| 6 | Indicador del tablero (`NUC-Q-26`) | La tarjeta muestra los **ingresos efectivamente cobrados**. En el inmobiliario la meta es que **todas las unidades estén alquiladas y ninguna libre**; en otros negocios la meta es que **crezcan los clientes**. | ✅ Sí, y añade la meta de ocupación | Núcleo: [5.3 tablero](../../general/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md#53-tablero-estado-del-negocio-frente-al-objetivo). C1: [B8 ocupación](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md#b8-indicadores-del-tablero-cobranza-y-ocupación) |
+| 7 | Alerta de morosidad al dueño (`C1-Q-13`) | Umbral de **7 días**. Canales: **correo electrónico** y **bandeja del sistema** (no pidió SMS). | ✅ Sí | [C1-RN-06](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md), [alertas por rol](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/03-actores-roles-privilegios.md#33-alertas-por-rol) |
+| 8 | Pagos parciales y mora (`C1-Q-24`) | **Sí** se puede pagar parcialmente y **no se cobra ningún interés** ni penalidad. | ✅ Sí | [C1-RN-39, C1-RN-40 y B4](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md), [C1-RF-59](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/06-requerimientos-preliminares.md) |
+| 9 | Visibilidad del analista (`C1-Q-31`, `C1-Q-32`) | El analista **sí ve el monto individual y el comprobante**, pero **no** datos generales como la recaudación total, porque podría pedir un aumento basándose en las ganancias del negocio. | ✅ Sí | [Matriz de privilegios C1](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/03-actores-roles-privilegios.md#32-matriz-preliminar-de-privilegios), [NUC-RN-12 y NUC-RN-30](../../general/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md) |
+| 10 | Prorrateo de servicios (`C1-Q-19`) | Hay **medidor de agua y de luz por departamento**. Consumo = lectura actual − lectura del mes pasado. La **suma de los consumos** de los departamentos es el consumo total. El proveedor envía el monto total de **agua, alcantarillado y luz**, y a cada departamento se le asigna un monto **proporcional a su consumo**. Unos departamentos pueden tener un **suministro de luz distinto** al de otros. | ✅ Método A | [B3 prorrateo](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md#b3-prorrateo-de-servicios-agua-y-luz), [C1-RN-41](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md) |
+
+### Preguntas nuevas que dejan estas respuestas
+
+| ID | Origen | Pregunta |
+|----|:------:|----------|
+| [NUC-Q-31](../../general/01-analisis-negocio/08-preguntas-abiertas.md) | P3 | ¿Qué hace que una empresa sea "pequeña" (web) o "mediana/grande" (escritorio)? ¿Número de usuarios, de unidades, de sedes? |
+| [NUC-Q-32](../../general/01-analisis-negocio/08-preguntas-abiertas.md) | P3 | "Servidores en vez de la nube": ¿servidores **propios del cliente** (en su oficina) o un **servidor dedicado** contratado por nosotros? ¿Por qué evita la nube: costo, confianza o control de los datos? |
+| [NUC-Q-33](../../general/01-analisis-negocio/08-preguntas-abiertas.md) | P3 | En su caso (1 analista, 11 unidades), ¿confirmamos que usa la **versión web**? |
+| [CLI-Q-11](02-preguntas-abiertas.md) | P5 | ¿Cuántas unidades espera tener en 2–3 años? |
+| [C1-Q-58](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P5 | "Alquiler de mercado": ¿es un **puesto o local dentro de un mercado**? ¿Cuántas unidades hay de cada tipo? ¿Las cocheras y puestos pagan servicios o mantenimiento? |
+| [C1-Q-59](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P6 | ¿La meta mensual de cobranza es la suma de los alquileres con **todas las unidades ocupadas**, o un monto que usted fija? |
+| [C1-Q-60](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P8 | Con un pago parcial, ¿la alerta de 7 días se cuenta desde el vencimiento original aunque haya abonado una parte? |
+| [C1-Q-61](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P10 | Si el agua y el alcantarillado vienen en el mismo recibo, ¿se reparten juntos por el consumo de agua? ¿El cargo fijo del recibo también se reparte por consumo? |

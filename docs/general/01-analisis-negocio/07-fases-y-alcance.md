@@ -33,7 +33,7 @@ Lo que sí es posible y barato ahora es **no bloquearla**. Hay decisiones muy ca
 Se decide con clientes reales. Con la información actual, **el mejor candidato es el Clúster 3, vertical 3.3**
 (constructoras y presupuestos por partidas), porque:
 
-- El cliente piloto ya mencionó **presupuestos de construcción** como posible tercer negocio, y NUC-P-15 usa ese ejemplo. [INFERIDO → [CLI-Q-08](../../clientes/cliente-piloto/02-preguntas-abiertas.md)]
+- ~~El cliente piloto ya mencionó **presupuestos de construcción** como posible tercer negocio.~~ **Actualización 10/Nov/2026:** el piloto confirmó que, por ahora, **no** abrirá un tercer negocio ([CLI-Q-08](../../clientes/cliente-piloto/02-preguntas-abiertas.md)). C3 pierde su cliente real para validar; sigue siendo candidato por reutilización, pero la elección queda abierta hasta que llegue un cliente de otro clúster.
 - Según la [matriz](10-mapa-de-clusters-y-reutilizacion.md#103-matriz-de-reutilización), C3 tiene reutilización alta de contratos y cobro recurrente, que ya estará construido.
 - Es una prueba exigente: obliga a añadir el motor de tareas e hitos sin tocar el núcleo.
 

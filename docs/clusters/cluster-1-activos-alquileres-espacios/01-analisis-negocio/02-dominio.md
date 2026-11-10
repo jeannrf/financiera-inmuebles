@@ -75,7 +75,8 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 
 #### Negocio / Unidad de negocio
 - El inmobiliario es **un negocio** dentro del sistema, que admite N negocios.
-- Tiene un **objetivo mensual** de ingresos para el tablero (por ejemplo, objetivo 120 frente a real 116).
+- Tiene un **objetivo mensual** de ingresos para el tablero (por ejemplo, objetivo 120 frente a real 116). El monto real son
+  los ingresos **efectivamente cobrados**, y la meta de fondo es la **ocupación total** [CONFIRMADO — P6; ver [B8](05-reglas-de-negocio-y-calculos.md#b8-indicadores-del-tablero-cobranza-y-ocupación)].
 
 #### Inmueble / Edificio (propiedad)
 - Nombre, dirección y distrito.
@@ -84,12 +85,25 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 - Medidores o **suministros** generales de agua y luz (puede haber **más de uno**; el cliente suma dos suministros de luz).
 - Modalidad de servicios: **el dueño paga y prorratea** o **el inquilino paga directo**. [INFERIDO: por inmueble o por departamento]
 
-#### Departamento (unidad alquilable)
-- Código (**sin estándar fijo**: "1A", "2B", "501"…), piso e inmueble al que pertenece.
-- **Valor** del departamento [PREGUNTA C1-Q-10: ¿el valor se lleva por edificio, por departamento o por ambos?].
-- **Submedidores** propios de agua y luz (con su número de suministro si existe).
-- Estado: ocupado o libre.
+#### Unidad alquilable (departamento, puesto de mercado o cochera)
+- **Tipo de unidad** [CONFIRMADO — cuestionario P5]: el piloto alquila **departamentos**, unidades en un **mercado** (puesto o
+  local [INFERIDO → C1-Q-58]) y **cocheras**. El tipo es un **catálogo configurable**, no una lista fija en el código (NUC-RN-25).
+  Cada tipo define qué atributos y conceptos usa:
+
+  | Tipo | Submedidores | Servicios prorrateados | Mantenimiento y limpieza |
+  |------|:------------:|:----------------------:|:------------------------:|
+  | Departamento | Agua y luz | Sí (si el dueño paga el recibo) | Sí |
+  | Puesto o local de mercado | [PREGUNTA C1-Q-58] | [PREGUNTA C1-Q-58] | [PREGUNTA C1-Q-58] |
+  | Cochera | No [INFERIDO] | No [INFERIDO] | [PREGUNTA C1-Q-58] |
+
+- Código (**sin estándar fijo**: "1A", "2B", "501", "C-03"…), piso (si aplica) e inmueble al que pertenece.
+- **Valor** de la unidad [PREGUNTA C1-Q-10: ¿el valor se lleva por edificio, por unidad o por ambos?].
+- **Submedidores** propios de agua y luz (con su número de suministro si existe). Cada submedidor de luz pertenece a **un
+  suministro** del inmueble; dos departamentos del mismo edificio pueden estar en suministros distintos [CONFIRMADO — P10].
+- Estado: **ocupada o libre**. Es la base del indicador de **ocupación** del tablero (la meta del dueño es que ninguna quede libre).
 - Historial de inquilinos.
+
+> Volumen actual del piloto: **11 unidades** y **1 analista** ([configuración](../../../clientes/cliente-piloto/03-configuracion-y-datos.md#34-dimensionamiento-actual)).
 
 #### Inquilino
 - Nombre completo, **DNI** (y **copia escaneada del DNI**), teléfono (el mismo del grupo de WhatsApp), correo y **fecha de nacimiento** (para el saludo de cumpleaños).
@@ -110,18 +124,23 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 
 #### Cuota / Obligación de pago (lo que hay que cobrar)
 - Generada automáticamente cada mes por contrato: concepto (alquiler, agua, luz, mantenimiento, limpieza, multa por limpieza…), período, monto y fecha de vencimiento.
-- Estado: pendiente → pagada (con voucher verificado) / vencida / con atraso de N días.
+- Estado: pendiente → **pago parcial** (con saldo pendiente) → pagada (con voucher verificado) / vencida / morosa (≥ 7 días de atraso).
+- **Saldo pendiente** = monto de la cuota − Σ pagos verificados. **Sin intereses ni penalidad por mora** [CONFIRMADO — P8].
 
 #### Pago y voucher
 - Fecha, monto, medio (**Yape**, Plin [INFERIDO], **transferencia**, efectivo [PREGUNTA C1-Q-12]) y la cuota o cuotas que cubre.
+- Una cuota puede tener **varios pagos** (pagos parciales), cada uno con **su propio voucher** [CONFIRMADO — P8].
 - **Imagen o PDF del voucher**, asociada a **inquilino + departamento + período** (por ejemplo, "enero 2026").
 - **Verificación humana**: el sistema **no interpreta** la imagen; una persona confirma que el monto y el período coinciden.
 - Hoy los vouchers llegan por **WhatsApp**, y el analista los descarga y los sube al sistema.
 
 #### Recibo de servicio (agua y luz)
-- Recibo del proveedor (Sedapal / Enel o Luz del Sur [INFERIDO]) por suministro: período, monto total, consumo total y archivo del recibo.
-- **Lecturas** de submedidor por departamento: lectura anterior y lectura actual (con **foto** como evidencia).
-- Resultado: **monto por departamento** y un **resumen o recibo interno** que se envía a cada inquilino por correo.
+- Recibo del proveedor (Sedapal / Enel o Luz del Sur [INFERIDO]) **por suministro**: período, monto total, consumo total y archivo del recibo.
+  El recibo de agua incluye **agua y alcantarillado** [CONFIRMADO — P10].
+- Cada suministro tiene su **grupo de departamentos**: el recibo se reparte solo entre los departamentos conectados a él.
+  Unos departamentos pueden tener un proveedor o suministro de luz distinto al de otros [CONFIRMADO — P10].
+- **Lecturas** de submedidor por departamento: lectura anterior (la del mes pasado) y lectura actual (con **foto** como evidencia).
+- Resultado: **monto por departamento**, proporcional a su consumo ([B3](05-reglas-de-negocio-y-calculos.md#b3-prorrateo-de-servicios-agua-y-luz)), y un **resumen o recibo interno** que se envía a cada inquilino por correo.
 
 #### Gasto de mantenimiento común
 - Ascensor, energía de áreas comunes, limpieza, vigilancia (por ejemplo, 3 vigilantes en turnos de 8 h para cubrir 24/7).

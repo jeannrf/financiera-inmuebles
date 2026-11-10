@@ -4,7 +4,8 @@
 
 **Dependencias:** núcleo, motor de cobro recurrente (del piloto) y un nuevo motor de **Tareas e Hitos**.
 
-**Vertical de entrada sugerida: 3.3 Construcción** [INFERIDO], porque el cliente piloto la mencionó como posible tercer negocio ([CLI-Q-08](../../../clientes/cliente-piloto/02-preguntas-abiertas.md)) y sería un cliente real para validar. Pero es la vertical **más exigente**. Si el piloto no la confirma, 3.1 o 3.2 son una entrada más sencilla.
+~~**Vertical de entrada sugerida: 3.3 Construcción**, porque el cliente piloto la mencionó como posible tercer negocio.~~
+**Actualización 10/Nov/2026:** el piloto **no** abrirá un tercer negocio por ahora ([CLI-Q-08](../../../clientes/cliente-piloto/02-preguntas-abiertas.md)). Sin un cliente real en 3.3, que es la vertical **más exigente**, la entrada sugerida pasa a ser **3.1 o 3.2** [INFERIDO], hasta que aparezca un cliente concreto.
 
 | Fase | Contenido |
 |------|-----------|
