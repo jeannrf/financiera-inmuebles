@@ -32,7 +32,6 @@ Términos del rubro. Los de la plataforma están en el [glosario general](../../
 | **Ocupación** | Porcentaje de unidades alquilables que están alquiladas; la meta del dueño es el 100 %. |
 | **Pago parcial** | Abono menor que el monto de la cuota; la cuota queda con saldo pendiente, sin intereses. |
 | **Puesto de mercado** | Local o espacio dentro de un mercado que se alquila como unidad. |
-| **Suministro** | Conexión con el proveedor (luz o agua) que genera un recibo propio; agrupa a los departamentos que se alimentan de ella. |
 | **Período de recuperación** | Años necesarios para recuperar la inversión con el ingreso neto (meta del cliente: 12–15 años). |
 | **Período** | Mes y año al que corresponde una cuota, un pago o un voucher (por ejemplo, enero 2026). |
 | **Plin / Yape** | Billeteras digitales peruanas para transferencias inmediatas. |
@@ -52,3 +51,10 @@ Términos del rubro. Los de la plataforma están en el [glosario general](../../
 | **Vigilante (huachimán)** | Personal de seguridad del edificio (3 turnos de 8 h para cubrir 24/7). |
 | **Voucher** | Comprobante de pago (captura de Yape o transferencia) que envía el inquilino. |
 | **Áreas comunes** | Espacios compartidos del edificio (ascensor, pasillos, ingreso), cuyos gastos se cubren con el mantenimiento. |
+| **Acuerdo de pago por partes** | Pedido del inquilino, antes de los 7 días de atraso, para pagar su deuda en partes; evita que se declare incobrable. |
+| **Alquiler sugerido** | Alquiler de mercado por m² de la zona multiplicado por el área de la unidad. |
+| **Antigüedad** | Años desde la construcción del inmueble; cada año resta 1 % a su valor por m² (depreciación). |
+| **Depreciación** | Pérdida de valor por antigüedad; para el piloto, 1 % por año (parámetro). |
+| **Estudio de mercado** | Registro de avisos de alquiler y de venta de una zona, del que salen los precios promedio por m². |
+| **Precio por m²** | Precio (de alquiler o de compra) dividido entre el área en metros cuadrados. |
+| **Suspensión de servicios** | Corte de agua y luz de una unidad cuya deuda se declaró incobrable. |

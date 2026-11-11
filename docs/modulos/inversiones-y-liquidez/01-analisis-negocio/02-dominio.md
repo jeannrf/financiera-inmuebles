@@ -13,7 +13,7 @@ Además, a fin de año necesita un **reporte de ganancias de trading** para decl
 ## 2.2 Instrumentos
 
 ### A) Cuentas bancarias (de ahorro con rendimiento)
-- Banco, tipo de cuenta, moneda (S/ o US$) [PREGUNTA INV-Q-20], **saldo** y **tasa (TEA)** (por ejemplo, 5 %).
+- Banco, tipo de cuenta, moneda (**S/ o US$**: el cliente tiene en ambas [CONFIRMADO — P14]), **saldo** y **tasa (TEA)** (por ejemplo, 5 %).
 - **Plazo: indefinido.** El dinero se puede retirar en cualquier momento.
 
 ### B) Depósitos a plazo fijo
@@ -48,11 +48,13 @@ Además, a fin de año necesita un **reporte de ganancias de trading** para decl
 - **Depósito a plazo**: monto, TEA, fechas e interés esperado.
 - **Acción / Valor**: emisor, ticker (nemónico BVL), moneda.
 - **Operación bursátil**: tipo (compra o venta), fecha, cantidad, precio de bolsa, comisiones, impuestos y monto real.
-- **Posición**: cantidad en cartera y costo promedio [INFERIDO].
+- **Posición**: cantidad en cartera y costo promedio [INFERIDO]. **Sin** ganancia estimada (P14).
+- **Tipo de cambio**: fecha y valor S/ por US$, ingresado por el dueño, para consolidar en soles [PROPUESTO → INV-Q-20].
 - **Dividendo / Utilidad recibida**: fecha, acción y monto.
 - **Objetivo financiero** del negocio, para el tablero.
 
 ## 2.5 Fuera de alcance inicial (sugerido)
 
 - La conexión automática con bancos o brókers para importar saldos y operaciones (no suele haber APIs públicas). En las etapas 1 y 2 el **registro es manual**, con importación de Excel o CSV como posible mejora.
-- Precios de acciones en tiempo real (la valorización de la cartera abierta se haría con el último precio que ingrese el usuario) [PREGUNTA INV-Q-23].
+- Precios de acciones en tiempo real. ~~La valorización de la cartera abierta se haría con el último precio que ingrese el usuario.~~
+  El cliente **no** quiere ver la ganancia estimada de la cartera abierta (P14), así que no se valoriza [CONFIRMADO].

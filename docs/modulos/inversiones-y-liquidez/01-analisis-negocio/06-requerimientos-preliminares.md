@@ -9,8 +9,9 @@ Prioridad **MoSCoW**. La columna **Etapa** remite a [07-fases-y-alcance.md](07-f
 | INV-RF-62 | Alerta de vencimiento de plazo fijo | S | 2 |
 | INV-RF-63 | Registrar operaciones de bolsa (compra y venta, cantidad, precio, comisiones, impuestos) | M | 2 |
 | INV-RF-64 | Registrar dividendos o utilidades recibidos | S | 2 |
-| INV-RF-65 | Calcular la ganancia o pérdida y el rendimiento % por operación, por acción y total | M | 2 |
-| INV-RF-66 | Resumen financiero: total por tipo de instrumento, rendimiento ponderado y ranking | M | 2 |
+| INV-RF-65 | Calcular la ganancia o pérdida y el rendimiento % por operación, por acción y total, incluyendo utilidades, y su **equivalente anual con regla de tres** mostrando los días de la operación [CONFIRMADO — P13] | M | 2 |
+| INV-RF-66 | Resumen financiero: total por tipo de instrumento **y por moneda (S/ y US$)**, rendimiento ponderado y ranking por % anual [CONFIRMADO — P14] | M | 2 |
+| INV-RF-74 | Registrar la **moneda** (S/ o US$) de cada cuenta, depósito y operación, y el **tipo de cambio** cuando se consolide en soles [CONFIRMADO — P14] | M | 2 |
 | INV-RF-67 | **Reporte anual** de ganancias de capital para el impuesto a la renta | M | 2 |
 | INV-RF-68 | Activar el módulo por organización, con su propia tarjeta en el tablero | M | 2 |
 | INV-RF-69 | Publicar la tasa ponderada para otros paquetes, como C1 | S | 2 |

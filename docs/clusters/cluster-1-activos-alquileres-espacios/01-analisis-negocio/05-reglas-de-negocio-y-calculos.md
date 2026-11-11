@@ -15,7 +15,7 @@
 | C1-RN-06 | Un pago con atraso de **≥ 7 días** (valor configurable) genera una alerta al **dueño** por **correo electrónico y bandeja del sistema**. | [CONFIRMADO — cuestionario P7, 10/Nov/2026; cierra C1-Q-13] |
 | C1-RN-07 | El analista recibe **cada semana** la lista de cobros de la semana. | [CONFIRMADO] |
 | C1-RN-08 | Una **mejora siempre se suma** al costo o valor del inmueble. | [CONFIRMADO] |
-| C1-RN-09 | El valor del inmueble se actualiza automáticamente con la **UIT** cada año. | [CONFIRMADO] |
+| C1-RN-09 | El valor del inmueble se actualiza automáticamente con la **UIT** cada año. *(Desde P11 es solo valor de referencia; el rendimiento usa C1-RN-43.)* | [CONFIRMADO en la 1.ª reunión → en revisión, C1-Q-62] |
 | C1-RN-10 | En el prorrateo de servicios **no puede haber pérdida ni ganancia**: la suma cobrada a los departamentos es igual al total del recibo. | [CONFIRMADO] |
 | C1-RN-14 | Si un inquilino no cumple su turno de limpieza, se contrata un reemplazo y **se le cobra** el costo. | [CONFIRMADO] |
 | C1-RN-16 | No hay descuentos por pronto pago ni por cumpleaños. | [CONFIRMADO] "No hay descuento" |
@@ -24,6 +24,11 @@
 | C1-RN-40 | El piloto **no cobra intereses ni penalidad** por mora: solo se exige el saldo pendiente. | [CONFIRMADO — P8] |
 | C1-RN-41 | El prorrateo de servicios es **proporcional al consumo** de cada departamento y se hace **por suministro**: cada recibo se reparte solo entre los departamentos conectados a ese suministro. | [CONFIRMADO — P10; cierra C1-Q-19] |
 | C1-RN-42 | La meta del negocio de alquiler es la **ocupación total**: una unidad libre es una alerta para el dueño, aunque la cobranza del mes esté al día. | [CONFIRMADO — P6] |
+| C1-RN-43 | El rendimiento de una unidad se calcula **por m²**: alquiler real por m² frente al precio de compra por m² de un departamento nuevo de la zona, **depreciado 1 % por año** de antigüedad (tasa configurable). | [CONFIRMADO — P11] |
+| C1-RN-44 | Los precios de mercado por m² (alquiler y compra) salen de un **estudio de mercado por zona** que registra el analista y valida el dueño. | [CONFIRMADO — P11] |
+| C1-RN-45 | Si una cuota cumple **7 días de atraso** y el inquilino **no pidió pagar por partes**, la deuda se declara **incobrable**. Si pidió pagar por partes, sigue como *Pago parcial* con su acuerdo. | [CONFIRMADO — P12] |
+| C1-RN-46 | Declarada la deuda incobrable, se **suspenden los servicios de agua y luz** de esa unidad. El sistema registra la suspensión (fecha, quién la ordenó) y su reposición. | [CONFIRMADO — P12] + [PREGUNTA legal C1-Q-67] |
+| C1-RN-47 | Una deuda **incobrable no se borra**: sigue en el historial del inquilino, baja su calificación y se puede cobrar después (NUC-RN-01). | [PROPUESTO → C1-Q-41] |
 
 ## A2. Reglas de las demás verticales [INFERIDO a partir del mapeo]
 
@@ -44,6 +49,12 @@
 ## B. Cálculos
 
 ### B1. Ingreso anual y rendimiento de un inmueble
+
+> **Actualización (cuestionario P11, 11/Nov/2026):** el cliente explicó que el rendimiento que usa en la práctica se calcula
+> **por metro cuadrado con precios de mercado de la zona** y depreciación, no sobre el costo histórico ni sobre la UIT.
+> Ese es ahora el **rendimiento principal** ([B1-bis](#b1-bis-rendimiento-de-mercado-por-metro-cuadrado-método-del-piloto)).
+> El cálculo de abajo (sobre la inversión) se conserva como **indicador secundario** de recuperación de la inversión
+> [PROPUESTO → C1-Q-62].
 
 ```
 Ingreso bruto anual   = alquiler mensual × 12
@@ -79,9 +90,8 @@ Alquiler mensual requerido = (inversión / años_meta + impuestos anuales) / 12
 Ej.: (500 000 / 15 + 2 000) / 12 = S/ 2 944.44
 ```
 
-[PREGUNTA C1-Q-16: ¿el rendimiento se calcula sobre la **inversión** (costo + mejoras) o sobre el **valor
-actualizado** por UIT? Proponemos mostrar ambos: "rendimiento sobre inversión" y "rendimiento sobre
-valor actual".]
+~~[PREGUNTA C1-Q-16: ¿el rendimiento se calcula sobre la inversión o sobre el valor actualizado por UIT?]~~
+Respondida en P11: ninguno de los dos como base principal; se usa el **valor de mercado por m² depreciado** (B1-bis).
 
 [PREGUNTA C1-Q-17: ¿los ingresos se consideran **cobrados** (caja) o **devengados** (lo que se debía cobrar)?
 Proponemos usar los cobrados para el rendimiento real y los devengados para el proyectado.]
@@ -91,7 +101,59 @@ Proponemos usar los cobrados para el rendimiento real y los devengados para el p
 > S/ 30 000 serían unos S/ 1 500. El impuesto predial y los arbitrios dependen de la municipalidad.
 > En el sistema conviene que los impuestos sean **montos o tasas configurables**, no fijos en el código.
 
+### B1-bis. Rendimiento de mercado por metro cuadrado (método del piloto)
+
+Respuesta del cliente (P11) [CONFIRMADO]:
+
+1. El **analista** revisa la **oferta de alquileres** de la zona y saca el **promedio de alquiler por m²**.
+2. El dueño y el analista fijan ese **precio por m²** y lo aplican a cada departamento de la zona **según su área**.
+3. El analista revisa el **precio promedio de compra de un departamento nuevo** en la zona.
+4. Ese precio se ajusta por **depreciación**: **1 % por año** de antigüedad del departamento. Del valor depreciado se saca el **valor por m²**.
+5. El **rendimiento** es la relación entre lo que se **cobra de alquiler por m²** y lo que **vale comprar por m²** (ya depreciado).
+
+```
+Alquiler de mercado por m²   = promedio( alquiler_k / área_k )          k = avisos de alquiler de la zona
+Alquiler sugerido de la unidad = alquiler de mercado por m² × área de la unidad
+Precio nuevo por m²          = promedio( precio_venta_k / área_k )      k = departamentos nuevos en venta en la zona
+Valor por m² depreciado      = precio nuevo por m² × (1 − tasa_depreciación × antigüedad)
+                               tasa_depreciación = 1 % por año (parámetro);  antigüedad = años del departamento
+Alquiler real por m²         = alquiler vigente de la unidad / área de la unidad
+Rendimiento mensual %        = alquiler real por m² / valor por m² depreciado × 100
+Rendimiento anual %          = rendimiento mensual % × 12
+```
+
+> El cliente lo expresó como `x × (100 − z)`; en porcentaje es `x × (100 − z) / 100`, que es la fórmula de arriba con tasa 1 %.
+
+**Ejemplo ilustrativo** (cifras inventadas):
+
+| Dato | Valor |
+|------|------:|
+| Alquiler de mercado de la zona | S/ 30 por m² al mes |
+| Departamento de 80 m² → alquiler sugerido | 30 × 80 = **S/ 2 400** |
+| Departamento nuevo en la zona | S/ 6 000 por m² |
+| Antigüedad del departamento | 10 años → 6 000 × (1 − 0.10) = **S/ 5 400 por m²** |
+| Alquiler real del departamento | S/ 2 200 / 80 m² = **S/ 27.50 por m²** |
+| Rendimiento mensual | 27.50 / 5 400 = **0.51 %** |
+| Rendimiento anual | 0.51 % × 12 = **6.11 %** |
+
+**Lo que agrega este método:**
+- Se necesita el **área (m²)** de cada unidad y su **año de construcción** (o antigüedad).
+- Se necesita registrar un **estudio de mercado por zona**: avisos de alquiler y de venta (fuente, fecha, área y precio), que hace el analista.
+- El **alquiler sugerido** sirve para decidir **incrementos** (C1-RN-03) y para comparar si una unidad está por debajo del mercado.
+- La comparación con un plazo fijo (C1-RF-54) se mantiene, ahora contra el rendimiento de mercado.
+
+**Lo que queda abierto:**
+- Si el rendimiento es **bruto** o se restan impuestos (renta 5 %, predial, arbitrios). El cliente no respondió esta parte de P11 [PREGUNTA C1-Q-63].
+- Si la depreciación tiene un **tope** (por ejemplo, un departamento de 60 años no vale 40 %) [PREGUNTA C1-Q-64].
+- Qué pasa con las **mejoras**: en este método no aparecen; una remodelación podría "reducir" la antigüedad [PREGUNTA C1-Q-65].
+- Cada cuánto se actualiza el estudio de mercado [PREGUNTA C1-Q-66].
+- Cómo se aplica a **cocheras y puestos de mercado**, que tienen otro precio por m² [PREGUNTA C1-Q-58].
+
 ### B2. Valorización del inmueble ligada a la UIT
+
+> **Actualización (P11):** el cliente **no** usa la UIT para el rendimiento; usa el valor de mercado por m² (B1-bis). La
+> indexación por UIT, que pidió en la primera reunión, queda como **valor patrimonial de referencia** hasta confirmar si se
+> mantiene o se reemplaza por el valor de mercado [PREGUNTA C1-Q-62].
 
 El cliente quiere que el valor "suba solito" con la UIT, sin tener que estimarlo.
 
@@ -196,7 +258,11 @@ estado      = PAGADA         si saldo = 0
               PAGO_PARCIAL   si 0 < pagado < monto y hoy ≤ fecha_vencimiento
               VENCIDA        si saldo > 0 y 0 < dias_atraso < umbral_alerta
               MOROSA         si saldo > 0 y dias_atraso ≥ umbral_alerta (7) → alerta al dueño
+              INCOBRABLE     si MOROSA y sin acuerdo de pago por partes → suspensión de agua y luz (C1-RN-45, C1-RN-46)
 ```
+
+Con P12, el día 7 dispara **dos cosas**: la alerta al dueño y la propuesta de declarar la deuda incobrable. El sistema
+**propone** y el dueño **confirma** (no lo hace solo, como en NUC-RN-04) [PROPUESTO → C1-Q-68].
 
 Una cuota vencida o morosa que tiene abonos muestra también el **saldo pendiente** y la marca "con pago parcial".
 [PREGUNTA C1-Q-60: con un pago parcial, ¿la alerta de 7 días sigue contándose desde el vencimiento original? Propuesta: sí.]

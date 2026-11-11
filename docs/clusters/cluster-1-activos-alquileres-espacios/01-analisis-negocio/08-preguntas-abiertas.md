@@ -6,12 +6,12 @@
 
 | ID | Pregunta |
 |----|----------|
-| C1-Q-10 | ¿El valor se registra por **edificio**, por **departamento** o por ambos? Si es por edificio, ¿cómo se reparte el rendimiento entre los departamentos? |
+| C1-Q-10 | ¿El valor se registra por **edificio**, por **departamento** o por ambos? Si es por edificio, ¿cómo se reparte el rendimiento entre los departamentos? *(Parcial 11/Nov: con el método por m² de P11 el valor sale por unidad; falta confirmarlo.)* |
 | C1-Q-11 | ¿Un contrato puede tener **varios inquilinos** (pareja, compañeros)? ¿Quién es el responsable del pago? |
 | C1-Q-12 | ¿Qué medios de pago acepta (Yape, Plin, transferencia, efectivo)? ¿Hay depósito de garantía? ¿Cómo se registra y se devuelve? |
 | ~~C1-Q-13~~ | ~~La alerta al dueño, ¿a los 5 o a los 7 días de atraso? ¿Quiere SMS, correo o ambos?~~ 🟢 **Respondida (10/Nov):** 7 días; correo + bandeja del sistema ([C1-RN-06](05-reglas-de-negocio-y-calculos.md)) |
 | C1-Q-14 | ¿El saludo de cumpleaños se envía por correo? ¿Con algún texto o diseño en particular? |
-| C1-Q-15 | ¿Se puede cerrar un mes si un inquilino quedó como **incobrable**? ¿Se puede **reabrir** un mes cerrado? |
+| C1-Q-15 | ¿Se puede cerrar un mes si un inquilino quedó como **incobrable**? ¿Se puede **reabrir** un mes cerrado? *(Parcial 11/Nov: P12 confirma el incobrable a los 7 días; falta si se puede reabrir un mes.)* |
 | ~~C1-Q-24~~ | ~~¿Se aceptan pagos parciales? ¿Se cobra mora o penalidad por atraso?~~ 🟢 **Respondida (10/Nov):** sí a pagos parciales; sin intereses ni penalidad ([C1-RN-39, C1-RN-40](05-reglas-de-negocio-y-calculos.md)) |
 | C1-Q-28 | ¿El día de pago es el mismo para todos o depende de cada contrato? |
 | C1-Q-29 | ¿Qué hacer con el contrato al renovarlo: se crea uno nuevo o se extiende el actual? ¿Con cuántos días de anticipación quiere la alerta? |
@@ -30,9 +30,9 @@
 
 | ID | Pregunta |
 |----|----------|
-| C1-Q-16 ⭐ | ¿El rendimiento se calcula sobre la **inversión** (costo + mejoras) o sobre el **valor actualizado** por UIT? ¿Qué impuestos y gastos se restan exactamente? |
-| C1-Q-17 | ¿El ingreso se considera cuando se **cobra** o cuando **se debía cobrar**? |
-| C1-Q-18 | ¿Las **mejoras** también se actualizan con la UIT desde el año en que se hicieron? |
+| ~~C1-Q-16~~ | ~~¿Sobre la inversión o sobre el valor actualizado por UIT?~~ 🟢 **Respondida (11/Nov):** sobre el **valor de mercado por m² depreciado 1 % por año** ([B1-bis](05-reglas-de-negocio-y-calculos.md#b1-bis-rendimiento-de-mercado-por-metro-cuadrado-método-del-piloto)). La parte de impuestos pasa a C1-Q-63 |
+| C1-Q-17 | ¿El ingreso se considera cuando se **cobra** o cuando **se debía cobrar**? *(En P11 el cliente usa el alquiler pactado por m²; falta saber si el rendimiento real usa lo cobrado.)* |
+| C1-Q-18 | ¿Las **mejoras** también se actualizan con la UIT desde el año en que se hicieron? *(Sin respuesta; con el método por m² se reemplaza por C1-Q-65.)* |
 | C1-Q-37 | ¿Qué tasa de referencia usamos para comparar (la de un plazo fijo que usted ingrese, por ejemplo 5.8 %)? |
 | C1-Q-25 | ¿Está de acuerdo con los criterios y pesos propuestos para la calificación de inquilinos (puntualidad 50 %, atraso promedio 30 %, deuda 20 %)? |
 
@@ -48,9 +48,9 @@
 
 | ID | Pregunta |
 |----|----------|
-| C1-Q-39 | ¿Qué debe contener el **dossier de desalojo** y quién lo arma? ¿Hay un abogado que deba validarlo? |
+| C1-Q-39 | ¿Qué debe contener el **dossier de desalojo** y quién lo arma? ¿Hay un abogado que deba validarlo? *(Sin respuesta en P12.)* |
 | C1-Q-40 | ¿Cómo se define la **vacancia** para el Cap Rate? ¿Con qué alquiler de referencia? |
-| C1-Q-41 | ¿Quién puede declarar una cuota como **incobrable**? ¿Se puede revertir si luego se paga? |
+| C1-Q-41 | ¿Quién puede declarar una cuota como **incobrable**? ¿Se puede revertir si luego se paga? *(Parcial 11/Nov: cuándo → a los 7 días sin acuerdo de pago por partes. Falta quién y si se revierte; ver C1-Q-68.)* |
 
 ## Otras verticales (para el primer cliente de cada una)
 
@@ -79,3 +79,16 @@
 | C1-Q-59 | La **meta mensual de cobranza** del tablero, ¿es la suma de los alquileres con **todas las unidades ocupadas** (propuesta) o un monto que usted fija? |
 | C1-Q-60 | Si un inquilino abona una parte, ¿la alerta de 7 días se sigue contando desde el **vencimiento original**? (Propuesta: sí.) |
 | C1-Q-61 | En el recibo de agua, ¿el **alcantarillado** y el **cargo fijo** se reparten junto con el agua según el consumo? |
+
+## Tras las respuestas P11 y P12 (11/Nov/2026)
+
+| ID | Pregunta |
+|----|----------|
+| C1-Q-62 ⭐ | Con el método por m², ¿se sigue usando la **UIT** para algo (valor patrimonial) o se deja de usar? ¿Le sirve ver también los años de recuperación sobre lo que invirtió? |
+| C1-Q-63 ⭐ | El rendimiento por m², ¿es **bruto** o se restan impuestos (renta 5 %, predial, arbitrios) y mantenimiento no trasladado? |
+| C1-Q-64 | ¿La depreciación de 1 % por año tiene un **tope** (por ejemplo, máximo 30 %)? ¿Es igual para cocheras y puestos de mercado? |
+| C1-Q-65 | Si hace una **mejora** grande (pisos, remodelación), ¿cómo afecta al valor por m²: reduce la antigüedad, se suma aparte o no se considera? |
+| C1-Q-66 | ¿Cada cuánto se actualiza el **estudio de mercado** (mensual, anual, antes de cada renovación)? ¿Qué fuentes usa el analista (portales, avisos)? |
+| C1-Q-67 ⭐ | **Legal:** suspender agua y luz a un inquilino moroso puede tener consecuencias legales. ¿Lo ha validado con un abogado? ¿Está previsto en el contrato de alquiler? |
+| C1-Q-68 ⭐ | A los 7 días sin acuerdo, ¿el sistema declara el incobrable **solo** o le **propone** al dueño y él confirma? (Propuesta: el dueño confirma.) |
+| C1-Q-69 | Cuando el inquilino paga la deuda, ¿se **reponen** los servicios de inmediato? ¿Se cobra algún costo de reconexión? ¿La deuda deja de ser incobrable? |

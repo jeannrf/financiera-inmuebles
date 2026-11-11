@@ -81,7 +81,9 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 #### Inmueble / Edificio (propiedad)
 - Nombre, dirección y distrito.
 - **Valor de adquisición o construcción** y **fecha** (año base para la UIT).
-- **Valor actualizado** (calculado: UIT + mejoras; ver `05-reglas-de-negocio-y-calculos.md`).
+- **Valor actualizado** (calculado: UIT + mejoras; ver `05-reglas-de-negocio-y-calculos.md`). *Desde P11 es solo referencia [C1-Q-62].*
+- **Año de construcción**, para calcular la **antigüedad** y la depreciación de 1 % por año [CONFIRMADO — P11].
+- **Zona** a la que pertenece, para usar el estudio de mercado que le corresponde [CONFIRMADO — P11].
 - Medidores o **suministros** generales de agua y luz (puede haber **más de uno**; el cliente suma dos suministros de luz).
 - Modalidad de servicios: **el dueño paga y prorratea** o **el inquilino paga directo**. [INFERIDO: por inmueble o por departamento]
 
@@ -97,13 +99,20 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
   | Cochera | No [INFERIDO] | No [INFERIDO] | [PREGUNTA C1-Q-58] |
 
 - Código (**sin estándar fijo**: "1A", "2B", "501", "C-03"…), piso (si aplica) e inmueble al que pertenece.
-- **Valor** de la unidad [PREGUNTA C1-Q-10: ¿el valor se lleva por edificio, por unidad o por ambos?].
+- **Área en m²** [CONFIRMADO — P11]: es la base del alquiler sugerido y del rendimiento por m².
+- **Valor** de la unidad: con P11 se obtiene **por unidad** (área × valor por m² depreciado), sin repartir el valor del edificio [INFERIDO → C1-Q-10].
 - **Submedidores** propios de agua y luz (con su número de suministro si existe). Cada submedidor de luz pertenece a **un
   suministro** del inmueble; dos departamentos del mismo edificio pueden estar en suministros distintos [CONFIRMADO — P10].
 - Estado: **ocupada o libre**. Es la base del indicador de **ocupación** del tablero (la meta del dueño es que ninguna quede libre).
 - Historial de inquilinos.
 
 > Volumen actual del piloto: **11 unidades** y **1 analista** ([configuración](../../../clientes/cliente-piloto/03-configuracion-y-datos.md#34-dimensionamiento-actual)).
+
+#### Estudio de mercado por zona [CONFIRMADO — P11]
+- **Zona** (distrito o sector), **fecha** del estudio y quién lo hizo (el analista) y lo validó (el dueño).
+- **Comparables**: avisos de **alquiler** y de **venta de departamentos nuevos**, cada uno con fuente (portal o enlace), área en m², precio y tipo de unidad.
+- Resultados: **alquiler promedio por m²** y **precio nuevo promedio por m²** de la zona. Se guardan con fecha de vigencia
+  (NUC-RN-01), para que el rendimiento de meses pasados no cambie al hacer un estudio nuevo.
 
 #### Inquilino
 - Nombre completo, **DNI** (y **copia escaneada del DNI**), teléfono (el mismo del grupo de WhatsApp), correo y **fecha de nacimiento** (para el saludo de cumpleaños).
@@ -126,6 +135,14 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 - Generada automáticamente cada mes por contrato: concepto (alquiler, agua, luz, mantenimiento, limpieza, multa por limpieza…), período, monto y fecha de vencimiento.
 - Estado: pendiente → **pago parcial** (con saldo pendiente) → pagada (con voucher verificado) / vencida / morosa (≥ 7 días de atraso).
 - **Saldo pendiente** = monto de la cuota − Σ pagos verificados. **Sin intereses ni penalidad por mora** [CONFIRMADO — P8].
+- **Acuerdo de pago por partes**: si el inquilino pide pagar por partes antes de los 7 días, se registra (fecha del pedido y
+  fechas prometidas) y la cuota **no** pasa a incobrable [CONFIRMADO — P12].
+- **Incobrable**: a los 7 días de atraso sin acuerdo, con fecha, motivo y quién lo confirmó. La deuda sigue en el historial [CONFIRMADO — P12].
+
+#### Suspensión de servicios [CONFIRMADO — P12]
+- Unidad, servicios suspendidos (**agua** y/o **luz**), fecha, cuota que la motivó y quién la ordenó.
+- **Reposición**: fecha y motivo (pago, acuerdo) [PREGUNTA C1-Q-69].
+- Mientras dure, la unidad no genera consumo en el prorrateo de ese suministro.
 
 #### Pago y voucher
 - Fecha, monto, medio (**Yape**, Plin [INFERIDO], **transferencia**, efectivo [PREGUNTA C1-Q-12]) y la cuota o cuotas que cubre.

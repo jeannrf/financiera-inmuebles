@@ -56,6 +56,12 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 | **Aprobar** gasto de mantenimiento o mejora | ✅ | ❌ |
 | Registrar mejoras al inmueble | ✅ | ❌ [INFERIDO] |
 | Cerrar mes (candado) | ✅ | ❌ |
+| Registrar el **estudio de mercado** de la zona (avisos de alquiler y venta por m²) | ✅ | ✅ [CONFIRMADO — P11] |
+| Validar el precio por m² y aplicar el alquiler sugerido | ✅ | ❌ [CONFIRMADO — P11: lo deciden dueño y analista; el dueño confirma] |
+| Ver el **rendimiento por m²** de las unidades | ✅ | ❌ [CONFIRMADO — P9] |
+| Registrar un **acuerdo de pago por partes** | ✅ | ✅ [INFERIDO] |
+| Declarar una cuota **incobrable** | ✅ | ❌ [PROPUESTO → C1-Q-68] |
+| Registrar la **suspensión y reposición** de agua y luz | ✅ | ✅ (ejecuta lo que ordena el dueño) [INFERIDO] |
 | Calificación (semáforo) de inquilinos | ✅ | 👁 [INFERIDO] |
 | Gestionar usuarios y roles | ✅ | ❌ |
 | Enviar mensajes internos al dueño | ✅ | ✅ |
@@ -68,6 +74,7 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 | Hoy le toca pagar a X | Analista | Sistema |
 | Pago con atraso ≥ N₁ días (nivel 1) [PREGUNTA C1-Q-56: valor de N₁] | **Analista** | Sistema + correo |
 | Pago aún sin regularizar ≥ **7 días** (nivel 2, N₂ configurable) [CONFIRMADO — P7] | **Dueño / Gerente** | **Correo electrónico + bandeja del sistema** [CONFIRMADO — P7] |
+| Cuota con 7 días de atraso y sin acuerdo: **propuesta de incobrable y suspensión de servicios** [CONFIRMADO — P12] | Dueño | Correo + bandeja del sistema |
 | Renovación de contrato próxima | Dueño (y analista [INFERIDO]) | Sistema + correo |
 | Gasto pendiente de aprobación | Dueño | Mensaje interno |
 | Negocio por debajo del objetivo (en rojo) | Dueño | Tablero |

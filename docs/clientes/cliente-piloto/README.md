@@ -20,7 +20,7 @@
 | [01-contexto-y-compromisos.md](01-contexto-y-compromisos.md) | Quién es, su problema, objetivos, modo de trabajo y compromisos |
 | [02-preguntas-abiertas.md](02-preguntas-abiertas.md) | Temas comerciales y generales a tratar con este cliente |
 | [03-configuracion-y-datos.md](03-configuracion-y-datos.md) | Sus zonas, información actual en Excel y cifras de ejemplo |
-| [04-cuestionario-validacion-reunion1.md](04-cuestionario-validacion-reunion1.md) | Pliego ejecutivo de 14 preguntas clave, solicitud de insumos (Issue FIN-01) y **respuestas del cliente** (P3–P10) |
+| [04-cuestionario-validacion-reunion1.md](04-cuestionario-validacion-reunion1.md) | Pliego ejecutivo de 14 preguntas clave, solicitud de insumos (Issue FIN-01) y **respuestas del cliente** (P3–P14) |
 
 Las preguntas sobre el negocio van en [C1](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) e
 [Inversiones](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md). Antes de enviárselas hay que unificarlas en un solo documento.
@@ -45,7 +45,7 @@ El cliente tiene **dos negocios** y quiere abrir un **tercero**. Quiere un softw
    analista no ve montos ni ganancias) y un diseño **escalable a N negocios**. A futuro
    quiere poder **adaptarlo y venderlo** a otros rubros.
 
-## Respuestas al cuestionario (10/Nov/2026)
+## Respuestas al cuestionario (10 y 11/Nov/2026)
 
 - **Entrega:** web para empresas pequeñas, app de escritorio para medianas y grandes, en **servidores** en lugar de la nube.
 - **Tamaño:** 1 analista y 11 unidades (departamentos, alquiler en mercado y cocheras). Sin tercer negocio por ahora.
@@ -53,5 +53,9 @@ El cliente tiene **dos negocios** y quiere abrir un **tercero**. Quiere un softw
 - **Cobranza:** alerta al dueño a los **7 días** por correo y bandeja; pagos parciales sí; **sin intereses** por mora.
 - **Analista:** ve montos individuales y comprobantes, **nunca** totales (para que no negocie su sueldo con las ganancias).
 - **Prorrateo:** proporcional al consumo de cada medidor, por suministro (agua + alcantarillado, luz).
+- **Rendimiento inmobiliario (11/Nov):** alquiler por m² frente al precio de compra nuevo por m² de la zona, depreciado 1 % por año; el analista hace el estudio de mercado.
+- **Incobrable (11/Nov):** a los 7 días sin pedido de pago por partes, con corte de agua y luz (a validar legalmente).
+- **Bolsa (11/Nov):** rendimiento = (venta − compra + utilidades) / compra, llevado a un año con regla de tres.
+- **Monedas (11/Nov):** soles y dólares; no quiere ver ganancias estimadas de acciones no vendidas.
 
-Detalle: [Sección 3 del cuestionario](04-cuestionario-validacion-reunion1.md#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026).
+Detalle: Secciones [3](04-cuestionario-validacion-reunion1.md#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026) y [4](04-cuestionario-validacion-reunion1.md#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026) del cuestionario.

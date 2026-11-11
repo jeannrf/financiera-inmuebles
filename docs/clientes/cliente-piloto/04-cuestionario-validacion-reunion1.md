@@ -5,9 +5,10 @@
 **Elaborado por:** Equipo de Ingeniería del Proyecto (John, Jeanpier, Ilia)  
 **Objetivo:** Consolidar definiciones operativas y recopilar datos reales para la presentación formal de la Fase 0 (~28 de noviembre de 2026 en Coworking).
 
-> **Estado de respuestas (10/Nov/2026):** el cliente respondió las preguntas **3 a 10**. Las respuestas y los
-> archivos actualizados están en la [Sección 3](#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026).
-> Siguen pendientes la **1, 2, 11, 12, 13 y 14** y los 3 insumos prácticos.
+> **Estado de respuestas (11/Nov/2026):** el cliente respondió las preguntas **3 a 10** (10/Nov) y **11 a 14** (11/Nov).
+> Las respuestas y los archivos actualizados están en la [Sección 3](#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026)
+> y la [Sección 4](#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026).
+> Siguen pendientes la **1 y 2** y los 3 insumos prácticos.
 
 ---
 
@@ -214,3 +215,33 @@ Quedamos a su disposición para coordinar la recepción de los archivos. ¡Mucha
 | [C1-Q-59](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P6 | ¿La meta mensual de cobranza es la suma de los alquileres con **todas las unidades ocupadas**, o un monto que usted fija? |
 | [C1-Q-60](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P8 | Con un pago parcial, ¿la alerta de 7 días se cuenta desde el vencimiento original aunque haya abonado una parte? |
 | [C1-Q-61](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P10 | Si el agua y el alcantarillado vienen en el mismo recibo, ¿se reparten juntos por el consumo de agua? ¿El cargo fijo del recibo también se reparte por consumo? |
+
+---
+
+## Sección 4: Respuestas del cliente (11 de noviembre de 2026)
+
+| # | Pregunta | Respuesta del cliente | ¿Aceptó la propuesta? | Dónde se aplicó |
+|---|----------|-----------------------|:---------------------:|-----------------|
+| 11 | Rendimiento inmobiliario (`C1-Q-16`, `C1-Q-17`, `C1-Q-18`) | El **analista** revisa la oferta de alquileres de la zona y saca el **promedio de alquiler por m²**. Cliente y analista fijan ese precio por m² y lo ajustan a cada departamento **según su área**. Se revisa el **precio promedio de compra de un departamento nuevo** en la zona y se ajusta por **depreciación de 1 % por año** de antigüedad: valor = x × (100 − z) %, del que sale el **valor por m²**. El rendimiento es la relación entre el **alquiler por m²** y el **valor de compra por m² depreciado**. | ❌ No: usa otro método (ni costo + mejoras ni UIT) | C1: [B1-bis](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md#b1-bis-rendimiento-de-mercado-por-metro-cuadrado-método-del-piloto), C1-RN-43 y C1-RN-44, [estudio de mercado en el dominio](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/02-dominio.md), C1-RF-64 a C1-RF-66 |
+| 12 | Edificio vs. departamento, incobrables y desalojos (`C1-Q-10`, `C1-Q-15`, `C1-Q-39`) | Cuando una deuda pasa los **7 días** y el inquilino **no pidió pagar por partes**, se declara **incobrable** y se le **quitan los servicios de agua y luz**. | ⚠ En parte: confirma el incobrable; no respondió sobre el valor por edificio ni el dossier de desalojo | C1: C1-RN-45 a C1-RN-47, [B4](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md#b4-días-de-atraso-y-estado-de-la-cuota), suspensión de servicios en el dominio, C1-RF-53, C1-RF-67 y C1-RF-68 |
+| 13 | Rendimiento bursátil (`INV-Q-21`, `INV-Q-27`) | Se compra a **x**, después de un tiempo **t** se vende a **y**. La ganancia del período es **y − x** y el rendimiento es esa ganancia **entre x**. Con **regla de tres** se lleva a un año, y si hay **utilidades** se añaden. | ✅ Sí (rendimiento total con utilidades) y precisa la anualización. No respondió sobre comisiones | Inversiones: [INV-C4](../../modulos/inversiones-y-liquidez/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md#inv-c4-rendimiento-de-una-acción-anualizado-y-con-utilidades-método-del-cliente), INV-RN-31 e INV-RN-32, INV-RF-65 |
+| 14 | Moneda y valoración de acciones (`INV-Q-20`, `INV-Q-23`) | **Sí** hay inversiones en **dólares** y otras en **soles**. **No** quiere ver la ganancia estimada de las acciones que aún no vende. | ⚠ Multimoneda sí; ganancia estimada no | Inversiones: INV-RN-33 e INV-RN-34, [INV-C5](../../modulos/inversiones-y-liquidez/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md#inv-c5-resumen-y-rendimiento-ponderado-de-la-cartera), INV-RF-66 e INV-RF-74. Núcleo: [NUC-Q-16](../../general/01-analisis-negocio/08-preguntas-abiertas.md) |
+
+### Preguntas nuevas que dejan estas respuestas
+
+| ID | Origen | Pregunta |
+|----|:------:|----------|
+| [C1-Q-62](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) ⭐ | P11 | ¿Se sigue usando la UIT para algo? ¿Quiere ver también los años de recuperación de lo invertido? |
+| [C1-Q-63](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) ⭐ | P11 | ¿El rendimiento por m² es bruto o se restan impuestos (renta 5 %, predial, arbitrios)? |
+| [C1-Q-64](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P11 | ¿La depreciación de 1 % por año tiene tope? ¿Vale igual para cocheras y puestos? |
+| [C1-Q-65](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P11 | ¿Cómo afecta una mejora grande al valor por m²? |
+| [C1-Q-66](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P11 | ¿Cada cuánto se actualiza el estudio de mercado y con qué fuentes? |
+| [C1-Q-67](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) ⭐ | P12 | **Legal:** ¿está validado con un abogado y en el contrato el corte de agua y luz por deuda? |
+| [C1-Q-68](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) ⭐ | P12 | ¿El sistema declara el incobrable solo o lo propone y el dueño confirma? |
+| [C1-Q-69](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | P12 | Al pagar, ¿se reponen los servicios de inmediato? ¿Hay costo de reconexión? |
+| [INV-Q-42](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md) | P13 | ¿x e y incluyen comisiones? ¿t en días calendario (base 365)? |
+| [INV-Q-43](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md) | P14 | ¿Cómo se pasan a soles las ganancias en dólares para el impuesto? (contador) |
+| [INV-Q-44](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md) | P14 | ¿Se mantiene la alerta de ±5 % del precio si no quiere ver la ganancia estimada? |
+
+Siguen **sin respuesta** dentro de estas preguntas: el dossier de desalojo (C1-Q-39), si un mes cerrado se puede reabrir
+(C1-Q-15), las comisiones del bróker y la póliza de muestra (INV-Q-27).

@@ -7,6 +7,10 @@
 |----|-------|--------|
 | INV-RN-17 | El impuesto se calcula **solo sobre las ganancias**; si hay pérdida, no se paga. | [CONFIRMADO] |
 | INV-RN-30 | El sistema solo **calcula y reporta**. Tasa y exoneración son parámetros. | [INFERIDO de la reunión] |
+| INV-RN-31 | El rendimiento de una operación se **anualiza con regla de tres** (proporción lineal según los días que duró), no con interés compuesto. | [CONFIRMADO — cuestionario P13, 11/Nov/2026] |
+| INV-RN-32 | Si la acción pagó **utilidades o dividendos** durante el período, se suman a la ganancia. | [CONFIRMADO — P13] |
+| INV-RN-33 | Hay inversiones en **soles (S/)** y en **dólares (US$)**. Cada cuenta, depósito u operación guarda su moneda y nunca se mezcla sin un tipo de cambio registrado. | [CONFIRMADO — P14] |
+| INV-RN-34 | **No** se muestra ganancia estimada ("en papel") de acciones que aún no se venden: solo cuenta la ganancia **realizada**. | [CONFIRMADO — P14] |
 
 ## Cálculos
 
@@ -45,17 +49,47 @@ Rendimiento %         = ganancia / costo real de compra × 100
 > costos **se restan**, así que el neto debería ser menor. Hay que confirmarlo con el cliente (INV-Q-27).
 > Tampoco quedó claro si el bróker cobra **2 %** o **0.2 %** (INV-Q-27).
 
-### INV-C4. Rendimiento de una acción incluyendo utilidades o dividendos (preferencia del cliente)
+### INV-C4. Rendimiento de una acción, anualizado y con utilidades (método del cliente)
+
+Respuesta del cliente (P13) [CONFIRMADO]: se compra a un valor **x**, después de un tiempo **t** se vende a un precio **y**;
+la ganancia del período es **y − x** y el rendimiento es esa ganancia entre **x**. Con **regla de tres** se lleva a un año, y
+si hubo **utilidades** se añaden.
+
 ```
-Rendimiento total % = (ganancias realizadas + dividendos/utilidades recibidos + ganancia no realizada [INV-Q-23]) / inversión total × 100
+Ganancia del período t      = y − x + utilidades o dividendos cobrados en t
+Rendimiento del período %   = ganancia del período / x × 100
+Rendimiento anual %         = rendimiento del período % × 365 / días de t        (regla de tres, lineal)
+Ganancia anual equivalente  = ganancia del período × 365 / días de t
 ```
-El cliente quiere comparar el % de cada acción (por ejemplo, 3 %, 7 %, 17 %) para decidir de cuál salir.
+
+- **x** e **y** son el **costo real de compra** y el **ingreso neto de venta** de INV-C3 (con comisiones) [INFERIDO → INV-Q-42].
+- Base de **365 días** [INFERIDO → INV-Q-42].
+- ~~Ganancia no realizada~~: el cliente **no** la quiere ver (P14, INV-RN-34). Solo cuentan las acciones vendidas.
+
+**Ejemplo con las cifras de la reunión:** compra real S/ 3 840, venta neta S/ 3 950, mantenida **90 días**, sin utilidades:
+
+```
+Ganancia del período = 3 950 − 3 840 = S/ 110
+Rendimiento período  = 110 / 3 840 = 2.86 %
+Rendimiento anual    = 2.86 % × 365 / 90 = 11.62 %
+```
+
+El cliente quiere comparar el **% anual** de cada acción (por ejemplo, 3 %, 7 %, 17 %) entre sí y con un plazo fijo para
+decidir dónde poner el dinero. Anualizar con regla de tres hace comparables operaciones de distinta duración.
+
+> Nota para el equipo: una operación muy corta con una ganancia pequeña puede dar un % anual muy alto (por ejemplo, 1 % en
+> 3 días ≈ 122 % anual). Conviene mostrar siempre los días junto al % anual.
 
 ### INV-C5. Resumen y rendimiento ponderado de la cartera
 ```
-Total invertido = Σ cuentas + Σ plazos fijos + Σ bolsa
+Total invertido = Σ cuentas + Σ plazos fijos + Σ bolsa            (por moneda)
 Rendimiento ponderado % = Σ (monto_k × rendimiento_k) / total invertido
 ```
+
+**Monedas (P14)** [CONFIRMADO]: hay inversiones en **soles** y en **dólares**. Los totales se muestran **por moneda**
+(un total en S/ y otro en US$). Para un total consolidado y un rendimiento ponderado de toda la cartera, los montos en US$
+se convierten a S/ con un **tipo de cambio que ingresa el dueño** [PROPUESTO → INV-Q-20]. Los rendimientos % de cada
+instrumento se calculan en su moneda de origen (no se mezclan con la variación del tipo de cambio).
 
 ### INV-C6. Reporte tributario anual (ganancias de capital)
 ```
@@ -66,3 +100,6 @@ Impuesto estimado     = max(0, ganancia neta − exoneración aplicable) × 5 %
 > valores tributa un **5 % efectivo**. Existe o ha existido una **exoneración de las primeras 5 UIT** para
 > valores negociados en la BVL bajo ciertas condiciones. El sistema solo debe **calcular y reportar**;
 > la tasa y la exoneración deben ser **parámetros configurables**.
+>
+> **Operaciones en dólares (P14):** para el reporte tributario las ganancias en US$ deben expresarse en soles. Qué tipo de
+> cambio usar (el del día de cada operación u otro) debe definirlo el contador [PREGUNTA INV-Q-43].

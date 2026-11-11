@@ -54,7 +54,7 @@ El cliente pidió **web para empresas pequeñas**, **escritorio para medianas y 
 | ID | Pregunta | Propuesta del análisis |
 |----|----------|------------------------|
 | NUC-Q-15 | ¿Se necesita contabilidad formal o basta con un P&L de gestión? | P&L de gestión; no reemplaza al sistema contable. |
-| NUC-Q-16 | ¿Multimoneda en el núcleo? C2 (viajes) e Inversiones la necesitan. | Sí, por negocio y con tipo de cambio registrado en cada operación. |
+| NUC-Q-16 | ¿Multimoneda en el núcleo? C2 (viajes) e Inversiones la necesitan. | Sí, por negocio y con tipo de cambio registrado en cada operación. **Confirmado por el piloto (P14, 11/Nov/2026):** tiene inversiones en soles y en dólares, así que la multimoneda entra en la etapa 2. |
 | NUC-Q-26 | En el tablero, ¿qué representa el "monto" de cada negocio: ingresos del mes, acumulado anual o patrimonio? ¿Cómo se define el objetivo? | 🟢 **Respondida por el cliente (10/Nov/2026):** ingresos **cobrados**. Meta de alquileres: ocupación total; meta de otros negocios: crecimiento de clientes ([5.3](05-reglas-de-negocio-y-calculos.md#53-tablero-estado-del-negocio-frente-al-objetivo)). Falta definir qué muestra la tarjeta de **Inversiones**. |
 | NUC-Q-27 | "Alertas por teléfono": ¿SMS, llamada automática o WhatsApp? | SMS en la etapa 2 (barato); WhatsApp en la etapa 3 |
 | NUC-Q-28 | ¿El plazo de 10 años aplica a todo o solo a lo tributario? ¿Desde qué fecha se cuenta? Validar con un contador (el Código Tributario fija plazos de conservación y prescripción). | Conservar 10 años todo lo que tenga monto o comprobante |
