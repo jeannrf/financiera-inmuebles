@@ -4,8 +4,8 @@
 
 - Es el padre de un compañero del equipo. Fue gerente en Claro, así que conoce la gestión de
   proyectos en empresas y **va a exigir como en una empresa**: fechas, cronograma y entregables.
-- Tiene **dos negocios activos** y quiere abrir **un tercero** (todavía no está definido; mencionó
-  ideas como presupuestos de construcción).
+- Tiene **dos negocios activos**. Mencionó abrir **un tercero** (presupuestos de construcción), pero el
+  10/Nov/2026 confirmó que **por ahora solo** se enfoca en el inmobiliario y las inversiones ([CLI-Q-08](02-preguntas-abiertas.md)).
 - Hoy gestiona todo con **Excel**, **WhatsApp** (un grupo general con los inquilinos) y revisión manual.
 
 ## 1.2 El problema
@@ -44,7 +44,7 @@ nuevos negocios, y el sistema puede **crecer a N negocios** y **adaptarse a otro
 
 ## 1.5 Visión de producto (a largo plazo)
 
-- **Escalable:** hoy tiene unos 10 departamentos; mañana tendrá más edificios y más negocios.
+- **Escalable:** hoy tiene **11 unidades** (departamentos, alquiler en mercado y cocheras) y 1 analista; mañana tendrá más edificios y más negocios.
 - **"Cuasi universal":** el cliente quiere que, "con cinco cambios", el software se pueda
   adaptar y **vender** a otros rubros (un albañil o constructor con presupuestos automáticos, un
   restaurante con insumos, una empresa con cuentas por cobrar).

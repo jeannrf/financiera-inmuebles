@@ -10,6 +10,7 @@ Términos del rubro. Los de la plataforma están en el [glosario general](../../
 | **Arbitrios** | Tributo municipal por limpieza pública, parques y serenazgo, que paga el propietario. |
 | **Autovalúo** | Valor del predio declarado cada año, sobre el que se calcula el impuesto predial. |
 | **Cap Rate** | Ingreso neto anual dividido entre el valor del activo. |
+| **Cochera** | Espacio de estacionamiento que se alquila como una unidad independiente. |
 | **Check-in / Check-out** | Devolución y entrega de un bien alquilado, con acta. |
 | **Cierre de mes (candado)** | Bloqueo de un período cuando todo está cobrado, verificado y pagado; después ya no se modifica. |
 | **Contrato** | Acuerdo entre el inquilino y el dueño sobre un departamento, con fechas, monto y condiciones. |
@@ -28,10 +29,14 @@ Términos del rubro. Los de la plataforma están en el [glosario general](../../
 | **Mantenimiento** | Cuota que cubre los gastos de las áreas comunes (vigilancia, limpieza, ascensor, energía común). |
 | **Mejora** | Inversión en el inmueble (pisos, ventanas, remodelación) que aumenta su costo y valor. |
 | **Morosidad / Atraso** | Situación de una cuota no pagada después de su vencimiento; se mide en días. |
+| **Ocupación** | Porcentaje de unidades alquilables que están alquiladas; la meta del dueño es el 100 %. |
+| **Pago parcial** | Abono menor que el monto de la cuota; la cuota queda con saldo pendiente, sin intereses. |
+| **Puesto de mercado** | Local o espacio dentro de un mercado que se alquila como unidad. |
+| **Suministro** | Conexión con el proveedor (luz o agua) que genera un recibo propio; agrupa a los departamentos que se alimentan de ella. |
 | **Período de recuperación** | Años necesarios para recuperar la inversión con el ingreso neto (meta del cliente: 12–15 años). |
 | **Período** | Mes y año al que corresponde una cuota, un pago o un voucher (por ejemplo, enero 2026). |
 | **Plin / Yape** | Billeteras digitales peruanas para transferencias inmediatas. |
-| **Prorrateo** | Reparto de un recibo común entre los departamentos según el consumo de cada uno. |
+| **Prorrateo** | Reparto de un recibo común entre los departamentos de un mismo suministro, proporcional al consumo de cada uno. |
 | **Rendimiento / Rentabilidad** | Porcentaje de ganancia neta respecto a lo invertido, en un período (mensual o anual). |
 | **Rol de limpieza** | Cronograma de turnos en que cada departamento limpia las áreas comunes. |
 | **Self-storage** | Alquiler de mini-bodegas. |

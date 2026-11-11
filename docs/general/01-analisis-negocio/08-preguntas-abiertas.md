@@ -18,6 +18,17 @@
 | NUC-Q-03 | ¿Cada clúster tendrá su propia arquitectura como sistema separado, o como paquete dentro del mismo código? | Un solo código base con paquetes; el documento de arquitectura de cada clúster registra solo su diferencia. |
 | NUC-Q-04 | ¿El aislamiento va por organización, por negocio o ambos? | Datos aislados por organización y permisos por negocio. |
 
+## Despliegue (tras la respuesta del cliente a CLI-Q-04, 10/Nov/2026)
+
+El cliente pidió **web para empresas pequeñas**, **escritorio para medianas y grandes** y **servidores en vez de la nube**
+([arquitectura](../04-arquitectura/README.md#modelo-de-despliegue-pedido-por-el-cliente-cli-q-04-respondida-el-10112026)).
+
+| ID | Pregunta | Propuesta del análisis |
+|----|----------|------------------------|
+| NUC-Q-31 ⭐ | ¿Qué hace que una empresa sea "pequeña" (web) o "mediana/grande" (escritorio)? ¿Usuarios, unidades, sedes, facturación? ¿Una empresa puede pasar de una forma a la otra sin migrar datos? | Criterio por número de usuarios y sedes; la app de escritorio usa el mismo backend, así que cambiar de forma no exige migrar datos. |
+| NUC-Q-32 ⭐ | "Servidores en vez de la nube": ¿servidores **propios del cliente** o **dedicados** operados por el equipo? ¿Qué le preocupa de la nube (costo, confianza, control de datos)? ¿Quién hace respaldos y actualizaciones en un servidor del cliente? | Servidor dedicado operado por el equipo para pequeñas; servidor propio o dedicado exclusivo para medianas y grandes, con contrato de soporte que incluya respaldos y actualizaciones. |
+| NUC-Q-33 | ¿El cliente piloto (1 analista, 11 unidades) usa la versión web? ¿La app de escritorio entra en alguna de las 3 etapas? | Web para el piloto; escritorio después de la etapa 2, cuando haya un cliente mediano. |
+
 ## Modelo comercial
 
 | ID | Pregunta | Propuesta del análisis |
@@ -44,7 +55,7 @@
 |----|----------|------------------------|
 | NUC-Q-15 | ¿Se necesita contabilidad formal o basta con un P&L de gestión? | P&L de gestión; no reemplaza al sistema contable. |
 | NUC-Q-16 | ¿Multimoneda en el núcleo? C2 (viajes) e Inversiones la necesitan. | Sí, por negocio y con tipo de cambio registrado en cada operación. |
-| NUC-Q-26 | En el tablero, ¿qué representa el "monto" de cada negocio: ingresos del mes, acumulado anual o patrimonio? ¿Cómo se define el objetivo? | Que lo defina cada paquete; validar con el cliente piloto para C1 e Inversiones. |
+| NUC-Q-26 | En el tablero, ¿qué representa el "monto" de cada negocio: ingresos del mes, acumulado anual o patrimonio? ¿Cómo se define el objetivo? | 🟢 **Respondida por el cliente (10/Nov/2026):** ingresos **cobrados**. Meta de alquileres: ocupación total; meta de otros negocios: crecimiento de clientes ([5.3](05-reglas-de-negocio-y-calculos.md#53-tablero-estado-del-negocio-frente-al-objetivo)). Falta definir qué muestra la tarjeta de **Inversiones**. |
 | NUC-Q-27 | "Alertas por teléfono": ¿SMS, llamada automática o WhatsApp? | SMS en la etapa 2 (barato); WhatsApp en la etapa 3 |
 | NUC-Q-28 | ¿El plazo de 10 años aplica a todo o solo a lo tributario? ¿Desde qué fecha se cuenta? Validar con un contador (el Código Tributario fija plazos de conservación y prescripción). | Conservar 10 años todo lo que tenga monto o comprobante |
 | NUC-Q-29 | ¿Un analista puede asignar tareas a otro analista o solo el dueño asigna? | Ambos pueden; el cierre lo aprueba quien asignó |

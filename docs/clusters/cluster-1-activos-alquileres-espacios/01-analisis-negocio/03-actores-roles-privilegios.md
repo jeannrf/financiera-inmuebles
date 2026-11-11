@@ -40,9 +40,11 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 | Tablero de negocios (montos frente a objetivos) | ✅ | ❌ |
 | Ver lista de cobros del día y de la semana | ✅ | ✅ |
 | Registrar pago y subir voucher | ✅ | ✅ |
-| Verificar o validar voucher | ✅ | ✅ [PREGUNTA C1-Q-31] |
-| Ver el **monto** de alquiler de un inquilino | ✅ | ⚠ [PREGUNTA C1-Q-32: el analista necesita saber cuánto cobrar] |
-| Ver totales recaudados, ganancias y rendimiento % | ✅ | ❌ |
+| Verificar o validar voucher | ✅ | ✅ [CONFIRMADO — P9] |
+| Ver el **monto individual** de la cuota de un inquilino y su saldo pendiente | ✅ | ✅ [CONFIRMADO — P9] |
+| Ver totales recaudados, ganancias y rendimiento % | ✅ | ❌ [CONFIRMADO — P9] |
+| Ver **sumas o subtotales** en listas de cobro, exportaciones o reportes ([NUC-RN-30](../../../general/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md)) | ✅ | ❌ [CONFIRMADO — P9] |
+| Ver indicador de ocupación del negocio | ✅ | ❌ [INFERIDO] |
 | Ver valor del inmueble, UIT y mejoras | ✅ | ❌ |
 | Registrar inquilinos, documentos (DNI, boleta) | ✅ | ✅ |
 | Crear o editar departamentos e inmuebles | ✅ | ❌ [INFERIDO] |
@@ -64,8 +66,8 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 |--------|--------------|-------|
 | Lista de pagos que vencen **esta semana** | Analista | Sistema + correo |
 | Hoy le toca pagar a X | Analista | Sistema |
-| Pago con atraso ≥ N₁ días (nivel 1) [PREGUNTA C1-Q-13] | **Analista** | Sistema + correo |
-| Pago aún sin regularizar ≥ N₂ días (nivel 2) [PREGUNTA C1-Q-56] | **Dueño / Gerente** | Correo y/o SMS |
+| Pago con atraso ≥ N₁ días (nivel 1) [PREGUNTA C1-Q-56: valor de N₁] | **Analista** | Sistema + correo |
+| Pago aún sin regularizar ≥ **7 días** (nivel 2, N₂ configurable) [CONFIRMADO — P7] | **Dueño / Gerente** | **Correo electrónico + bandeja del sistema** [CONFIRMADO — P7] |
 | Renovación de contrato próxima | Dueño (y analista [INFERIDO]) | Sistema + correo |
 | Gasto pendiente de aprobación | Dueño | Mensaje interno |
 | Negocio por debajo del objetivo (en rojo) | Dueño | Tablero |
@@ -76,3 +78,7 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 > gerente". Se adopta el escalamiento ([C1-RN-38](05-reglas-de-negocio-y-calculos.md), pendiente de confirmar en
 > [C1-Q-56](08-preguntas-abiertas.md)), y el nivel 2 llega al dueño **aunque el analista no haga nada**, con lo que se
 > conserva el control sobre el analista.
+
+> **Por qué el analista no ve totales** [CONFIRMADO — P9]: necesita el monto individual y el comprobante para cobrar y verificar,
+> pero si ve la recaudación total puede deducir las ganancias del negocio y **pedir un aumento** basándose solo en ellas.
+> Por eso la lista semanal de cobros del analista muestra montos por inquilino **sin fila de total**, y el control se aplica en el servidor.

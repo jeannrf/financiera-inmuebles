@@ -8,7 +8,7 @@
 | ID | Requerimiento | Prioridad | Etapa |
 |----|---------------|:---------:|:-----:|
 | C1-RF-20 | Registrar inmuebles (dirección, valor base, año base, suministros, modalidad de servicios) | M | 1 |
-| C1-RF-21 | Registrar departamentos con código libre, piso y submedidores | M | 1 |
+| C1-RF-21 | Registrar unidades (departamentos, puestos de mercado, cocheras) con tipo, código libre, piso y submedidores (ver C1-RF-60) | M | 1 |
 | C1-RF-22 | Registrar inquilinos: nombre, DNI, teléfono, correo, fecha de nacimiento, datos laborales | M | 1 |
 | C1-RF-23 | Adjuntar al inquilino la copia del DNI y la boleta de pago | M | 1 |
 | C1-RF-24 | Registrar contratos (inquilino, departamento, fechas, día de pago, monto, conceptos) | M | 1 |
@@ -20,13 +20,13 @@
 | C1-RF-30 | Advertir si se sube un **archivo idéntico** a uno ya existente (comparando hash) | S | 1 |
 | C1-RF-31 | Consultar los vouchers por inquilino y período ("muéstrame todos los vouchers de 2026") | M | 1 |
 | C1-RF-32 | Lista **semanal** de cobros y lista de "hoy vence" para el analista | M | 1 |
-| C1-RF-33 | Alerta al dueño por atraso ≥ N días (configurable, 7 por defecto) *(ahora es el segundo nivel del escalamiento de C1-RF-57)* | M | 1 |
+| C1-RF-33 | Alerta al dueño por atraso ≥ N días (configurable, 7 por defecto) por **correo electrónico y bandeja del sistema** *(segundo nivel del escalamiento de C1-RF-57)* [CONFIRMADO — P7] | M | 1 |
 | C1-RF-34 | Alerta de **renovación de contrato** X días antes de su vencimiento | M | 1 |
 | C1-RF-35 | Historial del inquilino: estadías, atrasos y deudas (incluye inquilinos que regresan) | M | 1 |
 | C1-RF-36 | **Calificación** del inquilino (verde, amarillo o rojo) con criterios ponderados configurables | S | 2 |
 | C1-RF-37 | Registrar recibos de agua, luz y gas del proveedor (uno o más suministros) con su archivo | M | 2 |
 | C1-RF-38 | Registrar lecturas de submedidores con foto; la lectura anterior se toma del mes previo | M | 2 |
-| C1-RF-39 | **Calcular el prorrateo** por departamento con cuadre exacto al total del recibo (agua, luz y gas) | M | 2 |
+| C1-RF-39 | **Calcular el prorrateo** por departamento, **proporcional al consumo** y **por suministro**, con cuadre exacto al total de cada recibo (agua y alcantarillado, luz y gas) [CONFIRMADO — P10] | M | 2 |
 | C1-RF-40 | Generar el **resumen de servicios** por inquilino y enviarlo por correo con los adjuntos | S | 2 |
 | C1-RF-41 | Registrar si el dueño ya pagó el recibo al proveedor | S | 2 |
 | C1-RF-42 | Registrar gastos de mantenimiento con el flujo **solicitud → aprobación del dueño** | S | 2 |
@@ -46,6 +46,11 @@
 | C1-RF-56 | **Vista tipo tabla (estilo Excel)** de cuotas por contrato: período, monto, fecha de vencimiento, fecha de pago, estado, y una **columna de incremento programado** visible; filtrable, ordenable y exportable [CONFIRMADO — PPT cliente] | M | 1 |
 | C1-RF-57 | **Escalamiento de alerta por falta de pago:** primero al **analista**; si no se regulariza en N días (configurable), al **dueño/gerente** [CONFIRMADO — PPT cliente] | M | 1 |
 | C1-RF-58 | Prorratear y cobrar el **gas** igual que agua y luz, cuando el inmueble lo tenga [CONFIRMADO — PPT cliente] | S | 2 |
+| C1-RF-59 | Registrar **pagos parciales** de una cuota (varios pagos, cada uno con su voucher), mostrar el **saldo pendiente** y el estado *Pago parcial*, **sin** calcular intereses ni penalidad [CONFIRMADO — P8] | M | 1 |
+| C1-RF-60 | Catálogo configurable de **tipos de unidad** (departamento, puesto o local de mercado, cochera), cada uno con sus atributos y conceptos de cobro [CONFIRMADO — P5] | M | 1 |
+| C1-RF-61 | Asociar cada submedidor a un **suministro** del inmueble, para prorratear cada recibo solo entre sus departamentos [CONFIRMADO — P10] | M | 2 |
+| C1-RF-62 | Indicador de **ocupación** (unidades ocupadas / alquilables) en la tarjeta del tablero, junto al monto cobrado, con la lista de unidades libres [CONFIRMADO — P6] | S | 2 |
+| C1-RF-63 | Ocultar **sumas y subtotales** en todas las listas, exportaciones y reportes que vea el analista (lista semanal sin fila de total) [CONFIRMADO — P9, NUC-RN-30] | M | 1 |
 | C1-RF-83 | **Portal o app para el inquilino**: ver su deuda, subir comprobantes y reportar limpieza | C | 3 |
 
 ## 6.2 Demás verticales [INFERIDO a partir del mapeo]

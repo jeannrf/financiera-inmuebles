@@ -11,7 +11,7 @@
 | Inmobiliario: construye y alquila departamentos | [Clúster 1](../../clusters/cluster-1-activos-alquileres-espacios/README.md) | 1.1 Inmobiliaria + 1.2 Edificios, como propietario directo |
 | Financiero: cuentas, plazos fijos y BVL | [Módulo de inversiones](../../modulos/inversiones-y-liquidez/README.md) | Módulo complementario |
 | Transversal: tablero, roles y mensajes | [General](../../general/01-analisis-negocio/00-README.md) | Núcleo |
-| Tercer negocio, aún sin definir | [CLI-Q-08](02-preguntas-abiertas.md) | Posiblemente 3.3 Construcción [INFERIDO] |
+| ~~Tercer negocio~~ | [CLI-Q-08](02-preguntas-abiertas.md) | **Descartado por ahora** (respuesta del 10/Nov/2026): solo inmobiliario e inversiones |
 
 ## Índice
 
@@ -20,7 +20,7 @@
 | [01-contexto-y-compromisos.md](01-contexto-y-compromisos.md) | Quién es, su problema, objetivos, modo de trabajo y compromisos |
 | [02-preguntas-abiertas.md](02-preguntas-abiertas.md) | Temas comerciales y generales a tratar con este cliente |
 | [03-configuracion-y-datos.md](03-configuracion-y-datos.md) | Sus zonas, información actual en Excel y cifras de ejemplo |
-| [04-cuestionario-validacion-reunion1.md](04-cuestionario-validacion-reunion1.md) | Pliego ejecutivo de 14 preguntas clave y solicitud de insumos (Issue FIN-01) |
+| [04-cuestionario-validacion-reunion1.md](04-cuestionario-validacion-reunion1.md) | Pliego ejecutivo de 14 preguntas clave, solicitud de insumos (Issue FIN-01) y **respuestas del cliente** (P3–P10) |
 
 Las preguntas sobre el negocio van en [C1](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) e
 [Inversiones](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md). Antes de enviárselas hay que unificarlas en un solo documento.
@@ -44,3 +44,14 @@ El cliente tiene **dos negocios** y quiere abrir un **tercero**. Quiere un softw
    objetivo, en verde o rojo), **mensajes internos**, **roles** (dueño y N analistas, y el
    analista no ve montos ni ganancias) y un diseño **escalable a N negocios**. A futuro
    quiere poder **adaptarlo y venderlo** a otros rubros.
+
+## Respuestas al cuestionario (10/Nov/2026)
+
+- **Entrega:** web para empresas pequeñas, app de escritorio para medianas y grandes, en **servidores** en lugar de la nube.
+- **Tamaño:** 1 analista y 11 unidades (departamentos, alquiler en mercado y cocheras). Sin tercer negocio por ahora.
+- **Tablero:** mide lo **cobrado**; su meta inmobiliaria es tener **todo alquilado**.
+- **Cobranza:** alerta al dueño a los **7 días** por correo y bandeja; pagos parciales sí; **sin intereses** por mora.
+- **Analista:** ve montos individuales y comprobantes, **nunca** totales (para que no negocie su sueldo con las ganancias).
+- **Prorrateo:** proporcional al consumo de cada medidor, por suministro (agua + alcantarillado, luz).
+
+Detalle: [Sección 3 del cuestionario](04-cuestionario-validacion-reunion1.md#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026).
