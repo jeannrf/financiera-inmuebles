@@ -56,7 +56,7 @@ docs/
 | [Clúster 5: Servicio Técnico](clusters/cluster-5-servicio-tecnico-campo/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
 | [Clúster 6: Comercio y Distribución](clusters/cluster-6-comercio-distribucion-produccion/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
 | [Módulo: Inversiones y Liquidez](modulos/inversiones-y-liquidez/README.md) | ✅ Borrador v0.3 | 🟢 Cliente real | ⏳ Pendiente |
-| [Cliente piloto](clientes/cliente-piloto/README.md) | ✅ Primera reunión + cuestionario (P3–P10 respondidas, 10/Nov/2026) | 🟢 En parte: faltan P1, P2, P11–P14 | No aplica |
+| [Cliente piloto](clientes/cliente-piloto/README.md) | ✅ Primera reunión + cuestionario (P3–P14 respondidas, 10–11/Nov/2026) | 🟢 En parte: faltan P1, P2 y los insumos | No aplica |
 
 ## Convenciones
 

@@ -62,3 +62,11 @@ Falta saber cuántas unidades hay de cada tipo y en qué inmueble está cada una
 | Método de prorrateo | **Proporcional al consumo** (método A), por suministro | P10 |
 | Conceptos del recibo de agua | Agua + alcantarillado | P10 |
 | Indicador del tablero inmobiliario | Ingresos efectivamente cobrados; meta: 100 % de ocupación | P6 |
+| Base del rendimiento inmobiliario | Alquiler por m² frente al precio de compra nuevo por m² de la zona, depreciado | P11 |
+| Depreciación por antigüedad | **1 % por año** | P11 |
+| Quién hace el estudio de mercado | El analista; el dueño valida el precio por m² | P11 |
+| Incobrable | A los **7 días** de atraso si no pidió pagar por partes | P12 |
+| Consecuencia del incobrable | Suspensión de agua y luz [validar legalmente → C1-Q-67] | P12 |
+| Anualización del rendimiento bursátil | Regla de tres (lineal), sumando utilidades | P13 |
+| Monedas de las inversiones | Soles (S/) y dólares (US$) | P14 |
+| Ganancia estimada de acciones no vendidas | **No** se muestra | P14 |
