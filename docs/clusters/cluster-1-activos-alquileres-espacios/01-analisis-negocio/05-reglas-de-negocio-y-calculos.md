@@ -28,7 +28,11 @@
 | C1-RN-44 | Los precios de mercado por m² (alquiler y compra) salen de un **estudio de mercado por zona** que registra el analista y valida el dueño. | [CONFIRMADO — P11] |
 | C1-RN-45 | Si una cuota cumple **7 días de atraso** y el inquilino **no pidió pagar por partes**, la deuda se declara **incobrable**. Si pidió pagar por partes, sigue como *Pago parcial* con su acuerdo. | [CONFIRMADO — P12] |
 | C1-RN-46 | Declarada la deuda incobrable, se **suspenden los servicios de agua y luz** de esa unidad. El sistema registra la suspensión (fecha, quién la ordenó) y su reposición. | [CONFIRMADO — P12] + [PREGUNTA legal C1-Q-67] |
-| C1-RN-47 | Una deuda **incobrable no se borra**: sigue en el historial del inquilino, baja su calificación y se puede cobrar después (NUC-RN-01). | [PROPUESTO → C1-Q-41] |
+| C1-RN-47 | Una deuda **incobrable no se borra**: sigue en el historial del inquilino y baja su calificación (NUC-RN-01). La **confirma el analista** a propuesta del sistema. | [CONFIRMADO — 13/Nov/2026; cierra C1-Q-41 y C1-Q-68] |
+| C1-RN-48 | Un mes cerrado **solo se reabre si se cobró una deuda incobrable** de ese período, para registrar el pago. Si no se cobra, el mes queda cerrado y la deuda es **incobrable no recuperable**. Toda reapertura queda en auditoría. | [CONFIRMADO — 13/Nov/2026; cierra C1-Q-15] |
+| C1-RN-49 | El rendimiento inmobiliario se compara con una **tasa media de plazo fijo que ingresa el analista**, no con la tasa del módulo de inversiones. | [CONFIRMADO — 13/Nov/2026; cierra C1-Q-37] |
+| C1-RN-50 | El sistema **no gestiona desalojos**: no arma expedientes ni dossiers legales. Solo conserva los datos del inquilino y su estado de cuenta. | [CONFIRMADO — 13/Nov/2026; cierra C1-Q-39] |
+| C1-RN-51 | Los **pagos de servicios** de los inquilinos los recibe y registra el **analista**, igual que el alquiler. | [CONFIRMADO — 13/Nov/2026] |
 
 ## A2. Reglas de las demás verticales [INFERIDO a partir del mapeo]
 
@@ -83,7 +87,7 @@ rendimiento neto de **6.7 % – 8.3 %**. Con 5.6 % el inmueble **rinde menos que
 lo permite) o **bajar el costo** de la siguiente compra (comprar en planos o construir: unos S/ 300 000).
 
 → El sistema debe mostrar esta comparación: **rendimiento del inmueble frente a la tasa de referencia
-de un plazo fijo** (tasa configurable por el dueño) y el **alquiler necesario** para lograr la meta de años:
+de un plazo fijo** (tasa media que ingresa el analista, C1-RN-49) y el **alquiler necesario** para lograr la meta de años:
 
 ```
 Alquiler mensual requerido = (inversión / años_meta + impuestos anuales) / 12
@@ -140,7 +144,12 @@ Rendimiento anual %          = rendimiento mensual % × 12
 - Se necesita el **área (m²)** de cada unidad y su **año de construcción** (o antigüedad).
 - Se necesita registrar un **estudio de mercado por zona**: avisos de alquiler y de venta (fuente, fecha, área y precio), que hace el analista.
 - El **alquiler sugerido** sirve para decidir **incrementos** (C1-RN-03) y para comparar si una unidad está por debajo del mercado.
-- La comparación con un plazo fijo (C1-RF-54) se mantiene, ahora contra el rendimiento de mercado.
+- La comparación con un plazo fijo (C1-RF-54) se mantiene, ahora contra el rendimiento de mercado y usando la **tasa media de plazo fijo que ingresa el analista** (C1-RN-49):
+
+```
+Diferencia = rendimiento anual % de la unidad − tasa media de plazo fijo %
+→ positivo: el inmueble rinde más que un plazo fijo   ·   negativo: rinde menos
+```
 
 **Lo que queda abierto:**
 - Si el rendimiento es **bruto** o se restan impuestos (renta 5 %, predial, arbitrios). El cliente no respondió esta parte de P11 [PREGUNTA C1-Q-63].
@@ -262,7 +271,8 @@ estado      = PAGADA         si saldo = 0
 ```
 
 Con P12, el día 7 dispara **dos cosas**: la alerta al dueño y la propuesta de declarar la deuda incobrable. El sistema
-**propone** y el dueño **confirma** (no lo hace solo, como en NUC-RN-04) [PROPUESTO → C1-Q-68].
+**propone** y el **analista confirma** (no lo hace solo, como en NUC-RN-04) [CONFIRMADO — 13/Nov/2026].
+Si después se cobra, el mes se reabre para registrar el pago; si no, al quedar cerrado la deuda es **no recuperable** (C1-RN-48).
 
 Una cuota vencida o morosa que tiene abonos muestra también el **saldo pendiente** y la marca "con pago parcial".
 [PREGUNTA C1-Q-60: con un pago parcial, ¿la alerta de 7 días sigue contándose desde el vencimiento original? Propuesta: sí.]

@@ -57,5 +57,6 @@ El cliente tiene **dos negocios** y quiere abrir un **tercero**. Quiere un softw
 - **Incobrable (11/Nov):** a los 7 días sin pedido de pago por partes, con corte de agua y luz (a validar legalmente).
 - **Bolsa (11/Nov):** rendimiento = (venta − compra + utilidades) / compra, llevado a un año con regla de tres.
 - **Monedas (11/Nov):** soles y dólares; no quiere ver ganancias estimadas de acciones no vendidas.
+- **Procesos (13/Nov):** el analista recibe los pagos de servicios, sube las fotos de limpieza que le mandan los inquilinos (con estado *Incumplido*), ingresa la tasa media de plazo fijo para comparar y **confirma los incobrables**. Un mes cerrado solo se reabre si se cobró la deuda. **No hay dossier de desalojo** en el sistema.
 
-Detalle: Secciones [3](04-cuestionario-validacion-reunion1.md#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026) y [4](04-cuestionario-validacion-reunion1.md#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026) del cuestionario.
+Detalle: Secciones [3](04-cuestionario-validacion-reunion1.md#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026), [4](04-cuestionario-validacion-reunion1.md#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026) y [5](04-cuestionario-validacion-reunion1.md#sección-5-conciliación-de-procesos-del-clúster-1-13-de-noviembre-de-2026) del cuestionario.

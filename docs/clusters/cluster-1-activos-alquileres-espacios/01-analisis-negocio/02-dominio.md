@@ -116,7 +116,7 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 
 #### Inquilino
 - Nombre completo, **DNI** (y **copia escaneada del DNI**), teléfono (el mismo del grupo de WhatsApp), correo y **fecha de nacimiento** (para el saludo de cumpleaños).
-- **Datos laborales**: empresa (razón social), RUC [INFERIDO], dirección del centro de trabajo y la **boleta de pago** como documento. *Uso: si hay juicio de desalojo, la notificación va al centro de trabajo.*
+- **Datos laborales**: empresa (razón social), RUC [INFERIDO], dirección del centro de trabajo y la **boleta de pago** como documento. *Uso: si la empresa inicia un desalojo (lo gestiona fuera del sistema), la notificación va al centro de trabajo.*
 - **Historial**: períodos en que vivió en qué departamento (los inquilinos se van y **vuelven**), atrasos y deudas.
 - **Calificación** (semáforo verde, amarillo o rojo) basada en su comportamiento de pago.
 
@@ -137,7 +137,8 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 - **Saldo pendiente** = monto de la cuota − Σ pagos verificados. **Sin intereses ni penalidad por mora** [CONFIRMADO — P8].
 - **Acuerdo de pago por partes**: si el inquilino pide pagar por partes antes de los 7 días, se registra (fecha del pedido y
   fechas prometidas) y la cuota **no** pasa a incobrable [CONFIRMADO — P12].
-- **Incobrable**: a los 7 días de atraso sin acuerdo, con fecha, motivo y quién lo confirmó. La deuda sigue en el historial [CONFIRMADO — P12].
+- **Incobrable**: a los 7 días de atraso sin acuerdo, con fecha, motivo y el **analista** que lo confirmó. La deuda sigue en el historial [CONFIRMADO — P12 y 13/Nov/2026].
+  Si se cobra después, el mes se reabre para registrar el pago; si no, queda como **incobrable no recuperable** al cerrarse el mes.
 
 #### Suspensión de servicios [CONFIRMADO — P12]
 - Unidad, servicios suspendidos (**agua** y/o **luz**), fecha, cuota que la motivó y quién la ordenó.
@@ -149,7 +150,7 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 - Una cuota puede tener **varios pagos** (pagos parciales), cada uno con **su propio voucher** [CONFIRMADO — P8].
 - **Imagen o PDF del voucher**, asociada a **inquilino + departamento + período** (por ejemplo, "enero 2026").
 - **Verificación humana**: el sistema **no interpreta** la imagen; una persona confirma que el monto y el período coinciden.
-- Hoy los vouchers llegan por **WhatsApp**, y el analista los descarga y los sube al sistema.
+- Hoy los vouchers llegan por **WhatsApp**, y el analista los descarga y los sube al sistema. Lo mismo vale para los **pagos de servicios** (agua, luz): los recibe el analista [CONFIRMADO — 13/Nov/2026].
 
 #### Recibo de servicio (agua y luz)
 - Recibo del proveedor (Sedapal / Enel o Luz del Sur [INFERIDO]) **por suministro**: período, monto total, consumo total y archivo del recibo.
@@ -170,9 +171,15 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 
 #### Rol de limpieza
 - Programación por fechas: qué departamento limpia las áreas comunes en cada período (por ejemplo, del 19 al 24).
-- El inquilino envía **fotos** como evidencia, y el dueño o el analista marca el resultado.
+- El inquilino envía **fotos al analista** (por WhatsApp) y el analista las sube y marca el resultado [CONFIRMADO — 13/Nov/2026].
 - Si el inquilino no puede o no quiere, se contrata a una persona y **se le cobra** (ejemplo: S/ 40).
-- Estados propuestos: *Programado → Reportado (con fotos) → Cumplido / Observado / Incumplido → Reemplazado (cobrado)*.
+- Estados [CONFIRMADO — 13/Nov/2026]: *Programado → Reportado (con fotos) → Cumplido*, o *Programado → **Incumplido***.
+  Desde *Incumplido* se registra el reemplazo y su cargo. *Observado* y *Reemplazado* ya no son estados.
 
 #### Cierre de mes
 - Candado por período ("octubre 2026 está cerrado"). Ver C1-RN y NUC-RN-11 en `05-reglas-de-negocio-y-calculos.md`.
+- **Reapertura** solo si se cobró una deuda incobrable de ese período; queda registrada con fecha, motivo y usuario (C1-RN-48).
+
+#### Tasa de referencia de plazo fijo [CONFIRMADO — 13/Nov/2026]
+- Tasa media de interés de los depósitos a plazo fijo en el mercado, **ingresada por el analista**, con fecha y fuente.
+- Sirve para comparar el rendimiento del negocio inmobiliario (C1-P-09). Se guarda con vigencia (NUC-RN-01).

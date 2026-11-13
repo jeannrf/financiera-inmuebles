@@ -16,7 +16,9 @@ Términos del rubro. Los de la plataforma están en el [glosario general](../../
 | **Contrato** | Acuerdo entre el inquilino y el dueño sobre un departamento, con fechas, monto y condiciones. |
 | **Cuota** | Obligación de pago de un concepto (alquiler, agua, luz…) para un período, con fecha de vencimiento. |
 | **DNI** | Documento Nacional de Identidad (8 dígitos). |
-| **Dossier de desalojo** | Expediente con lo necesario para iniciar una acción legal contra un inquilino moroso. |
+| **Dossier de desalojo** | Expediente con lo necesario para iniciar una acción legal contra un inquilino moroso. **No lo genera el sistema**: el piloto gestiona los desalojos por fuera (C1-RN-50). |
+| **Incobrable no recuperable** | Deuda incobrable de un mes que se cerró sin haberse cobrado; ya no se reabre ese mes. |
+| **Tasa media de plazo fijo** | Tasa de interés promedio de los depósitos a plazo fijo del mercado, que ingresa el analista para comparar el rendimiento inmobiliario. |
 | **Fondo de reserva** | Dinero separado para gastos futuros o extraordinarios del edificio. |
 | **Horómetro** | Contador de horas de uso de una máquina. |
 | **Impuesto a la renta de primera categoría** | Impuesto sobre los ingresos por alquiler de inmuebles (persona natural). |

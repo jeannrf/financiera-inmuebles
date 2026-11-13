@@ -100,7 +100,7 @@ inmobiliario. Este es el camino para generalizarlas:
 | Aprobación de gastos | Flujo de aprobación | Núcleo | C2 (descuentos), C5 (presupuestos) |
 | Cierre de mes | Candado de período con condiciones que aporta cada paquete | Núcleo | Todos |
 | Tablero de negocios | Holding View con indicador por negocio | Núcleo | Todos |
-| Dossier de desalojo | Expediente legal | Se queda en C1 | Podría extenderse a cobranza judicial |
+| ~~Dossier de desalojo~~ | Expediente legal | **Descartado** (13/Nov/2026): el piloto gestiona los desalojos fuera del sistema | Se reconsidera solo si otro cliente lo pide |
 | Prorrateo por submedidores | No se generaliza | Paquete C1 | Vertical 1.2 |
 | Valorización por UIT | No se generaliza | Paquete C1 (inmuebles) | Requiere análisis para maquinaria o flotas |
 
