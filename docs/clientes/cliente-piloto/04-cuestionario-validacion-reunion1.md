@@ -9,7 +9,7 @@
 > Las respuestas y los archivos actualizados están en la [Sección 3](#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026)
 > y la [Sección 4](#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026). El 13/Nov concilió además los procesos del
 > Clúster 1 ([Sección 5](#sección-5-conciliación-de-procesos-del-clúster-1-13-de-noviembre-de-2026)).
-> Siguen pendientes la **1 y 2** y los 3 insumos prácticos.
+> Siguen pendientes las preguntas **1 y 2** (los insumos prácticos ya fueron recibidos del cliente).
 
 ---
 

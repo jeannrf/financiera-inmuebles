@@ -6,13 +6,13 @@ son también la base de las demás verticales. Los procesos del núcleo (alta de
 
 ## 4.1 Procesos de la vertical piloto
 
-### C1-P-01. Alta de inmueble y departamentos
+### C1-P-01. Alta de inmueble y unidades alquilables
 **AS-IS:** Anotaciones dispersas sobre medidores, costo de adquisición y suministros.
 **TO-BE:**
-1. El **Dueño** registra el inmueble: dirección, distrito, fecha base de adquisición/construcción, valor inicial de inversión y modalidad de servicios (*el dueño paga y prorratea* en zonas como San Martín de Porres vs. *inquilino paga directo / paquete todo incluido* en Jesús María).
+1. El **Dueño** registra el inmueble: dirección, distrito, **zona** (para vincularlo al estudio de mercado), **año de construcción** (base de depreciación anual), fecha y valor inicial de adquisición/construcción, y modalidad de servicios (*el dueño paga y prorratea* en zonas como San Martín de Porres vs. *inquilino paga directo / paquete todo incluido* en Jesús María).
 2. Registra los suministros generales de agua y luz (soporta N suministros por edificio).
-3. Crea las unidades/departamentos: código libre (ej. "1A", "2B", "501"), piso y submedidores vinculados con sus identificadores.
-4. El sistema fija el costo base del activo para procesar las valorizaciones automáticas por indexación a la UIT y acumulado de mejoras (Capex).
+3. Crea las unidades alquilables seleccionando el **tipo de unidad** (departamento, puesto de mercado o cochera), código libre (ej. "1A", "2B", "501", "C-03"), piso (si aplica), **área en m²** y submedidores vinculados a su suministro correspondiente.
+4. El sistema registra el área y antigüedad como base para el rendimiento por m² (B1-bis), y conserva el costo base como referencia patrimonial (UIT + mejoras).
 
 ### C1-P-02. Alta de inquilino y formalización de contrato
 **AS-IS:** Documentos en papel, contactos informales en WhatsApp y falta de expediente estructurado para contingencias legales.

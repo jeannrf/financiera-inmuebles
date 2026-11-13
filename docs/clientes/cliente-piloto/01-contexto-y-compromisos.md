@@ -35,7 +35,7 @@ nuevos negocios, y el sistema puede **crecer a N negocios** y **adaptarse a otro
 | OE-01 | Controlar el cobro de alquileres y servicios con **alertas automáticas** de vencimiento y morosidad |
 | OE-02 | **Archivar** vouchers, recibos y documentos por inquilino y por período, y consultarlos fácilmente |
 | OE-03 | Calcular el **prorrateo** de agua y luz por consumo y generar el resumen para cada inquilino |
-| OE-04 | Mantener el **valor actualizado** de cada inmueble (UIT + mejoras) y su **rendimiento** mensual y anual |
+| OE-04 | Mantener el **valor de mercado** de cada unidad (por m² con depreciación anual, y UIT + mejoras como referencia) y su **rendimiento** mensual y anual |
 | OE-05 | Registrar el **historial** de cada inquilino y calificarlo (verde, amarillo o rojo) |
 | OE-06 | Consolidar las **inversiones financieras** con su rendimiento %, y generar el reporte de ganancias para el impuesto a la renta |
 | OE-07 | Mostrar un **tablero** con todos los negocios y su avance frente a los objetivos |

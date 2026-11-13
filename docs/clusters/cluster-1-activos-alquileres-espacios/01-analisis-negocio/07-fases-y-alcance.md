@@ -11,10 +11,11 @@ de terceros con costo o incertidumbre (WhatsApp, OCR, SMS masivo) va al final.
 
 **Objetivo:** que el cliente deje de usar el Excel para los alquileres y reciba alertas automáticas.
 
-- Inmuebles, departamentos, inquilinos (con DNI y datos laborales) y contratos.
+- Inmuebles (con año de construcción y zona), unidades alquilables por **tipo** (departamento, puesto de mercado, cochera, `C1-RF-60`) con **área en m²** (`C1-RF-65`), inquilinos (con DNI y datos laborales) y contratos.
 - Cuotas mensuales automáticas, **historial de montos** e **incrementos programados**.
-- Registro de pagos + **repositorio de vouchers** por período + verificación humana + aviso de archivo duplicado.
-- **Alertas**: lista semanal y diaria para el analista, escalamiento por atraso (analista y luego dueño, por **correo**, [C1-RF-57](06-requerimientos-preliminares.md)), renovación de contrato.
+- Registro de pagos (incluidos **pagos parciales** sin intereses ni mora, `C1-RF-59`), **acuerdos de pago por partes** (`C1-RF-67`), **repositorio de vouchers** por período + verificación humana + aviso de archivo duplicado.
+- Confirmación de cuotas **incobrables** a los 7 días sin acuerdo (`C1-RF-53`).
+- **Alertas**: lista semanal y diaria para el analista (ocultando sumas y subtotales al analista, `C1-RF-63`), escalamiento por atraso (analista y luego dueño, por **correo**, [C1-RF-57](06-requerimientos-preliminares.md)), renovación de contrato.
 - Historial del inquilino (estadías y atrasos).
 - Importación inicial desde Excel y reportes básicos de cobranza.
 - Guardar el **autovalúo** por año (C1-RF-55) y la **vista tipo tabla** de cuotas con columna de incremento (C1-RF-56).
@@ -25,9 +26,9 @@ de terceros con costo o incertidumbre (WhatsApp, OCR, SMS masivo) va al final.
 
 **Objetivo:** que el dueño vea **cuánto gana y cuánto vale** cada inmueble.
 
-- **Servicios**: recibos, lecturas con foto, **prorrateo** exacto (agua, luz y **gas**, C1-RF-58) y envío del resumen por correo.
-- Mantenimiento con **aprobación de gastos** y **rol de limpieza**.
-- **Mejoras**, **valorización por UIT** y **rendimiento** mensual y anual.
+- **Servicios**: recibos por suministro (`C1-RF-61`), lecturas con foto, **prorrateo** proporcional exacto (agua y alcantarillado, luz y **gas**, C1-RF-58), **registro de pagos de servicios** por el analista (`C1-RF-69`), suspensión/reposición de agua y luz (`C1-RF-68`) y envío del resumen por correo.
+- Mantenimiento con **aprobación de gastos** y **rol de limpieza** (fotos subidas por el analista).
+- **Estudio de mercado por zona** (`C1-RF-64`), **alquiler sugerido** (`C1-RF-66`), **rendimiento mensual y anual por m²** (con depreciación 1 % anual), comparación contra **tasa media de plazo fijo** ingresada por el analista (`C1-RF-54`), e indicador de **ocupación** en el tablero (`C1-RF-62`). Se conservan mejoras y valorización por UIT como referencia.
 - **Calificación** de inquilinos (semáforo).
 - **Cierre de mes** (candado), con reapertura solo si se cobra una deuda incobrable.
 - Saludo de cumpleaños.

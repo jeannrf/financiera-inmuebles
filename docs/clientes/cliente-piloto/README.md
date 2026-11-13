@@ -35,8 +35,8 @@ El cliente tiene **dos negocios** y quiere abrir un **tercero**. Quiere un softw
    Hoy lleva todo en Excel y WhatsApp. Necesita: control de cobros con **alertas de
    morosidad**, archivo de **vouchers**, **historial** de montos, **incrementos programados**,
    **prorrateo de agua y luz**, **rol de limpieza**, **valorización del inmueble ligada a la UIT**
-   más mejoras, **rendimiento mensual y anual**, **calificación de inquilinos**, **cierre de mes** y
-   datos para un eventual **juicio de desalojo**.
+   más mejoras *(actualizado 11/Nov: rendimiento por m² de mercado)*, **rendimiento mensual y anual**, **calificación de inquilinos**, **cierre de mes** y
+   datos para un eventual **juicio de desalojo** *(actualizado 13/Nov: fuera del sistema)*.
 2. **Financiero:** dinero en **cuentas bancarias**, **depósitos a plazo fijo** y **acciones en la
    BVL**. Necesita ver el monto y el **rendimiento %** de cada instrumento para decidir dónde
    mover el dinero, y un **reporte de ganancias de trading** para el impuesto a la renta.

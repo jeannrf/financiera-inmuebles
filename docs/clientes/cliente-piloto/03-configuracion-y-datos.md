@@ -20,7 +20,7 @@ Hay inmuebles en al menos dos zonas, con modalidades distintas:
 - Tabla de servicios: departamento, número de suministro, lectura anterior, lectura actual, consumo, factor (por ejemplo, 0.87) y monto.
 - Totales por departamento: agua, luz, mantenimiento y total a pagar.
 
-> **Acción:** pedir al cliente sus Excel reales (anonimizados si lo prefiere) para validar campos. [PREGUNTA CLI-Q-02]
+> **Estado:** insumos reales recibidos del cliente; pendiente de mapeo de columnas y validación de campos para el importador (`C1-RF-50`). [PREGUNTA CLI-Q-02]
 
 ## 3.3 Datos de ejemplo de la reunión (referencia, no reales)
 
