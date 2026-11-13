@@ -16,7 +16,7 @@ Los números de las reglas originales se conservan para mantener la trazabilidad
 | NUC-RN-15 | Los gastos registrados por un operador pueden requerir **aprobación del dueño**. | [CONFIRMADO] |
 | NUC-RN-18 | Una organización puede tener **N negocios**, cada uno con su objetivo mensual. | [CONFIRMADO] |
 | NUC-RN-20 | **Aislamiento:** ningún dato cruza entre organizaciones, ni siquiera para consultas de historial. | [EQUIPO] |
-| NUC-RN-21 | Las búsquedas de personas por documento se limitan a la **organización**. No se comparte morosidad entre clientes. | [INFERIDO → NUC-Q-06] |
+| NUC-RN-21 | Las búsquedas de personas por documento se limitan a la **organización**. No se comparte morosidad entre clientes. | [CONFIRMADO — cliente piloto, 13/Nov/2026; cierra NUC-Q-06] |
 | NUC-RN-22 | Toda excepción al flujo normal y todo acceso de soporte queda en auditoría. | [INFERIDO] |
 | NUC-RN-23 | La IA **no publica** configuraciones ni ejecuta acciones sobre datos reales sin confirmación humana. | [EQUIPO] |
 | NUC-RN-24 | Las reglas de un rubro van en su paquete o plantilla, **nunca** en el núcleo. | [EQUIPO] |

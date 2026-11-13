@@ -28,20 +28,20 @@
 | C1-RF-38 | Registrar lecturas de submedidores con foto; la lectura anterior se toma del mes previo | M | 2 |
 | C1-RF-39 | **Calcular el prorrateo** por departamento, **proporcional al consumo** y **por suministro**, con cuadre exacto al total de cada recibo (agua y alcantarillado, luz y gas) [CONFIRMADO — P10] | M | 2 |
 | C1-RF-40 | Generar el **resumen de servicios** por inquilino y enviarlo por correo con los adjuntos | S | 2 |
-| C1-RF-41 | Registrar si el dueño ya pagó el recibo al proveedor | S | 2 |
+| C1-RF-41 | Registrar el pago del recibo al proveedor (quién lo pagó y cuándo) [PREGUNTA C1-Q-70] | S | 2 |
 | C1-RF-42 | Registrar gastos de mantenimiento con el flujo **solicitud → aprobación del dueño** | S | 2 |
-| C1-RF-43 | **Rol de limpieza**: cronograma, evidencia fotográfica, estados y cargo por reemplazo | S | 2 |
+| C1-RF-43 | **Rol de limpieza**: cronograma, fotos que el inquilino envía al analista y este sube, estados *Programado → Reportado → Cumplido* o *Incumplido*, y cargo por reemplazo [CONFIRMADO — 13/Nov/2026] | S | 2 |
 | C1-RF-44 | Registrar **mejoras** que se suman al costo del inmueble | M | 2 |
 | C1-RF-45 | Calcular el **valor actualizado** del inmueble con la UIT (más mejoras) | M | 2 |
 | C1-RF-46 | Calcular el **rendimiento** mensual y anual **por m²** con precios de mercado y depreciación (B1-bis), y como dato secundario los años de recuperación; compararlo con un plazo fijo, por unidad, por inmueble y total [CONFIRMADO — P11] | M | 2 |
-| C1-RF-47 | **Cierre de mes** con validaciones (sin deudas, vouchers completos, servicios pagados) y bloqueo de cambios | S | 2 |
+| C1-RF-47 | **Cierre de mes** con validaciones (sin deudas, vouchers completos, servicios pagados) y bloqueo de cambios. **Reapertura** solo si se cobró una deuda incobrable del período, con auditoría (C1-RN-48) [CONFIRMADO — 13/Nov/2026] | S | 2 |
 | C1-RF-48 | Saludo automático de **cumpleaños** por correo | C | 2 |
 | C1-RF-49 | Exportar reportes (cobranza, morosidad, rendimiento) a Excel o PDF (ver C1-RF-56) | S | 2 |
 | C1-RF-50 | Importar los datos iniciales desde los Excel actuales del cliente | S | 1 |
-| C1-RF-51 | Armar el **dossier de desalojo** con contrato, datos laborales, deuda y comprobantes | S | 2 |
+| ~~C1-RF-51~~ | ~~Armar el dossier de desalojo~~ **Descartado (13/Nov/2026):** el desalojo se gestiona fuera del sistema (C1-RN-50) | — | — |
 | C1-RF-52 | Emitir el **desglose en PDF** del estado de cuenta por correo | S | 2 |
-| C1-RF-53 | Declarar una cuota como **incobrable**, con autorización y motivo. El sistema lo **propone** a los 7 días de atraso si no hay acuerdo de pago por partes [CONFIRMADO — P12] | **M** | **1** |
-| C1-RF-54 | Comparar el Cap Rate con la tasa del módulo de inversiones, o con una tasa manual si no está activo | S | 2 |
+| C1-RF-53 | Declarar una cuota como **incobrable**, con motivo. El sistema lo **propone** a los 7 días de atraso si no hay acuerdo de pago por partes y el **analista lo confirma** [CONFIRMADO — P12 y 13/Nov/2026] | **M** | **1** |
+| C1-RF-54 | Comparar el rendimiento inmobiliario con una **tasa media de plazo fijo que ingresa el analista** (con fecha y fuente) [CONFIRMADO — 13/Nov/2026] | S | 2 |
 | C1-RF-55 | Guardar el **autovalúo** (impuesto predial) de cada inmueble por año, con su archivo y fecha de pago [CONFIRMADO — PPT cliente] | M | 1 |
 | C1-RF-56 | **Vista tipo tabla (estilo Excel)** de cuotas por contrato: período, monto, fecha de vencimiento, fecha de pago, estado, y una **columna de incremento programado** visible; filtrable, ordenable y exportable [CONFIRMADO — PPT cliente] | M | 1 |
 | C1-RF-57 | **Escalamiento de alerta por falta de pago:** primero al **analista**; si no se regulariza en N días (configurable), al **dueño/gerente** [CONFIRMADO — PPT cliente] | M | 1 |
@@ -54,6 +54,7 @@
 | C1-RF-65 | Registrar el **área (m²)** de cada unidad y el **año de construcción** del inmueble; calcular la antigüedad y el valor depreciado (1 % por año, configurable) [CONFIRMADO — P11] | M | 1 |
 | C1-RF-66 | Mostrar el **alquiler sugerido** de cada unidad (precio de mercado por m² × área) junto al alquiler vigente, como apoyo para programar incrementos [CONFIRMADO — P11] | S | 2 |
 | C1-RF-67 | Registrar el **acuerdo de pago por partes** de una cuota (fecha del pedido y fechas prometidas) [CONFIRMADO — P12] | M | 1 |
+| C1-RF-69 | Registrar los **pagos de servicios** (agua, luz) de los inquilinos con su voucher, igual que el alquiler; los recibe el analista [CONFIRMADO — 13/Nov/2026] | M | 2 |
 | C1-RF-68 | Registrar la **suspensión y reposición** de agua y luz de una unidad, con fecha, motivo y quién la ordenó, y excluir su consumo del prorrateo mientras dure [CONFIRMADO — P12] | S | 2 |
 | C1-RF-63 | Ocultar **sumas y subtotales** en todas las listas, exportaciones y reportes que vea el analista (lista semanal sin fila de total) [CONFIRMADO — P9, NUC-RN-30] | M | 1 |
 | C1-RF-83 | **Portal o app para el inquilino**: ver su deuda, subir comprobantes y reportar limpieza | C | 3 |

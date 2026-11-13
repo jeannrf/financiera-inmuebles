@@ -14,7 +14,7 @@ Prioridad **MoSCoW**. La columna **Etapa** remite a [07-fases-y-alcance.md](07-f
 | INV-RF-74 | Registrar la **moneda** (S/ o US$) de cada cuenta, depósito y operación, y el **tipo de cambio** cuando se consolide en soles [CONFIRMADO — P14] | M | 2 |
 | INV-RF-67 | **Reporte anual** de ganancias de capital para el impuesto a la renta | M | 2 |
 | INV-RF-68 | Activar el módulo por organización, con su propia tarjeta en el tablero | M | 2 |
-| INV-RF-69 | Publicar la tasa ponderada para otros paquetes, como C1 | S | 2 |
+| INV-RF-69 | Publicar la tasa ponderada para otros paquetes *(C1 ya no la usa: compara con una tasa media que ingresa el analista, C1-RN-49)* | **W** | Futuro |
 | INV-RF-70 | Mostrar la ganancia o pérdida **mensual y anual** del módulo (además de por operación) [CONFIRMADO — PPT cliente] | M | 2 |
 | INV-RF-71 | Registrar y guardar el **EBITDA trimestral** (ver [INV-Q-39](08-preguntas-abiertas.md) sobre de qué entidad) [CONFIRMADO — PPT cliente] | S | 2 |
 | INV-RF-72 | **Alerta por teléfono** cuando el precio de una acción en cartera varíe **±5 %** (umbral configurable) [CONFIRMADO — PPT cliente] | S | 3 (o 2 si se elige la opción manual) |

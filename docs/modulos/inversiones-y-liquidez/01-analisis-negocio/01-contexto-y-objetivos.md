@@ -28,5 +28,5 @@ A fin de año necesita calcular a mano las ganancias de trading para su impuesto
 ## 1.4 Relación con otras piezas
 
 - **Núcleo:** usa usuarios, alertas, documentos y tablero.
-- **Clúster 1:** C1-P-09 lee su tasa ponderada, si está activo. La dependencia es opcional: sin el módulo, se usa una tasa manual.
+- **Clúster 1:** ~~C1-P-09 lee su tasa ponderada, si está activo.~~ **Actualizado (13/Nov/2026):** el piloto compara el rendimiento inmobiliario con una **tasa media de plazo fijo que ingresa el analista** (C1-RN-49). C1 ya no depende de este módulo.
 - No se mezcla con **Finanzas y Tesorería** del núcleo: esta registra la caja de la operación de un negocio; este módulo, las inversiones del dueño.

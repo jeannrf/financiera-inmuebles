@@ -7,7 +7,8 @@
 
 > **Estado de respuestas (11/Nov/2026):** el cliente respondió las preguntas **3 a 10** (10/Nov) y **11 a 14** (11/Nov).
 > Las respuestas y los archivos actualizados están en la [Sección 3](#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026)
-> y la [Sección 4](#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026).
+> y la [Sección 4](#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026). El 13/Nov concilió además los procesos del
+> Clúster 1 ([Sección 5](#sección-5-conciliación-de-procesos-del-clúster-1-13-de-noviembre-de-2026)).
 > Siguen pendientes la **1 y 2** y los 3 insumos prácticos.
 
 ---
@@ -243,5 +244,30 @@ Quedamos a su disposición para coordinar la recepción de los archivos. ¡Mucha
 | [INV-Q-43](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md) | P14 | ¿Cómo se pasan a soles las ganancias en dólares para el impuesto? (contador) |
 | [INV-Q-44](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md) | P14 | ¿Se mantiene la alerta de ±5 % del precio si no quiere ver la ganancia estimada? |
 
-Siguen **sin respuesta** dentro de estas preguntas: el dossier de desalojo (C1-Q-39), si un mes cerrado se puede reabrir
-(C1-Q-15), las comisiones del bróker y la póliza de muestra (INV-Q-27).
+Siguen **sin respuesta** dentro de estas preguntas: las comisiones del bróker y la póliza de muestra (INV-Q-27).
+*(El dossier de desalojo y la reapertura del mes se resolvieron el 13/Nov; ver Sección 5.)*
+
+> **Nota:** la propuesta 12.3 de la Sección 2 (Dossier de Desalojo en PDF) quedó **descartada**: el cliente gestiona los desalojos fuera del sistema.
+
+---
+
+## Sección 5: Conciliación de procesos del Clúster 1 (13 de noviembre de 2026)
+
+> Respuestas del cliente a los "puntos por conciliar" de los procesos ([C1, 4.2](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/04-procesos-de-negocio.md#42-puntos-por-conciliar)).
+
+| Proceso | Respuesta del cliente | Dónde se aplicó |
+|---------|-----------------------|-----------------|
+| C1-P-05 Prorrateo | Hay un medidor por departamento; la diferencia entre la lectura actual y la anterior es el consumo, y el gasto de agua y luz se reparte **proporcionalmente al consumo**. Quien **recibe los pagos de servicios es el analista**. | C1-P-05, C1-RN-51, C1-RF-69. Queda abierto quién paga al proveedor (C1-Q-70) |
+| C1-P-07 Rol de limpieza | El inquilino **manda las fotos al analista** y este las refleja en el sistema. Los estados actuales están bien, pero debe existir la opción de que el inquilino **no cumplió**. | C1-P-07, dominio (estados *Programado → Reportado → Cumplido* o *Incumplido*), C1-RF-43 |
+| C1-P-09 Rendimiento | Se calcula como explicó en P11 (por m²). Para comparar, el **analista ingresa una tasa media de plazo fijo** y se compara con el negocio inmobiliario. | C1-P-09, C1-RN-49, C1-RF-54. C1 deja de depender del módulo de inversiones (INV-RF-69) |
+| C1-P-10 Cierre de mes | El **analista confirma** el incobrable. El mes **se puede reabrir solo si se cobró la deuda**; si no, queda cerrado y la deuda es **incobrable no recuperable**. | C1-P-10, C1-RN-47, C1-RN-48, C1-RF-47, C1-RF-53. Nuevas C1-Q-71 y C1-Q-72 |
+| C1-P-03 Cobranza | El **dossier de desalojo no existe**: el desalojo lo gestiona la empresa sin el sistema. | C1-P-03, C1-RN-50, C1-RF-51 descartado, fuera de alcance |
+| C1-P-02 Alta de inquilino | La búsqueda de inquilinos se **limita a la organización**. | C1-P-02, NUC-Q-06 decidida, NUC-RN-21 confirmada |
+
+### Preguntas nuevas
+
+| ID | Pregunta |
+|----|----------|
+| [C1-Q-70](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | ¿Quién paga el recibo al proveedor: el analista con lo cobrado o el dueño? |
+| [C1-Q-71](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | ¿Quién reabre un mes cerrado cuando se cobra una deuda incobrable? |
+| [C1-Q-72](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) | Si el analista confirma el incobrable y el corte de servicios, ¿el dueño solo recibe un aviso o debe aprobarlo? |

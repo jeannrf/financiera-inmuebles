@@ -11,7 +11,7 @@
 | C1-Q-12 | ¿Qué medios de pago acepta (Yape, Plin, transferencia, efectivo)? ¿Hay depósito de garantía? ¿Cómo se registra y se devuelve? |
 | ~~C1-Q-13~~ | ~~La alerta al dueño, ¿a los 5 o a los 7 días de atraso? ¿Quiere SMS, correo o ambos?~~ 🟢 **Respondida (10/Nov):** 7 días; correo + bandeja del sistema ([C1-RN-06](05-reglas-de-negocio-y-calculos.md)) |
 | C1-Q-14 | ¿El saludo de cumpleaños se envía por correo? ¿Con algún texto o diseño en particular? |
-| C1-Q-15 | ¿Se puede cerrar un mes si un inquilino quedó como **incobrable**? ¿Se puede **reabrir** un mes cerrado? *(Parcial 11/Nov: P12 confirma el incobrable a los 7 días; falta si se puede reabrir un mes.)* |
+| ~~C1-Q-15~~ | ~~¿Se puede cerrar un mes con un incobrable? ¿Se puede reabrir?~~ 🟢 **Respondida (13/Nov):** sí se cierra; **solo se reabre si se cobró la deuda**; si no, queda cerrado y la deuda es incobrable no recuperable ([C1-RN-48](05-reglas-de-negocio-y-calculos.md)) |
 | ~~C1-Q-24~~ | ~~¿Se aceptan pagos parciales? ¿Se cobra mora o penalidad por atraso?~~ 🟢 **Respondida (10/Nov):** sí a pagos parciales; sin intereses ni penalidad ([C1-RN-39, C1-RN-40](05-reglas-de-negocio-y-calculos.md)) |
 | C1-Q-28 | ¿El día de pago es el mismo para todos o depende de cada contrato? |
 | C1-Q-29 | ¿Qué hacer con el contrato al renovarlo: se crea uno nuevo o se extiende el actual? ¿Con cuántos días de anticipación quiere la alerta? |
@@ -33,14 +33,14 @@
 | ~~C1-Q-16~~ | ~~¿Sobre la inversión o sobre el valor actualizado por UIT?~~ 🟢 **Respondida (11/Nov):** sobre el **valor de mercado por m² depreciado 1 % por año** ([B1-bis](05-reglas-de-negocio-y-calculos.md#b1-bis-rendimiento-de-mercado-por-metro-cuadrado-método-del-piloto)). La parte de impuestos pasa a C1-Q-63 |
 | C1-Q-17 | ¿El ingreso se considera cuando se **cobra** o cuando **se debía cobrar**? *(En P11 el cliente usa el alquiler pactado por m²; falta saber si el rendimiento real usa lo cobrado.)* |
 | C1-Q-18 | ¿Las **mejoras** también se actualizan con la UIT desde el año en que se hicieron? *(Sin respuesta; con el método por m² se reemplaza por C1-Q-65.)* |
-| C1-Q-37 | ¿Qué tasa de referencia usamos para comparar (la de un plazo fijo que usted ingrese, por ejemplo 5.8 %)? |
+| ~~C1-Q-37~~ | ~~¿Qué tasa de referencia usamos para comparar?~~ 🟢 **Respondida (13/Nov):** una **tasa media de plazo fijo que ingresa el analista** ([C1-RN-49](05-reglas-de-negocio-y-calculos.md)) |
 | C1-Q-25 | ¿Está de acuerdo con los criterios y pesos propuestos para la calificación de inquilinos (puntualidad 50 %, atraso promedio 30 %, deuda 20 %)? |
 
 ## Roles y privilegios
 
 | ID | Pregunta |
 |----|----------|
-| C1-Q-30 | ¿Los inquilinos deberían tener acceso al sistema en algún momento (para ver su deuda o subir vouchers), o solo reciben correos? |
+| C1-Q-30 | ¿Los inquilinos deberían tener acceso al sistema en algún momento (para ver su deuda o subir vouchers), o solo reciben correos? *(Parcial 13/Nov: en el día a día el inquilino manda fotos y vouchers al analista, que los sube; el portal sigue en etapa 3.)* |
 | ~~C1-Q-31~~ | ~~¿El analista puede verificar vouchers?~~ 🟢 **Respondida (10/Nov):** sí, ve y verifica el comprobante |
 | ~~C1-Q-32~~ | ~~¿Puede ver el monto individual de la cuota (pero no los totales)?~~ 🟢 **Respondida (10/Nov):** sí al monto individual; **nunca** la recaudación total ([matriz](03-actores-roles-privilegios.md#32-matriz-preliminar-de-privilegios), [NUC-RN-30](../../../general/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md)) |
 
@@ -48,9 +48,9 @@
 
 | ID | Pregunta |
 |----|----------|
-| C1-Q-39 | ¿Qué debe contener el **dossier de desalojo** y quién lo arma? ¿Hay un abogado que deba validarlo? *(Sin respuesta en P12.)* |
+| ~~C1-Q-39~~ | ~~¿Qué debe contener el dossier de desalojo?~~ 🟢 **Respondida (13/Nov):** **no existe** en el sistema; el desalojo lo gestiona la empresa por fuera ([C1-RN-50](05-reglas-de-negocio-y-calculos.md)) |
 | C1-Q-40 | ¿Cómo se define la **vacancia** para el Cap Rate? ¿Con qué alquiler de referencia? |
-| C1-Q-41 | ¿Quién puede declarar una cuota como **incobrable**? ¿Se puede revertir si luego se paga? *(Parcial 11/Nov: cuándo → a los 7 días sin acuerdo de pago por partes. Falta quién y si se revierte; ver C1-Q-68.)* |
+| ~~C1-Q-41~~ | ~~¿Quién declara el incobrable? ¿Se revierte si luego se paga?~~ 🟢 **Respondida (13/Nov):** lo **confirma el analista**; si se cobra, se reabre el mes para registrar el pago ([C1-RN-47, C1-RN-48](05-reglas-de-negocio-y-calculos.md)) |
 
 ## Otras verticales (para el primer cliente de cada una)
 
@@ -71,6 +71,7 @@
 |----|----------|
 | C1-Q-56 ⭐ | En la reunión la alerta de atraso iba **directa al dueño**; en la PPT va "al analista y luego al gerente". ¿Confirmamos el escalamiento? ¿Con cuántos días cada nivel? *(Parcial 10/Nov: el nivel del dueño es 7 días; falta el del analista.)* |
 | C1-Q-57 | ¿El autovalúo solo se archiva o también se registra su monto como gasto del inmueble? |
+
 ## Tras las respuestas al cuestionario (10/Nov/2026)
 
 | ID | Pregunta |
@@ -90,5 +91,13 @@
 | C1-Q-65 | Si hace una **mejora** grande (pisos, remodelación), ¿cómo afecta al valor por m²: reduce la antigüedad, se suma aparte o no se considera? |
 | C1-Q-66 | ¿Cada cuánto se actualiza el **estudio de mercado** (mensual, anual, antes de cada renovación)? ¿Qué fuentes usa el analista (portales, avisos)? |
 | C1-Q-67 ⭐ | **Legal:** suspender agua y luz a un inquilino moroso puede tener consecuencias legales. ¿Lo ha validado con un abogado? ¿Está previsto en el contrato de alquiler? |
-| C1-Q-68 ⭐ | A los 7 días sin acuerdo, ¿el sistema declara el incobrable **solo** o le **propone** al dueño y él confirma? (Propuesta: el dueño confirma.) |
-| C1-Q-69 | Cuando el inquilino paga la deuda, ¿se **reponen** los servicios de inmediato? ¿Se cobra algún costo de reconexión? ¿La deuda deja de ser incobrable? |
+| ~~C1-Q-68~~ | ~~¿El sistema declara el incobrable solo o lo propone y alguien confirma?~~ 🟢 **Respondida (13/Nov):** el sistema propone y **el analista confirma** |
+| C1-Q-69 | Cuando el inquilino paga la deuda, ¿se **reponen** los servicios de inmediato? ¿Se cobra algún costo de reconexión? *(Si se cobra, el mes se reabre para registrar el pago, C1-RN-48.)* |
+
+## Tras la conciliación de procesos (13/Nov/2026)
+
+| ID | Pregunta |
+|----|----------|
+| C1-Q-70 | El analista recibe los pagos de servicios de los inquilinos. ¿Quién **paga el recibo al proveedor** (Sedapal, Enel, Luz del Sur): el analista con ese dinero o el dueño? ¿Se registra en el sistema? |
+| C1-Q-71 | ¿Quién **reabre** un mes cerrado cuando se cobra una deuda incobrable: el dueño o también el analista? (Propuesta: solo el dueño.) |
+| C1-Q-72 | Si el **analista** confirma el incobrable y el corte de servicios, ¿el dueño debe recibir un aviso o aprobarlo? (Propuesta: aviso al dueño, sin aprobación.) |

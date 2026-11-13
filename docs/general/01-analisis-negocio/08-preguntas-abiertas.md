@@ -10,6 +10,7 @@
 | NUC-Q-01 | El negocio financiero es un **módulo complementario**, no un clúster. Se mantienen 6 clústeres. | 2026-11-06 | Se documenta en [modulos/inversiones-y-liquidez](../../modulos/inversiones-y-liquidez/README.md) |
 | NUC-Q-02 | Restaurantes y tiendas **van en el Clúster 6**, porque comparten muchas ventas, proveedores e inventario. Forman la vertical 6.3. | 2026-11-06 | Falta definir si tiendas y restaurantes son una sola plantilla ([C6-Q-30](../../clusters/cluster-6-comercio-distribucion-produccion/01-analisis-negocio/08-preguntas-abiertas.md)) |
 | NUC-Q-09 | El producto será de **una empresa propia del equipo**. El cliente piloto es su primer cliente. | 2026-11-06 | Corresponde a la opción (A) de [CLI-Q-03](../../clientes/cliente-piloto/02-preguntas-abiertas.md). Falta comunicárselo al cliente |
+| NUC-Q-06 | La búsqueda de personas por documento (la "base centralizada" del alta de inquilino) se limita a **cada organización**. No se comparte morosidad entre clientes. | 2026-11-13 | Confirmado por el cliente piloto al conciliar C1-P-02. [NUC-RN-21](05-reglas-de-negocio-y-calculos.md) pasa a confirmada |
 
 ## Estructura de la plataforma
 
@@ -44,7 +45,7 @@ El cliente pidió **web para empresas pequeñas**, **escritorio para medianas y 
 
 | ID | Pregunta | Propuesta del análisis |
 |----|----------|------------------------|
-| NUC-Q-06 ⭐ | El proceso de alta busca a la persona "en la base centralizada". ¿Centralizada para una organización o para toda la plataforma? Una lista compartida de morosos entre clientes tiene riesgo legal serio. | Solo por organización. Consultar a un abogado antes de plantear otra cosa. |
+| ~~NUC-Q-06~~ | ~~¿Base centralizada por organización o para toda la plataforma?~~ 🟢 **Decidida (13/Nov/2026):** solo por organización. Ver [decisiones tomadas](#decisiones-tomadas). | — |
 | NUC-Q-07 ⭐ | **Comprobantes electrónicos SUNAT:** el mapeo habla de "facturación" en casi todos los clústeres y ningún documento lo aborda. Para C4, C5 y C6 es indispensable. ¿Va en el núcleo? | Servicio del núcleo conectado a un proveedor autorizado, activable por negocio. Validar con un contador. |
 | NUC-Q-08 | ¿Qué obligaciones implica custodiar datos de terceros de muchas empresas (Ley 29733) y datos de salud? | Consulta legal antes de vender el primer cliente externo. |
 | NUC-Q-14 | ¿Qué datos pueden enviarse a un proveedor de IA y con qué consentimiento? | Por defecto, solo la descripción del negocio y nunca datos de sus clientes. |

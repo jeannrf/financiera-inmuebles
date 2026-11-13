@@ -29,7 +29,7 @@ de terceros con costo o incertidumbre (WhatsApp, OCR, SMS masivo) va al final.
 - Mantenimiento con **aprobación de gastos** y **rol de limpieza**.
 - **Mejoras**, **valorización por UIT** y **rendimiento** mensual y anual.
 - **Calificación** de inquilinos (semáforo).
-- **Cierre de mes** (candado) y dossier de desalojo.
+- **Cierre de mes** (candado), con reapertura solo si se cobra una deuda incobrable.
 - Saludo de cumpleaños.
 
 ## Etapa 3: Integraciones y deseos
@@ -47,4 +47,5 @@ piezas de [C1-RF-100 en adelante](06-requerimientos-preliminares.md#62-demás-ve
 
 - Publicación automática en portales inmobiliarios.
 - GPS o telemetría de flotas, y control físico de accesos (cerraduras, torniquetes).
-- Tasación profesional del inmueble: la UIT es una aproximación elegida por el cliente.
+- Tasación profesional del inmueble: se usa la aproximación del cliente (valor de mercado por m² depreciado).
+- **Gestión de desalojos** y expedientes legales: la empresa los lleva fuera del sistema [CONFIRMADO — 13/Nov/2026].
