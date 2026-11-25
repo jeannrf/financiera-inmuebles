@@ -80,23 +80,23 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 
 #### Inmueble / Edificio (propiedad)
 - Nombre, dirección y distrito.
-- **Valor de adquisición o construcción** y **fecha** (año base para la UIT).
-- **Valor actualizado** (calculado: UIT + mejoras; ver `05-reglas-de-negocio-y-calculos.md`). *Desde P11 es solo referencia [C1-Q-62].*
+- **Valor de adquisición o construcción** y **fecha** (base de la inversión total y de los años de recuperación).
+- ~~Valor actualizado (UIT + mejoras)~~: **descartado**, la UIT no se usa [CONFIRMADO — ronda 2, C1-Q-62]. El valor sale del mercado por m² depreciado.
 - **Año de construcción**, para calcular la **antigüedad** y la depreciación de 1 % por año [CONFIRMADO — P11].
 - **Zona** a la que pertenece, para usar el estudio de mercado que le corresponde [CONFIRMADO — P11].
 - Medidores o **suministros** generales de agua y luz (puede haber **más de uno**; el cliente suma dos suministros de luz).
 - Modalidad de servicios: **el dueño paga y prorratea** o **el inquilino paga directo**. [INFERIDO: por inmueble o por departamento]
 
 #### Unidad alquilable (departamento, puesto de mercado o cochera)
-- **Tipo de unidad** [CONFIRMADO — cuestionario P5]: el piloto alquila **departamentos**, unidades en un **mercado** (puesto o
-  local [INFERIDO → C1-Q-58]) y **cocheras**. El tipo es un **catálogo configurable**, no una lista fija en el código (NUC-RN-25).
+- **Tipo de unidad** [CONFIRMADO — P5 y ronda 2, C1-Q-58]: el piloto alquila **8 departamentos**, **2 cocheras** y **1 puesto
+  dentro de un mercado**. El tipo es un **catálogo configurable**, no una lista fija en el código (NUC-RN-25).
   Cada tipo define qué atributos y conceptos usa:
 
-  | Tipo | Submedidores | Servicios prorrateados | Mantenimiento y limpieza |
-  |------|:------------:|:----------------------:|:------------------------:|
-  | Departamento | Agua y luz | Sí (si el dueño paga el recibo) | Sí |
-  | Puesto o local de mercado | [PREGUNTA C1-Q-58] | [PREGUNTA C1-Q-58] | [PREGUNTA C1-Q-58] |
-  | Cochera | No [INFERIDO] | No [INFERIDO] | [PREGUNTA C1-Q-58] |
+  | Tipo | Contrato | Submedidores | Servicios prorrateados | Gas | Mantenimiento y limpieza |
+  |------|:--------:|:------------:|:----------------------:|:---:|:------------------------:|
+  | Departamento | Sí | Agua y luz | Sí (si el dueño paga el recibo) | Suministro propio, si tiene | Sí |
+  | Puesto de mercado | Sí [INFERIDO] | [PREGUNTA C1-Q-73] | [PREGUNTA C1-Q-73] | No [INFERIDO] | [PREGUNTA C1-Q-73] |
+  | Cochera | **Sí** [CONFIRMADO] | No [INFERIDO] | No [INFERIDO] | No | **No** [CONFIRMADO] |
 
 - Código (**sin estándar fijo**: "1A", "2B", "501", "C-03"…), piso (si aplica) e inmueble al que pertenece.
 - **Área en m²** [CONFIRMADO — P11]: es la base del alquiler sugerido y del rendimiento por m².
@@ -137,7 +137,7 @@ comunes y limpieza. Hay dos modalidades: **el dueño paga y prorratea** o **el i
 - **Saldo pendiente** = monto de la cuota − Σ pagos verificados. **Sin intereses ni penalidad por mora** [CONFIRMADO — P8].
 - **Acuerdo de pago por partes**: si el inquilino pide pagar por partes antes de los 7 días, se registra (fecha del pedido y
   fechas prometidas) y la cuota **no** pasa a incobrable [CONFIRMADO — P12].
-- **Incobrable**: a los 7 días de atraso sin acuerdo, con fecha, motivo y el **analista** que lo confirmó. La deuda sigue en el historial [CONFIRMADO — P12 y 13/Nov/2026].
+- **Incobrable**: a los 7 días de atraso sin acuerdo, con fecha, motivo y el **dueño** que lo decidió a propuesta del sistema. La deuda sigue en el historial [CONFIRMADO — P12 y ronda 2, 24/Nov/2026].
   Si se cobra después, el mes se reabre para registrar el pago; si no, queda como **incobrable no recuperable** al cerrarse el mes.
 
 #### Suspensión de servicios [CONFIRMADO — P12]

@@ -20,7 +20,7 @@
 | C1-RF-30 | Advertir si se sube un **archivo idéntico** a uno ya existente (comparando hash) | S | 1 |
 | C1-RF-31 | Consultar los vouchers por inquilino y período ("muéstrame todos los vouchers de 2026") | M | 1 |
 | C1-RF-32 | Lista **semanal** de cobros y lista de "hoy vence" para el analista | M | 1 |
-| C1-RF-33 | Alerta al dueño por atraso ≥ N días (configurable, 7 por defecto) por **correo electrónico y bandeja del sistema** *(segundo nivel del escalamiento de C1-RF-57)* [CONFIRMADO — P7] | M | 1 |
+| C1-RF-33 | Alerta al dueño por atraso ≥ N días (configurable, 7 por defecto) por **correo electrónico y bandeja del sistema** *(en el piloto coincide con la del analista, C1-RF-57)* [CONFIRMADO — P7] | M | 1 |
 | C1-RF-34 | Alerta de **renovación de contrato** X días antes de su vencimiento | M | 1 |
 | C1-RF-35 | Historial del inquilino: estadías, atrasos y deudas (incluye inquilinos que regresan) | M | 1 |
 | C1-RF-36 | **Calificación** del inquilino (verde, amarillo o rojo) con criterios ponderados configurables | S | 2 |
@@ -32,22 +32,22 @@
 | C1-RF-42 | Registrar gastos de mantenimiento con el flujo **solicitud → aprobación del dueño** | S | 2 |
 | C1-RF-43 | **Rol de limpieza**: cronograma, fotos que el inquilino envía al analista y este sube, estados *Programado → Reportado → Cumplido* o *Incumplido*, y cargo por reemplazo [CONFIRMADO — 13/Nov/2026] | S | 2 |
 | C1-RF-44 | Registrar **mejoras** que se suman al costo del inmueble | M | 2 |
-| C1-RF-45 | Calcular el **valor actualizado** del inmueble con la UIT (más mejoras) | M | 2 |
-| C1-RF-46 | Calcular el **rendimiento** mensual y anual **por m²** con precios de mercado y depreciación (B1-bis), y como dato secundario los años de recuperación; compararlo con un plazo fijo, por unidad, por inmueble y total [CONFIRMADO — P11] | M | 2 |
+| ~~C1-RF-45~~ | ~~Calcular el valor actualizado del inmueble con la UIT (más mejoras)~~ **Descartado (24/Nov/2026):** la UIT no se usa (C1-Q-62) | — | — |
+| C1-RF-46 | Calcular el **rendimiento neto** mensual y anual **por m²** (descontando impuestos y mantenimiento) con precios de mercado y depreciación (B1-bis), y como dato secundario los años de recuperación; compararlo con un plazo fijo, por unidad, por inmueble y total [CONFIRMADO — P11 y ronda 2] | M | 2 |
 | C1-RF-47 | **Cierre de mes** con validaciones (sin deudas, vouchers completos, servicios pagados) y bloqueo de cambios. **Reapertura** solo si se cobró una deuda incobrable del período, con auditoría (C1-RN-48) [CONFIRMADO — 13/Nov/2026] | S | 2 |
 | C1-RF-48 | Saludo automático de **cumpleaños** por correo | C | 2 |
 | C1-RF-49 | Exportar reportes (cobranza, morosidad, rendimiento) a Excel o PDF (ver C1-RF-56) | S | 2 |
 | C1-RF-50 | Importar los datos iniciales desde los Excel actuales del cliente | S | 1 |
 | ~~C1-RF-51~~ | ~~Armar el dossier de desalojo~~ **Descartado (13/Nov/2026):** el desalojo se gestiona fuera del sistema (C1-RN-50) | — | — |
 | C1-RF-52 | Emitir el **desglose en PDF** del estado de cuenta por correo | S | 2 |
-| C1-RF-53 | Declarar una cuota como **incobrable**, con motivo. El sistema lo **propone** a los 7 días de atraso si no hay acuerdo de pago por partes y el **analista lo confirma** [CONFIRMADO — P12 y 13/Nov/2026] | **M** | **1** |
+| C1-RF-53 | Declarar una cuota como **incobrable**, con motivo. El sistema lo **propone al dueño** a los 7 días de atraso si no hay acuerdo de pago por partes, y el **dueño decide** si es incobrable [CONFIRMADO — P12 y ronda 2, 24/Nov/2026] | **M** | **1** |
 | C1-RF-54 | Comparar el rendimiento inmobiliario con una **tasa media de plazo fijo que ingresa el analista** (con fecha y fuente) [CONFIRMADO — 13/Nov/2026] | S | 2 |
 | C1-RF-55 | Guardar el **autovalúo** (impuesto predial) de cada inmueble por año, con su archivo y fecha de pago [CONFIRMADO — PPT cliente] | M | 1 |
-| C1-RF-56 | **Vista tipo tabla (estilo Excel)** de cuotas por contrato: período, monto, fecha de vencimiento, fecha de pago, estado, y una **columna de incremento programado** visible; filtrable, ordenable y exportable [CONFIRMADO — PPT cliente] | M | 1 |
-| C1-RF-57 | **Escalamiento de alerta por falta de pago:** primero al **analista**; si no se regulariza en N días (configurable), al **dueño/gerente** [CONFIRMADO — PPT cliente] | M | 1 |
-| C1-RF-58 | Prorratear y cobrar el **gas** igual que agua y luz, cuando el inmueble lo tenga [CONFIRMADO — PPT cliente] | S | 2 |
+| C1-RF-56 | **Vista tipo tabla (estilo Excel)** de cuotas por contrato: período, monto, fecha de vencimiento, fecha de pago, estado, y una **columna de incremento programado** visible; filtrable, ordenable y exportable. Reemplaza las columnas por mes del Excel actual ([3.2.1](../../../clientes/cliente-piloto/03-configuracion-y-datos.md#321-tabla-de-inquilinos-y-alquiler-ejemplojpg)) [CONFIRMADO — PPT cliente] | M | 1 |
+| C1-RF-57 | **Alerta por falta de pago** al **analista** y al **dueño/gerente**, cada una con su número de días (configurable; en el piloto, **7 y 7**) [CONFIRMADO — PPT cliente y ronda 2] | M | 1 |
+| C1-RF-58 | Trasladar el **gas** de cada departamento según **su propio suministro**, sin prorrateo, cuando la unidad lo tenga *(antes: "prorratear el gas igual que agua y luz")* [⚙ Default aplicado para SRS — Excel del cliente, C1-Q-34] | S | 2 |
 | C1-RF-59 | Registrar **pagos parciales** de una cuota (varios pagos, cada uno con su voucher), mostrar el **saldo pendiente** y el estado *Pago parcial*, **sin** calcular intereses ni penalidad [CONFIRMADO — P8] | M | 1 |
-| C1-RF-60 | Catálogo configurable de **tipos de unidad** (departamento, puesto o local de mercado, cochera), cada uno con sus atributos y conceptos de cobro [CONFIRMADO — P5] | M | 1 |
+| C1-RF-60 | Catálogo configurable de **tipos de unidad** (departamento, puesto de mercado, cochera), cada uno con sus atributos y conceptos de cobro; las cocheras tienen contrato pero **sin** limpieza ni mantenimiento [CONFIRMADO — P5 y ronda 2, C1-Q-58] | M | 1 |
 | C1-RF-61 | Asociar cada submedidor a un **suministro** del inmueble, para prorratear cada recibo solo entre sus departamentos [CONFIRMADO — P10] | M | 2 |
 | C1-RF-62 | Indicador de **ocupación** (unidades ocupadas / alquilables) en la tarjeta del tablero, junto al monto cobrado, con la lista de unidades libres [CONFIRMADO — P6] | S | 2 |
 | C1-RF-64 | Registrar el **estudio de mercado por zona**: avisos de alquiler y de venta de departamentos nuevos (fuente, fecha, área, precio) y calcular los promedios por m² con fecha de vigencia [CONFIRMADO — P11] | M | 2 |
@@ -57,6 +57,8 @@
 | C1-RF-69 | Registrar los **pagos de servicios** (agua, luz) de los inquilinos con su voucher, igual que el alquiler; los recibe el analista [CONFIRMADO — 13/Nov/2026] | M | 2 |
 | C1-RF-68 | Registrar la **suspensión y reposición** de agua y luz de una unidad, con fecha, motivo y quién la ordenó, y excluir su consumo del prorrateo mientras dure [CONFIRMADO — P12] | S | 2 |
 | C1-RF-63 | Ocultar **sumas y subtotales** en todas las listas, exportaciones y reportes que vea el analista (lista semanal sin fila de total) [CONFIRMADO — P9, NUC-RN-30] | M | 1 |
+| C1-RF-70 | Marcar la **morosidad solo en la cuota afectada** (celda y estado *Vencida*, *Morosa* o *Incobrable*) y el semáforo del inquilino aparte, **sin** pintar toda la fila como hace hoy el Excel [CONFIRMADO — Excel del cliente, 24/Nov/2026] | M | 1 |
+| C1-RF-71 | Al **importar** los Excel (C1-RF-50): convertir las columnas por mes en cuotas por período, el texto "30 de cada mes" en día de pago, la ubicación en texto libre en código de unidad, y la columna de teléfono sin encabezado en el teléfono del inquilino [CONFIRMADO — Excel del cliente] | S | 1 |
 | C1-RF-83 | **Portal o app para el inquilino**: ver su deuda, subir comprobantes y reportar limpieza | C | 3 |
 
 ## 6.2 Demás verticales [INFERIDO a partir del mapeo]

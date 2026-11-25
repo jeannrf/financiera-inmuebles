@@ -27,7 +27,7 @@ de terceros con costo o incertidumbre (WhatsApp, OCR, SMS masivo) va al final.
 
 - **Servicios**: recibos, lecturas con foto, **prorrateo** exacto (agua, luz y **gas**, C1-RF-58) y envío del resumen por correo.
 - Mantenimiento con **aprobación de gastos** y **rol de limpieza**.
-- **Mejoras**, **valorización por UIT** y **rendimiento** mensual y anual.
+- **Mejoras** y **rendimiento neto por m²** mensual y anual (la UIT ya no se usa: C1-Q-62).
 - **Calificación** de inquilinos (semáforo).
 - **Cierre de mes** (candado), con reapertura solo si se cobra una deuda incobrable.
 - Saludo de cumpleaños.
