@@ -5,11 +5,8 @@
 **Elaborado por:** Equipo de Ingeniería del Proyecto (John, Jeanpier, Ilia)  
 **Objetivo:** Consolidar definiciones operativas y recopilar datos reales para la presentación formal de la Fase 0 (~28 de noviembre de 2026 en Coworking).
 
-> **Estado de respuestas (11/Nov/2026):** el cliente respondió las preguntas **3 a 10** (10/Nov) y **11 a 14** (11/Nov).
-> Las respuestas y los archivos actualizados están en la [Sección 3](#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026)
-> y la [Sección 4](#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026). El 13/Nov concilió además los procesos del
-> Clúster 1 ([Sección 5](#sección-5-conciliación-de-procesos-del-clúster-1-13-de-noviembre-de-2026)).
-> Siguen pendientes las preguntas **1 y 2** (los insumos prácticos ya fueron recibidos del cliente).
+> **Registro histórico (Ronda 1 — 09 al 13/Nov/2026):** el cliente respondió las preguntas **3 a 10** (10/Nov), **11 a 14** (11/Nov) y concilió los procesos del Clúster 1 (13/Nov) en las secciones [3](#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026), [4](#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026) y [5](#sección-5-conciliación-de-procesos-del-clúster-1-13-de-noviembre-de-2026).  
+> 👉 Para ver el **estado consolidado vigente** (incluyendo los cambios de la Ronda 2 del 24/Nov y los enlaces a requerimientos), consulta el **[Tablero Maestro de Preguntas y Decisiones](02-preguntas-abiertas.md)**.
 
 ---
 

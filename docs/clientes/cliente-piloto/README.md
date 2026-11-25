@@ -15,16 +15,15 @@
 
 ## Índice
 
-| Archivo | Contenido |
-|---------|-----------|
-| [01-contexto-y-compromisos.md](01-contexto-y-compromisos.md) | Quién es, su problema, objetivos, modo de trabajo y compromisos |
-| [02-preguntas-abiertas.md](02-preguntas-abiertas.md) | Temas comerciales y generales a tratar con este cliente |
-| [03-configuracion-y-datos.md](03-configuracion-y-datos.md) | Sus zonas, información actual en Excel y cifras de ejemplo |
-| [04-cuestionario-validacion-reunion1.md](04-cuestionario-validacion-reunion1.md) | Pliego ejecutivo de 14 preguntas clave, solicitud de insumos (Issue FIN-01) y **respuestas del cliente** (P3–P14) |
-| [05-cuestionario-ronda2-cierre.md](05-cuestionario-ronda2-cierre.md) | **Ronda 2:** mensaje de cierre con propuestas por defecto, respuestas del 24/Nov e insumos recibidos |
+| Archivo | Rol | Contenido |
+|---------|-----|-----------|
+| [01-contexto-y-compromisos.md](01-contexto-y-compromisos.md) | Contexto | Quién es, su problema, objetivos, modo de trabajo y compromisos |
+| [02-preguntas-abiertas.md](02-preguntas-abiertas.md) | **⭐ Fuente de verdad** | **Tablero maestro de preguntas y decisiones** (qué está confirmado, qué cerró por default/equipo y enlaces a requerimientos) |
+| [03-configuracion-y-datos.md](03-configuracion-y-datos.md) | **⭐ Fuente de verdad** | Zonas, estructura real de sus Excel migrables, dimensionamiento y parámetros confirmados |
+| [04-cuestionario-validacion-reunion1.md](04-cuestionario-validacion-reunion1.md) | Historial (Ronda 1) | Pliego inicial de 14 preguntas (FIN-01) y respuestas del 10, 11 y 13/Nov |
+| [05-cuestionario-ronda2-cierre.md](05-cuestionario-ronda2-cierre.md) | Historial (Ronda 2) | Pliego de cierre (FIN-17), respuestas del 24/Nov, defaults e insumos |
 
-Las preguntas sobre el negocio van en [C1](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) e
-[Inversiones](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md). Antes de enviárselas hay que unificarlas en un solo documento.
+> **Estado actual (25/Nov/2026):** 🟢 **Sin bloqueantes técnicos para el SRS, ERD, Arquitectura y Wireframes.** Consulta el resumen consolidado con enlaces a cada requerimiento en [02-preguntas-abiertas.md](02-preguntas-abiertas.md). Los registros detallados por dominio se mantienen en [General](../../general/01-analisis-negocio/08-preguntas-abiertas.md), [C1](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) e [Inversiones](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md).
 
 ## Resumen de la 1.ª reunión
 

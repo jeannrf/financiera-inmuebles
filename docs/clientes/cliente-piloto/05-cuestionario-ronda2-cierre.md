@@ -7,8 +7,8 @@
 confirmar la reunión del ~28 de noviembre y registrar los insumos recibidos, para destrabar el SRS v1.0 (FIN-04, FIN-05,
 FIN-06) y el modelo de datos (FIN-07, FIN-08).
 
-> **Cómo funciona esta ronda:** cada punto trae una **propuesta por defecto**. Si el cliente no la objeta, queda **aprobada
-> para el SRS** y se marca como `⚙ Default aplicado para SRS` en los archivos de preguntas.
+> **Registro de cierre (Ronda 2 — 24/Nov/2026):** cada punto trae una **propuesta por defecto**. Si el cliente no la objeta, queda **aprobada para el SRS** (`⚙ Default aplicado para SRS`).  
+> 👉 Para consultar el **estado consolidado de todas las rondas con enlaces directos a los requerimientos**, ve al **[Tablero Maestro de Preguntas y Decisiones](02-preguntas-abiertas.md)**.
 
 ---
 
