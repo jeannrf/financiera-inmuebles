@@ -47,9 +47,10 @@ Términos del rubro. Los de la plataforma están en el [glosario general](../../
 | **SUM** | Salón de Usos Múltiples de un edificio. |
 | **Suministro** | Número de servicio del proveedor de luz o agua; un edificio puede tener varios. |
 | **SUNAT** | Superintendencia Nacional de Aduanas y de Administración Tributaria. |
-| **UIT** | Unidad Impositiva Tributaria: valor de referencia que el Estado fija cada año (por ejemplo, S/ 5 350 en 2025). El cliente la usa como índice para actualizar el valor de sus inmuebles. |
+| **UIT** | Unidad Impositiva Tributaria: valor de referencia que el Estado fija cada año (por ejemplo, S/ 5 350 en 2025). El piloto **ya no** la usa para valorizar sus inmuebles (C1-Q-62). |
 | **Vacancia** | Tiempo en que una unidad está sin contrato y no genera ingreso. |
-| **Valor actualizado** | Valor del inmueble ajustado por el factor UIT, más las mejoras. |
+| **Valor actualizado** | ~~Valor del inmueble ajustado por el factor UIT, más las mejoras.~~ Descartado; ver **Valor por m² depreciado**. |
+| **Valor por m² depreciado** | Precio de compra por m² de un departamento nuevo de la zona, menos 1 % por cada año de antigüedad del inmueble. |
 | **Vigilante (huachimán)** | Personal de seguridad del edificio (3 turnos de 8 h para cubrir 24/7). |
 | **Voucher** | Comprobante de pago (captura de Yape o transferencia) que envía el inquilino. |
 | **Áreas comunes** | Espacios compartidos del edificio (ascensor, pasillos, ingreso), cuyos gastos se cubren con el mantenimiento. |

@@ -11,8 +11,8 @@ son también la base de las demás verticales. Los procesos del núcleo (alta de
 **TO-BE:**
 1. El **Dueño** registra el inmueble: dirección, distrito, fecha base de adquisición/construcción, valor inicial de inversión y modalidad de servicios (*el dueño paga y prorratea* en zonas como San Martín de Porres vs. *inquilino paga directo / paquete todo incluido* en Jesús María).
 2. Registra los suministros generales de agua y luz (soporta N suministros por edificio).
-3. Crea las unidades/departamentos: código libre (ej. "1A", "2B", "501"), piso y submedidores vinculados con sus identificadores.
-4. El sistema fija el costo base del activo para procesar las valorizaciones automáticas por indexación a la UIT y acumulado de mejoras (Capex).
+3. Crea las unidades: **tipo** (departamento, cochera o puesto de mercado), código libre (ej. "1A", "2B", "501"), piso, **área en m²** y submedidores vinculados a su suministro. Las cocheras no llevan limpieza ni mantenimiento [CONFIRMADO — ronda 2].
+4. Registra el **año de construcción** y la **zona** del inmueble, que alimentan el valor por m² depreciado (C1-P-09). ~~Valorización por indexación a la UIT~~: descartada, la UIT no se usa [CONFIRMADO — ronda 2, C1-Q-62].
 
 ### C1-P-02. Alta de inquilino y formalización de contrato
 **AS-IS:** Documentos en papel, contactos informales en WhatsApp y falta de expediente estructurado para contingencias legales.
@@ -31,8 +31,8 @@ son también la base de las demás verticales. Los procesos del núcleo (alta de
 4. **Verificación humana asistida:** El analista/dueño valida que la referencia, monto y período coincidan, descartando vouchers duplicados, consumidos o de otros meses/departamentos. Al confirmar, la cuota cambia a *Pagada*, o a *Pago parcial* si el monto no cubre toda la cuota (C1-RN-39).
 5. **Control de morosidad y fiscalización del analista:**
    * Si no hay pago al vencimiento, la cuota pasa a *Vencida*.
-   * Al alcanzar **7 días de atraso** (configurable), el sistema dispara una **Alerta Crítica al Dueño** por **correo y bandeja del sistema** (C1-RN-06). Esto le notifica la deuda y fiscaliza si el analista omitió reportar la morosidad.
-   * Si el inquilino **no pidió pagar por partes**, el sistema **propone** declarar la deuda **incobrable** y el **analista lo confirma**; luego se suspenden agua y luz (C1-RN-45, C1-RN-46) [CONFIRMADO — 13/Nov/2026].
+   * Al alcanzar **7 días de atraso** (configurable), el sistema avisa **a la vez al analista y al dueño** por **correo y bandeja del sistema** (C1-RN-06, C1-RN-38). Así el dueño se entera de la deuda y fiscaliza si el analista omitió reportar la morosidad.
+   * Si el inquilino **no pidió pagar por partes**, el sistema **propone al dueño** declarar la deuda **incobrable** y **el dueño decide**; si la declara, se suspenden agua y luz (C1-RN-45 a C1-RN-47) [CONFIRMADO — ronda 2, 24/Nov/2026].
 6. El historial actualiza automáticamente la **Calificación (Semáforo Verde, Amarillo o Rojo)** del inquilino.
 7. El **desalojo** lo gestiona la empresa **fuera del sistema**; el sistema no arma expedientes legales [CONFIRMADO — 13/Nov/2026].
 
@@ -40,9 +40,9 @@ son también la base de las demás verticales. Los procesos del núcleo (alta de
 Flujo del Estado de la Cuota:
 [Programada] ➔ [Pendiente (Vence hoy)] ➔ [Pagada (Por verificar)] ➔ [Pagada (Verificada)]
                      ↘ [Pago parcial (saldo)] ➔ [Pagada]
-                     ↘ [Vencida (días de atraso)] ➔ [Morosa (d ≥ 7): ALERTA AL DUEÑO]
+                     ↘ [Vencida (días de atraso)] ➔ [Morosa (d ≥ 7): ALERTA AL ANALISTA Y AL DUEÑO]
                                                        ├─ con acuerdo de pago por partes ➔ [Pago parcial] ➔ [Pagada]
-                                                       └─ sin acuerdo ➔ [Incobrable (confirma el analista)] ➔ suspensión de agua y luz
+                                                       └─ sin acuerdo ➔ propuesta al dueño ➔ [Incobrable (decide el dueño)] ➔ suspensión de agua y luz
 ```
 
 ### C1-P-04. Incrementos programados de alquiler
@@ -57,10 +57,13 @@ Flujo del Estado de la Cuota:
 **TO-BE:**
 1. El **Analista** registra el recibo del proveedor (Sedapal, Enel, Luz del Sur) **por suministro**, sube la factura digital e ingresa el monto total.
 2. Registra la **lectura actual** del medidor de cada departamento adjuntando **evidencia fotográfica** (el sistema recupera automáticamente la lectura del mes anterior).
-3. El sistema calcula el **consumo** de cada departamento (lectura actual − lectura anterior) y reparte el monto del recibo **proporcionalmente al consumo** entre los departamentos de ese suministro. Valida que la suma sea exactamente el 100 % del recibo (C1-RN-10, C1-RN-41).
-4. Anexa los conceptos de agua, luz y mantenimiento al estado de cuenta del inquilino (unificado con el proceso C1-P-03) y emite un desglose en PDF por correo.
-5. El **Analista recibe los pagos de servicios** de los inquilinos, igual que el alquiler: sube el voucher y lo verifica (C1-P-03) [CONFIRMADO — 13/Nov/2026].
-6. Se registra el **pago del recibo al proveedor** (C1-RF-41) [PREGUNTA C1-Q-70: ¿quién paga al proveedor y con qué dinero?].
+3. El sistema calcula el **consumo** de cada departamento (lectura actual − lectura anterior) y reparte el monto del recibo **proporcionalmente al consumo** entre los departamentos de ese suministro. En el agua, **agua y alcantarillado** se reparten por separado con el mismo %. Valida que la suma sea exactamente el 100 % del recibo (C1-RN-10, C1-RN-41).
+4. El **gas** no se prorratea: cada departamento con gas tiene su propio suministro y su costo se le traslada tal cual [⚙ Default — C1-Q-34].
+5. Anexa los conceptos de agua, luz, gas y mantenimiento al estado de cuenta del inquilino (unificado con el proceso C1-P-03) y emite un desglose en PDF por correo.
+6. El **Analista recibe los pagos de servicios** de los inquilinos, igual que el alquiler: sube el voucher y lo verifica (C1-P-03) [CONFIRMADO — 13/Nov/2026].
+7. Se registra el **pago del recibo al proveedor** (C1-RF-41) [⚙ Default — C1-Q-70: lo paga el dueño y lo registra el analista con el comprobante].
+
+> El período de lectura va **del día 5 al día 5** de cada mes, según el Excel actual del cliente ([3.2.2](../../../clientes/cliente-piloto/03-configuracion-y-datos.md#322-tabla-de-agua-agua_luzjpg-parte-superior)).
 
 ### C1-P-06. Mantenimiento común y flujo de aprobación de egresos
 **AS-IS:** Gastos operativos ejecutados sin control previo de caja ni aprobación centralizada.
@@ -78,19 +81,19 @@ Flujo del Estado de la Cuota:
 3. El **Analista** revisa las imágenes y actualiza el estado: *Programado ➔ Reportado ➔ Cumplido*, o *Programado ➔ **Incumplido*** si el inquilino no cumplió con su responsabilidad [CONFIRMADO — 13/Nov/2026].
 4. En caso de incumplimiento o solicitud de reemplazo, el analista registra la contratación del servicio sustituto y el sistema carga automáticamente la multa/recargo (ej. S/ 40) en la cuota del inquilino.
 
-### C1-P-08. Valorización del activo (UIT + Mejoras / Capex)
+### C1-P-08. Registro de mejoras (Capex)
 **AS-IS:** Imposibilidad de visualizar la revalorización contable y comercial de las propiedades.
 **TO-BE:**
 1. El **Dueño** registra los egresos por mejoras de capital (Capex) efectuados sobre el inmueble (ej. renovación de pisos por S/ 50,000) respaldados por comprobantes.
-2. El sistema suma las mejoras al valor contable acumulado de la propiedad.
-3. Al registrar la **nueva UIT** anual en la parametrización central del sistema, el módulo indexa y recalcula automáticamente el valor actualizado de todos los inmuebles.
+2. El sistema suma las mejoras a la **inversión total**, que alimenta el indicador secundario de años de recuperación (B1) [⚙ Default — C1-Q-65].
+3. ~~Al registrar la nueva UIT anual, el módulo recalcula el valor actualizado.~~ **Descartado:** la UIT no se usa [CONFIRMADO — ronda 2, C1-Q-62]. El valor del inmueble sale del mercado por m² depreciado (C1-P-09).
 
 ### C1-P-09. Análisis de rentabilidad inmobiliaria (rendimiento por m²)
 **AS-IS:** Incertidumbre sobre el retorno real de los activos inmobiliarios frente a opciones financieras de menor riesgo.
 **TO-BE:** [CONFIRMADO — cuestionario P11 y respuesta del 13/Nov/2026]
 1. El **Analista** registra el **estudio de mercado** de la zona: avisos de alquiler y de venta de departamentos nuevos, con área y precio.
 2. El sistema calcula el **alquiler promedio por m²** y el **precio nuevo promedio por m²** de la zona; el **Dueño** los valida.
-3. Calcula el **rendimiento** de cada unidad: alquiler real por m² frente al precio nuevo por m² **depreciado 1 % por año** de antigüedad ([B1-bis](05-reglas-de-negocio-y-calculos.md#b1-bis-rendimiento-de-mercado-por-metro-cuadrado-método-del-piloto)).
+3. Calcula el **rendimiento neto** de cada unidad: alquiler por m² **menos impuestos y mantenimiento** frente al precio nuevo por m² **depreciado 1 % por año** de antigüedad [neto: CONFIRMADO — ronda 2, C1-Q-63] ([B1-bis](05-reglas-de-negocio-y-calculos.md#b1-bis-rendimiento-de-mercado-por-metro-cuadrado-método-del-piloto)).
 4. El **Analista** ingresa la **tasa media de interés de los plazos fijos** del mercado (por ejemplo, revisándola en comparabien.com).
 5. El sistema compara el rendimiento del negocio inmobiliario con esa tasa y muestra cuál rinde más. Solo el **Dueño** ve el resultado (NUC-RN-30).
 
@@ -98,7 +101,7 @@ Flujo del Estado de la Cuota:
 **AS-IS:** Alteración de registros pasados en hojas de cálculo sin rastro de auditoría.
 **TO-BE:**
 1. Al finalizar el período, el **Dueño** solicita ejecutar el **Cierre de Mes**.
-2. El sistema valida las precondiciones: ausencia de cobros pendientes de verificación, servicios totalmente prorrateados y conciliación completa de cuotas (*Pagadas* o declaradas como *Incobrables*). El **incobrable lo confirma el analista** [CONFIRMADO — 13/Nov/2026].
+2. El sistema valida las precondiciones: ausencia de cobros pendientes de verificación, servicios totalmente prorrateados y conciliación completa de cuotas (*Pagadas* o declaradas como *Incobrables*). El **incobrable lo decide el dueño** a propuesta del sistema [CONFIRMADO — ronda 2, 24/Nov/2026].
 3. Al confirmarse, el sistema aplica un **candado digital**: se bloquea cualquier edición o eliminación retroactiva de datos en ese período.
 4. **Reapertura** [CONFIRMADO — 13/Nov/2026]: un mes cerrado **solo se reabre si se cobró una deuda incobrable** de ese período, para registrar el pago. Si la deuda no se cobra, el mes **queda cerrado** y la deuda queda como **incobrable no recuperable**. Toda reapertura queda en auditoría (NUC-RN-22).
 
@@ -116,14 +119,14 @@ Esta versión de los procesos reemplaza a la anterior. Al compararlas apareciero
 
 | Proceso | Diferencia | Resolución del cliente (13/Nov/2026) |
 |---------|------------|--------------------------------------|
-| C1-P-05 | La versión anterior terminaba con "el dueño paga el recibo y lo marca como pagado" (C1-RF-41). Ya no aparece | 🟢 Se confirma el cálculo: consumo = lectura actual − anterior, reparto **proporcional al consumo**. Quien **recibe los pagos de servicios es el analista**. ⏳ Sigue abierto quién paga el recibo al proveedor ([C1-Q-70](08-preguntas-abiertas.md)) |
+| C1-P-05 | La versión anterior terminaba con "el dueño paga el recibo y lo marca como pagado" (C1-RF-41). Ya no aparece | 🟢 Se confirma el cálculo: consumo = lectura actual − anterior, reparto **proporcional al consumo**. Quien **recibe los pagos de servicios es el analista**. ⚙ Quién paga el recibo al proveedor: default en [C1-Q-70](08-preguntas-abiertas.md) |
 | C1-P-07 | Ahora "el inquilino sube las fotos", pero el inquilino no usa el sistema en las etapas 1-2 ([C1-Q-30](08-preguntas-abiertas.md)) | 🟢 El inquilino **manda las fotos al analista** y el analista las refleja en el sistema |
 | C1-P-07 | Antes había estados *Observado*, *Incumplido* y *Reemplazado*; ahora solo *Programado → Reportado → Cumplido*, aunque el paso 4 trata el incumplimiento | 🟢 Los estados actuales están bien, **más *Incumplido*** cuando el inquilino no cumple. *Observado* y *Reemplazado* se descartan; el reemplazo es una acción sobre *Incumplido* |
 | C1-P-09 | Se calculaba sobre el **valor actualizado** y descontaba la **vacancia** | 🟢 Rendimiento **por m²** con precios de mercado y depreciación ([B1-bis](05-reglas-de-negocio-y-calculos.md#b1-bis-rendimiento-de-mercado-por-metro-cuadrado-método-del-piloto)). ⏳ Falta definir la vacancia (C1-Q-40) |
 | C1-P-09 | Ya no menciona el período de recuperación ni el alquiler requerido, que el cliente sí usó en la reunión | Se conservan como datos secundarios en la regla B1 ([C1-Q-62](08-preguntas-abiertas.md)) |
 | C1-P-09 | Compara contra la tasa del módulo financiero, pero un negocio puede no tenerlo | 🟢 Se compara con una **tasa media de plazo fijo que ingresa el analista**; no depende del módulo de inversiones |
-| C1-P-10 | Admite cuotas *Incobrables*; faltaba saber quién las declara y si se puede reabrir | 🟢 El **analista confirma** el incobrable. Un mes cerrado **solo se reabre si se cobró la deuda**; si no, queda cerrado y la deuda es **incobrable no recuperable** |
-| C1-P-03 / C1-P-10 | P12 agrega un flujo que no estaba: **suspensión y reposición de servicios** | Subproceso de la cobranza: día 7 → propuesta del sistema → **confirmación del analista** → suspensión → reposición al pagar ([C1-Q-69](08-preguntas-abiertas.md)) |
+| C1-P-10 | Admite cuotas *Incobrables*; faltaba saber quién las declara y si se puede reabrir | 🟢 ~~El analista confirma el incobrable~~ → **corregido en la ronda 2 (24/Nov): el dueño decide** a propuesta del sistema. Un mes cerrado **solo se reabre si se cobró la deuda**; si no, queda cerrado y la deuda es **incobrable no recuperable** |
+| C1-P-03 / C1-P-10 | P12 agrega un flujo que no estaba: **suspensión y reposición de servicios** | Subproceso de la cobranza: día 7 → propuesta del sistema → **decisión del dueño** → suspensión → reposición al pagar ([C1-Q-69](08-preguntas-abiertas.md)) |
 | C1-P-03 | "Dossier Desalojo" aparece en el flujo sin definición | 🟢 **No existe en el sistema**: el desalojo lo gestiona la empresa por fuera. Se quitó del flujo y de los requerimientos |
 | C1-P-02 | La "base centralizada" de inquilinos se limita a la organización | 🟢 Confirmado: **solo la organización** ([NUC-Q-06](../../../general/01-analisis-negocio/08-preguntas-abiertas.md#decisiones-tomadas)) |
 
