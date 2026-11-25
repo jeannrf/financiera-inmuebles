@@ -26,9 +26,9 @@ de terceros con costo o incertidumbre (WhatsApp, OCR, SMS masivo) va al final.
 
 **Objetivo:** que el dueño vea **cuánto gana y cuánto vale** cada inmueble.
 
-- **Servicios**: recibos por suministro (`C1-RF-61`), lecturas con foto, **prorrateo** proporcional exacto (agua y alcantarillado, luz y **gas**, C1-RF-58), **registro de pagos de servicios** por el analista (`C1-RF-69`), suspensión/reposición de agua y luz (`C1-RF-68`) y envío del resumen por correo.
+- **Servicios**: recibos por suministro (`C1-RF-61`), lecturas con foto, **prorrateo** proporcional exacto (agua y alcantarillado, y luz), traslado directo de **gas** por suministro propio (`C1-RF-58`), **registro de pagos de servicios** por el analista (`C1-RF-69`), suspensión/reposición de agua y luz (`C1-RF-68`) y envío del resumen por correo.
 - Mantenimiento con **aprobación de gastos** y **rol de limpieza** (fotos subidas por el analista).
-- **Estudio de mercado por zona** (`C1-RF-64`), **alquiler sugerido** (`C1-RF-66`), **rendimiento mensual y anual por m²** (con depreciación 1 % anual), comparación contra **tasa media de plazo fijo** ingresada por el analista (`C1-RF-54`), e indicador de **ocupación** en el tablero (`C1-RF-62`). Se conservan mejoras y valorización por UIT como referencia.
+- **Mejoras**, **estudio de mercado por zona** (`C1-RF-64`), **alquiler sugerido** (`C1-RF-66`), **rendimiento neto mensual y anual por m²** (con depreciación 1 % anual; la UIT ya no se usa: `C1-Q-62`), comparación contra **tasa media de plazo fijo** ingresada por el analista (`C1-RF-54`), e indicador de **ocupación** en el tablero (`C1-RF-62`).
 - **Calificación** de inquilinos (semáforo).
 - **Cierre de mes** (candado), con reapertura solo si se cobra una deuda incobrable.
 - Saludo de cumpleaños.

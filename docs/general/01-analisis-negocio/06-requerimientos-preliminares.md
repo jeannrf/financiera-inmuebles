@@ -87,12 +87,12 @@
 | NUC-RNF-04 | **Disponibilidad y respaldo** | Copias de seguridad automáticas diarias de la base de datos y de los archivos; procedimiento de restauración probado |
 | NUC-RNF-05 | **Escalabilidad** | Arquitectura modular: un núcleo común más módulos por negocio; agregar un negocio o rubro no debe requerir rehacer el núcleo. Debe soportar cientos de departamentos sin degradarse |
 | NUC-RNF-06 | **Usabilidad** | Interfaz interactiva y sencilla para un usuario no técnico; las tareas frecuentes (registrar pago y voucher) en ≤ 3 pasos; en español; moneda S/ con formato peruano |
-| NUC-RNF-07 | **Portabilidad** | **Versión web** accesible desde una laptop (navegador) y usable en el celular (diseño responsivo), para empresas pequeñas. **App de escritorio** con la misma interfaz y el mismo backend, para empresas medianas y grandes [CONFIRMADO — CLI-Q-04, 10/Nov/2026; criterio de tamaño en NUC-Q-31] |
+| NUC-RNF-07 | **Portabilidad** | **Versión web** accesible desde una laptop (navegador) y usable en el celular (diseño responsivo), para empresas pequeñas; es la que usa el piloto. **App de escritorio** con la misma interfaz y el mismo backend, para empresas más grandes [CONFIRMADO — CLI-Q-04 y ronda 2, 24/Nov/2026; criterio de tamaño postergado, NUC-Q-31] |
 | NUC-RNF-08 | **Rendimiento** | Las pantallas principales cargan en < 2 s con los volúmenes esperados |
 | NUC-RNF-09 | **Confiabilidad de alertas** | Las tareas programadas (cuotas, alertas) se ejecutan a diario aunque nadie abra el sistema; los envíos fallidos se reintentan y se registran |
 | NUC-RNF-10 | **Precisión** | Los cálculos monetarios usan tipo decimal (nunca coma flotante) y un redondeo definido |
 | NUC-RNF-11 | **Mantenibilidad** | Código versionado (Git), pruebas automáticas de los cálculos críticos y documentación |
-| NUC-RNF-12 | **Configurabilidad** | Las tasas de impuestos, la UIT, los umbrales y los pesos de la calificación son parámetros, no valores fijos en el código |
+| NUC-RNF-12 | **Configurabilidad** | Las tasas de impuestos, la UIT (para cálculos tributarios), los umbrales, la tasa de depreciación y los pesos de la calificación son parámetros, no valores fijos en el código |
 | NUC-RNF-13 | **Almacenamiento** | Soporta imágenes y PDF de hasta ~10 MB, organizados por inmueble, inquilino y período |
 | NUC-RNF-14 | **Aislamiento** | Las consultas se filtran por organización en una capa que el programador no pueda olvidar, por ejemplo, seguridad a nivel de fila en la base de datos. Debe haber pruebas automáticas de fuga entre organizaciones |
 | NUC-RNF-15 | **Extensibilidad** | Añadir un paquete no requiere modificar el núcleo. Las dependencias van del paquete al núcleo, y se comprueban en la integración continua |
@@ -103,7 +103,7 @@
 | NUC-RNF-20 | **Portabilidad de datos** | El cliente puede obtener sus datos en formato abierto |
 | NUC-RNF-21 | **Sensibilidad por paquete** | Un paquete puede declarar datos sensibles (salud, contraseñas de equipos) con cifrado y acceso más estrictos |
 | NUC-RNF-22 | **Retención** | La información contable y tributaria (ingresos, egresos, comprobantes, vouchers, reportes) se conserva al menos **10 años** y no se puede eliminar antes de ese plazo, ni siquiera al dar de baja un negocio ([NUC-RN-29](05-reglas-de-negocio-y-calculos.md), [NUC-Q-28](08-preguntas-abiertas.md)) [CONFIRMADO — PPT cliente] |
-| NUC-RNF-23 | **Despliegue en servidores** | El sistema se instala en **servidores** (dedicados o propios del cliente) en lugar de la nube pública. El backend se entrega como un paquete instalable por cliente, con respaldos, tareas programadas y envío de correo funcionando en ese servidor ([arquitectura](../04-arquitectura/README.md#modelo-de-despliegue-pedido-por-el-cliente-cli-q-04-respondida-el-10112026)) [CONFIRMADO — CLI-Q-04; detalle en NUC-Q-32] |
+| NUC-RNF-23 | **Despliegue en servidores** | El sistema corre en **servidores operados por el equipo** para sus clientes, en lugar de la nube pública. El equipo se encarga de respaldos, tareas programadas, envío de correo y actualizaciones ([arquitectura](../04-arquitectura/README.md#modelo-de-despliegue-pedido-por-el-cliente-cli-q-04-respondida-el-10112026)) [CONFIRMADO — CLI-Q-04 y ronda 2, NUC-Q-32] |
 
 ## 6.3 Restricciones conocidas
 

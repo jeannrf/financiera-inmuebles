@@ -45,7 +45,7 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 | Ver totales recaudados, ganancias y rendimiento % | ✅ | ❌ [CONFIRMADO — P9] |
 | Ver **sumas o subtotales** en listas de cobro, exportaciones o reportes ([NUC-RN-30](../../../general/01-analisis-negocio/05-reglas-de-negocio-y-calculos.md)) | ✅ | ❌ [CONFIRMADO — P9] |
 | Ver indicador de ocupación del negocio | ✅ | ❌ [INFERIDO] |
-| Ver valor del inmueble, UIT y mejoras | ✅ | ❌ |
+| Ver valor del inmueble (por m² depreciado) y mejoras | ✅ | ❌ |
 | Registrar inquilinos, documentos (DNI, boleta) | ✅ | ✅ |
 | Crear o editar departamentos e inmuebles | ✅ | ❌ [INFERIDO] |
 | Definir monto de alquiler e incrementos programados | ✅ | ❌ [INFERIDO] |
@@ -57,13 +57,13 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 | **Aprobar** gasto de mantenimiento o mejora | ✅ | ❌ |
 | Registrar mejoras al inmueble | ✅ | ❌ [INFERIDO] |
 | Cerrar mes (candado) | ✅ | ❌ |
-| **Reabrir** un mes cerrado (solo si se cobró una deuda incobrable) | ✅ [PROPUESTO → C1-Q-71] | ❌ |
+| **Reabrir** un mes cerrado (solo si se cobró una deuda incobrable) | ✅ [⚙ Default para SRS — C1-Q-71] | ❌ |
 | Ingresar la **tasa media de plazo fijo** de referencia | ✅ | ✅ [CONFIRMADO — 13/Nov/2026] |
 | Registrar el **estudio de mercado** de la zona (avisos de alquiler y venta por m²) | ✅ | ✅ [CONFIRMADO — P11] |
 | Validar el precio por m² y aplicar el alquiler sugerido | ✅ | ❌ [CONFIRMADO — P11: lo deciden dueño y analista; el dueño confirma] |
 | Ver el **rendimiento por m²** de las unidades | ✅ | ❌ [CONFIRMADO — P9] |
 | Registrar un **acuerdo de pago por partes** | ✅ | ✅ [INFERIDO] |
-| **Confirmar** una cuota como **incobrable** (la propone el sistema a los 7 días) | ✅ | ✅ [CONFIRMADO — 13/Nov/2026] |
+| **Decidir** si una cuota es **incobrable** (la propone el sistema a los 7 días) | ✅ | ❌ [CONFIRMADO — ronda 2, 24/Nov/2026; reemplaza la respuesta del 13/Nov] |
 | Registrar la **suspensión y reposición** de agua y luz | ✅ | ✅ [INFERIDO] |
 | Calificación (semáforo) de inquilinos | ✅ | 👁 [INFERIDO] |
 | Gestionar usuarios y roles | ✅ | ❌ |
@@ -75,9 +75,9 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 |--------|--------------|-------|
 | Lista de pagos que vencen **esta semana** | Analista | Sistema + correo |
 | Hoy le toca pagar a X | Analista | Sistema |
-| Pago con atraso ≥ N₁ días (nivel 1) [PREGUNTA C1-Q-56: valor de N₁] | **Analista** | Sistema + correo |
-| Pago aún sin regularizar ≥ **7 días** (nivel 2, N₂ configurable) [CONFIRMADO — P7] | **Dueño / Gerente** | **Correo electrónico + bandeja del sistema** [CONFIRMADO — P7] |
-| Cuota con 7 días de atraso y sin acuerdo: **propuesta de incobrable y suspensión de servicios** para que la confirme [CONFIRMADO — P12 y 13/Nov/2026] | **Analista** (y aviso al dueño) | Sistema + correo |
+| Pago con atraso ≥ **7 días** (N₁ configurable) [CONFIRMADO — ronda 2, C1-Q-56] | **Analista** | Sistema + correo |
+| Pago con atraso ≥ **7 días** (N₂ configurable) [CONFIRMADO — P7] | **Dueño / Gerente** | **Correo electrónico + bandeja del sistema** [CONFIRMADO — P7] |
+| Cuota con 7 días de atraso y sin acuerdo: **propuesta de incobrable y suspensión de servicios** para que decida [CONFIRMADO — ronda 2, C1-Q-68] | **Dueño** | Correo + bandeja del sistema |
 | Renovación de contrato próxima | Dueño (y analista [INFERIDO]) | Sistema + correo |
 | Gasto pendiente de aprobación | Dueño | Mensaje interno |
 | Negocio por debajo del objetivo (en rojo) | Dueño | Tablero |
@@ -85,9 +85,9 @@ Leyenda: ✅ puede · 👁 solo ver · ❌ no puede · ⚠ parcial
 
 > **Por qué la alerta escala:** en la reunión el cliente dijo que la alerta iba directa al dueño, para enterarse de la
 > deuda y a la vez **controlar al analista** ("mata dos pájaros de un tiro"). En la PPT pide "al analista y luego al
-> gerente". Se adopta el escalamiento ([C1-RN-38](05-reglas-de-negocio-y-calculos.md), pendiente de confirmar en
-> [C1-Q-56](08-preguntas-abiertas.md)), y el nivel 2 llega al dueño **aunque el analista no haga nada**, con lo que se
-> conserva el control sobre el analista.
+> gerente". En la ronda 2 ([C1-Q-56](08-preguntas-abiertas.md)) fijó **7 días para ambos**: la alerta llega al analista y al
+> dueño a la vez ([C1-RN-38](05-reglas-de-negocio-y-calculos.md)). El dueño la recibe **aunque el analista no haga nada**, con lo
+> que se conserva el control sobre el analista. Los dos plazos siguen siendo parámetros por si otro cliente quiere escalonarlos.
 
 > **Por qué el analista no ve totales** [CONFIRMADO — P9]: necesita el monto individual y el comprobante para cobrar y verificar,
 > pero si ve la recaudación total puede deducir las ganancias del negocio y **pedir un aumento** basándose solo en ellas.

@@ -32,25 +32,24 @@ Las reglas de capas están en [02-dominio-nucleo.md](../01-analisis-negocio/02-d
 **Qué cambia:** el análisis suponía un SaaS en la nube con una sola instalación para todos. Ahora el núcleo debe poder
 entregarse de más de una forma **sin dejar de ser un solo código base** ([OE-NUC-03](../01-analisis-negocio/01-vision-y-modelo-de-negocio.md#14-objetivos-de-la-plataforma)).
 
-**Propuesta del equipo** [PROPUESTO]:
+**Decisión tras la ronda 2 (24/Nov/2026)** [CONFIRMADO, salvo lo marcado]:
 
-| Pieza | Empresa pequeña | Empresa mediana o grande |
-|-------|-----------------|--------------------------|
-| Interfaz | Navegador (web responsiva) | **App de escritorio** que empaqueta la **misma interfaz web** (por ejemplo, Electron o Tauri) |
-| Servidor y base de datos | **Servidor dedicado** operado por el equipo, compartido por varias organizaciones pequeñas (aisladas por RLS) | **Servidor propio del cliente** (en su local o centro de datos) o servidor dedicado solo para él |
+| Pieza | Empresa pequeña (como el piloto) | Empresa más grande |
+|-------|----------------------------------|--------------------|
+| Interfaz | Navegador (web responsiva) | **App de escritorio** que empaqueta la **misma interfaz web** (por ejemplo, Electron o Tauri) [PROPUESTO] |
+| Servidor y base de datos | **Servidores operados por el equipo** ([NUC-Q-32](../01-analisis-negocio/08-preguntas-abiertas.md)) | **Servidores operados por el equipo** |
 | Código | El mismo backend y la misma interfaz | El mismo backend y la misma interfaz |
-| Actualizaciones | Las publica el equipo | Por versión, con ventana acordada con el cliente |
+| Actualizaciones, respaldos y monitoreo | Los hace el equipo | Los hace el equipo |
 
-Así la app de escritorio no es un segundo producto: es una "ventana" instalable sobre la misma aplicación, y "servidores en
-vez de la nube" se resuelve con **instalación local o dedicada (on-premise)** del mismo backend.
+Así la app de escritorio no es un segundo producto: es una "ventana" instalable sobre la misma aplicación. Y "servidores en vez
+de la nube" se resuelve con **servidores que opera el equipo** para sus clientes; ya no se contempla instalar en servidores del cliente.
 
 **Consecuencias para el núcleo:**
-- El backend debe poder **instalarse por cliente** (paquete con base de datos, archivos y tareas programadas), no solo en una nube.
-- Respaldos, monitoreo y actualizaciones dejan de ser centrales: hay que definir **quién los hace** en un servidor del cliente ([NUC-Q-32](../01-analisis-negocio/08-preguntas-abiertas.md)).
-- El correo de alertas necesita salida a internet aunque el servidor esté en el local del cliente.
+- Respaldos, monitoreo, correo de alertas y actualizaciones quedan **centralizados** en el equipo, lo que simplifica el soporte.
+- La multi-tenancy (una base con `organizacion_id` y RLS) sigue siendo válida en esos servidores.
 - Ver [NUC-RNF-07](../01-analisis-negocio/06-requerimientos-preliminares.md) (portabilidad) y [NUC-RNF-23](../01-analisis-negocio/06-requerimientos-preliminares.md) (despliegue).
 
-**Para el cliente piloto** (1 analista, 11 unidades) corresponde la **versión web** [INFERIDO → [NUC-Q-33](../01-analisis-negocio/08-preguntas-abiertas.md)].
-La app de escritorio y la instalación en servidor del cliente **no** entran en las etapas 1 y 2 salvo que se decida lo contrario.
+**Para el cliente piloto** (1 analista, 11 unidades) corresponde la **versión web**, que él mismo prefiere porque tiene pocos
+negocios [CONFIRMADO — [NUC-Q-33](../01-analisis-negocio/08-preguntas-abiertas.md)]. La app de escritorio **no** entra en las etapas 1 y 2.
 
-Preguntas abiertas: [NUC-Q-31 a NUC-Q-33](../01-analisis-negocio/08-preguntas-abiertas.md).
+Qué empresa es "pequeña" o "grande" ([NUC-Q-31](../01-analisis-negocio/08-preguntas-abiertas.md)) queda **postergado** hasta que llegue un cliente que lo necesite.

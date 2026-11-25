@@ -26,16 +26,16 @@ El cliente pidió **web para empresas pequeñas**, **escritorio para medianas y 
 
 | ID | Pregunta | Propuesta del análisis |
 |----|----------|------------------------|
-| NUC-Q-31 ⭐ | ¿Qué hace que una empresa sea "pequeña" (web) o "mediana/grande" (escritorio)? ¿Usuarios, unidades, sedes, facturación? ¿Una empresa puede pasar de una forma a la otra sin migrar datos? | Criterio por número de usuarios y sedes; la app de escritorio usa el mismo backend, así que cambiar de forma no exige migrar datos. |
-| NUC-Q-32 ⭐ | "Servidores en vez de la nube": ¿servidores **propios del cliente** o **dedicados** operados por el equipo? ¿Qué le preocupa de la nube (costo, confianza, control de datos)? ¿Quién hace respaldos y actualizaciones en un servidor del cliente? | Servidor dedicado operado por el equipo para pequeñas; servidor propio o dedicado exclusivo para medianas y grandes, con contrato de soporte que incluya respaldos y actualizaciones. |
-| NUC-Q-33 | ¿El cliente piloto (1 analista, 11 unidades) usa la versión web? ¿La app de escritorio entra en alguna de las 3 etapas? | Web para el piloto; escritorio después de la etapa 2, cuando haya un cliente mediano. |
+| NUC-Q-31 | ¿Qué hace que una empresa sea "pequeña" (web) o "mediana/grande" (escritorio)? ¿Usuarios, unidades, sedes, facturación? ¿Una empresa puede pasar de una forma a la otra sin migrar datos? | ⏸ **Postergada (24/Nov/2026):** "por ahora eso no toca". Solo se da por cierto que habrá **versión web y versión de escritorio**. El criterio de tamaño se define cuando llegue un cliente mediano. |
+| ~~NUC-Q-32~~ | ~~¿Servidores propios del cliente o dedicados operados por el equipo?~~ | 🟢 **Respondida (24/Nov/2026):** servidores **operados por el equipo** para los clientes. No se instala en servidores del cliente. |
+| ~~NUC-Q-33~~ | ~~¿El piloto usa la versión web?~~ | 🟢 **Respondida (24/Nov/2026):** sí, el piloto prefiere la **web** porque tiene pocos negocios. La versión de escritorio se considera para empresas más grandes. |
 
 ## Modelo comercial
 
 | ID | Pregunta | Propuesta del análisis |
 |----|----------|------------------------|
-| NUC-Q-05 ⭐ | ¿El dueño crea un negocio por su cuenta (como dice NUC-P-00) o lo solicita con acompañamiento (como en el modelo comercial)? | Solicitado y acompañado al inicio; el autoservicio llega para casos A cuando las plantillas estén maduras. |
-| NUC-Q-17 ⭐ | ¿Cuándo se constituye la empresa, quiénes son los socios y en qué proporción? ¿A nombre de quién se firma con el cliente piloto si aún no existe? | Acordarlo por escrito entre los 3 antes de firmar con el cliente; validar con un abogado. |
+| NUC-Q-05 | ¿El dueño crea un negocio por su cuenta (como dice NUC-P-00) o lo solicita con acompañamiento (como en el modelo comercial)? | ⏸ **Postergada (24/Nov/2026):** no bloquea el SRS del piloto. Mientras tanto: solicitado y acompañado. |
+| NUC-Q-17 | ¿Cuándo se constituye la empresa, quiénes son los socios y en qué proporción? ¿A nombre de quién se firma con el cliente piloto si aún no existe? | ⏸ **Postergada (24/Nov/2026):** no bloquea el SRS del piloto. Se retoma antes de firmar con el cliente. |
 | NUC-Q-10 | ¿Cómo se cobra: pago inicial, mensualidad por negocio, por usuarios o por volumen? | Implantación + mensualidad por negocio, a validar. |
 | NUC-Q-11 | ¿Qué incluye el soporte humano y cuál es su límite? ¿Qué pasa con un caso D? | Definir un catálogo de servicio con precios. |
 | NUC-Q-12 | ¿Las mejoras hechas para un cliente quedan disponibles para los demás? | Sí, salvo pacto contrario; debe estar en el contrato. |
@@ -57,7 +57,7 @@ El cliente pidió **web para empresas pequeñas**, **escritorio para medianas y 
 | NUC-Q-15 | ¿Se necesita contabilidad formal o basta con un P&L de gestión? | P&L de gestión; no reemplaza al sistema contable. |
 | NUC-Q-16 | ¿Multimoneda en el núcleo? C2 (viajes) e Inversiones la necesitan. | Sí, por negocio y con tipo de cambio registrado en cada operación. **Confirmado por el piloto (P14, 11/Nov/2026):** tiene inversiones en soles y en dólares, así que la multimoneda entra en la etapa 2. |
 | NUC-Q-26 | En el tablero, ¿qué representa el "monto" de cada negocio: ingresos del mes, acumulado anual o patrimonio? ¿Cómo se define el objetivo? | 🟢 **Respondida por el cliente (10/Nov/2026):** ingresos **cobrados**. Meta de alquileres: ocupación total; meta de otros negocios: crecimiento de clientes ([5.3](05-reglas-de-negocio-y-calculos.md#53-tablero-estado-del-negocio-frente-al-objetivo)). Falta definir qué muestra la tarjeta de **Inversiones**. |
-| NUC-Q-27 | "Alertas por teléfono": ¿SMS, llamada automática o WhatsApp? | SMS en la etapa 2 (barato); WhatsApp en la etapa 3 |
-| NUC-Q-28 | ¿El plazo de 10 años aplica a todo o solo a lo tributario? ¿Desde qué fecha se cuenta? Validar con un contador (el Código Tributario fija plazos de conservación y prescripción). | Conservar 10 años todo lo que tenga monto o comprobante |
+| NUC-Q-27 | "Alertas por teléfono": ¿SMS, llamada automática o WhatsApp? | SMS en la etapa 2 (barato); WhatsApp en la etapa 3  ⚙ **Default aplicado para SRS ([ronda 2](../../clientes/cliente-piloto/05-cuestionario-ronda2-cierre.md)):** correo y bandeja en las etapas 1 y 2; SMS o WhatsApp en la etapa 3. |
+| NUC-Q-28 | ¿El plazo de 10 años aplica a todo o solo a lo tributario? ¿Desde qué fecha se cuenta? Validar con un contador (el Código Tributario fija plazos de conservación y prescripción). | Conservar 10 años todo lo que tenga monto o comprobante  ⚙ **Default aplicado para SRS ([ronda 2](../../clientes/cliente-piloto/05-cuestionario-ronda2-cierre.md)):** se conserva 10 años todo lo que tenga monto o comprobante. |
 | NUC-Q-29 | ¿Un analista puede asignar tareas a otro analista o solo el dueño asigna? | Ambos pueden; el cierre lo aprueba quien asignó |
 | NUC-Q-30 | ¿La calculadora es una calculadora simple o calculadoras de negocio (rendimiento, interés de plazo fijo, incremento de alquiler)? | Empezar con una simple + las de negocio que ya existen como fórmulas |

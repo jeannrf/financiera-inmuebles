@@ -21,6 +21,7 @@
 | [02-preguntas-abiertas.md](02-preguntas-abiertas.md) | Temas comerciales y generales a tratar con este cliente |
 | [03-configuracion-y-datos.md](03-configuracion-y-datos.md) | Sus zonas, información actual en Excel y cifras de ejemplo |
 | [04-cuestionario-validacion-reunion1.md](04-cuestionario-validacion-reunion1.md) | Pliego ejecutivo de 14 preguntas clave, solicitud de insumos (Issue FIN-01) y **respuestas del cliente** (P3–P14) |
+| [05-cuestionario-ronda2-cierre.md](05-cuestionario-ronda2-cierre.md) | **Ronda 2:** mensaje de cierre con propuestas por defecto, respuestas del 24/Nov e insumos recibidos |
 
 Las preguntas sobre el negocio van en [C1](../../clusters/cluster-1-activos-alquileres-espacios/01-analisis-negocio/08-preguntas-abiertas.md) e
 [Inversiones](../../modulos/inversiones-y-liquidez/01-analisis-negocio/08-preguntas-abiertas.md). Antes de enviárselas hay que unificarlas en un solo documento.
@@ -57,6 +58,7 @@ El cliente tiene **dos negocios** y quiere abrir un **tercero**. Quiere un softw
 - **Incobrable (11/Nov):** a los 7 días sin pedido de pago por partes, con corte de agua y luz (a validar legalmente).
 - **Bolsa (11/Nov):** rendimiento = (venta − compra + utilidades) / compra, llevado a un año con regla de tres.
 - **Monedas (11/Nov):** soles y dólares; no quiere ver ganancias estimadas de acciones no vendidas.
-- **Procesos (13/Nov):** el analista recibe los pagos de servicios, sube las fotos de limpieza que le mandan los inquilinos (con estado *Incumplido*), ingresa la tasa media de plazo fijo para comparar y **confirma los incobrables**. Un mes cerrado solo se reabre si se cobró la deuda. **No hay dossier de desalojo** en el sistema.
+- **Procesos (13/Nov):** el analista recibe los pagos de servicios, sube las fotos de limpieza que le mandan los inquilinos (con estado *Incumplido*), ingresa la tasa media de plazo fijo para comparar. Un mes cerrado solo se reabre si se cobró la deuda. **No hay dossier de desalojo** en el sistema.
+- **Ronda 2 (24/Nov):** 8 departamentos, 2 cocheras (con contrato, sin limpieza ni mantenimiento) y 1 puesto de mercado. Alerta a los 7 días también para el analista. **La UIT no se usa.** El rendimiento es **neto** (menos impuestos y mantenimiento). Los servicios se cortan sin más trámite. **El incobrable lo decide el dueño** (antes, el analista). Versión web para el piloto, escritorio para empresas grandes, en **servidores operados por el equipo**.
 
-Detalle: Secciones [3](04-cuestionario-validacion-reunion1.md#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026), [4](04-cuestionario-validacion-reunion1.md#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026) y [5](04-cuestionario-validacion-reunion1.md#sección-5-conciliación-de-procesos-del-clúster-1-13-de-noviembre-de-2026) del cuestionario.
+Detalle: Secciones [3](04-cuestionario-validacion-reunion1.md#sección-3-respuestas-del-cliente-10-de-noviembre-de-2026), [4](04-cuestionario-validacion-reunion1.md#sección-4-respuestas-del-cliente-11-de-noviembre-de-2026) y [5](04-cuestionario-validacion-reunion1.md#sección-5-conciliación-de-procesos-del-clúster-1-13-de-noviembre-de-2026) del cuestionario, y la [ronda 2](05-cuestionario-ronda2-cierre.md).
