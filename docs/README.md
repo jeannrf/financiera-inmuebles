@@ -48,7 +48,7 @@ docs/
 
 | Parte | Análisis de negocio | Validación | SRS, modelado, arquitectura, UX |
 |-------|---------------------|------------|----------------|
-| [General](general/01-analisis-negocio/00-README.md) | ✅ Borrador v0.3 | Modelo SaaS sin validar con el cliente | ⏳ Pendiente |
+| [General](general/01-analisis-negocio/00-README.md) | ✅ Borrador v0.3 | Modelo SaaS sin validar con el cliente | ✅ [SRS v1.0](general/02-srs/README.md) (núcleo + motor cobro recurrente); ⏳ modelado, arquitectura y UX |
 | [Clúster 1: Activos y Alquileres](clusters/cluster-1-activos-alquileres-espacios/README.md) | ✅ Borrador v0.3 | 🟢 Cliente real (1.1 y 1.2) | ⏳ Pendiente |
 | [Clúster 2: Comercial de Alto Valor](clusters/cluster-2-comercial-alto-valor/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
 | [Clúster 3: Servicios Profesionales](clusters/cluster-3-servicios-profesionales-proyectos/README.md) | ✅ Borrador v0.1 | 🟡 Hipótesis | ⏳ Pendiente |
